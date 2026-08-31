@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "weights": {
+    "cuisine_match": 0.2,
+    "dietary_match": 0.15,
+    "budget_match": 0.15,
+    "travel_convenience": 0.2,
+    "rating": 0.1,
+    "review_confidence": 0.2
+  }
+}

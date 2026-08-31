@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noEmit": false,
+    "outDir": ".test-dist",
+    "rootDir": ".",
+    "incremental": false,
+    "isolatedModules": false,
+    "plugins": []
+  },
+  "include": [
+    "src/lib/api/restaurants.ts",
+    "src/lib/api/recommendations.ts",
+    "src/lib/voice.ts",
+    "tests/**/*.test.ts"
+  ],
+  "exclude": ["node_modules", ".next"]
+}

@@ -1,0 +1,2342 @@
+{
+  "metadata": {
+    "city": "Chicago",
+    "dataset_name": "BiteCheck Synthetic Chicago Restaurants",
+    "description": "Reproducible fictional restaurant records for portfolio development and testing.",
+    "generator_version": "1.0.0",
+    "record_count": 24,
+    "schema_version": "1.0.0",
+    "seed": 42,
+    "synthetic": true
+  },
+  "restaurants": [
+    {
+      "address": "137 Demo Avenue, Chicago, IL 60616",
+      "city": "Chicago",
+      "cuisine": "Thai",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 12,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 9,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 17,
+          "straight_line_distance_km": 1.72,
+          "walking_minutes": 24
+        },
+        "Chicago Loop": {
+          "driving_minutes": 16,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 22,
+          "straight_line_distance_km": 3.33,
+          "walking_minutes": 43
+        },
+        "Chinatown": {
+          "driving_minutes": 10,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 11,
+          "straight_line_distance_km": 0.5,
+          "walking_minutes": 8
+        },
+        "Hyde Park": {
+          "driving_minutes": 25,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 27,
+          "straight_line_distance_km": 7.09,
+          "walking_minutes": 91
+        },
+        "Illinois Tech": {
+          "driving_minutes": 12,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 18,
+          "straight_line_distance_km": 1.68,
+          "walking_minutes": 23
+        },
+        "Lakeview": {
+          "driving_minutes": 31,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 42,
+          "straight_line_distance_km": 10.66,
+          "walking_minutes": 136
+        },
+        "River North": {
+          "driving_minutes": 19,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 21,
+          "straight_line_distance_km": 4.88,
+          "walking_minutes": 62
+        }
+      },
+      "latitude": 41.848514,
+      "longitude": -87.635828,
+      "name": "Silver Orchid Cafe",
+      "neighborhood": "Chinatown",
+      "opening_hours": {
+        "friday": {
+          "close": "23:00",
+          "open": "10:00"
+        },
+        "monday": {
+          "close": "23:00",
+          "open": "10:00"
+        },
+        "saturday": {
+          "close": "23:00",
+          "open": "10:00"
+        },
+        "sunday": null,
+        "thursday": {
+          "close": "23:00",
+          "open": "10:00"
+        },
+        "tuesday": {
+          "close": "23:00",
+          "open": "10:00"
+        },
+        "wednesday": {
+          "close": "23:00",
+          "open": "10:00"
+        }
+      },
+      "price_category": "$",
+      "rating": 4.1,
+      "restaurant_id": "CHI-SYN-001",
+      "review_count": 513,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "174 Example Street, Chicago, IL 60657",
+      "city": "Chicago",
+      "cuisine": "Indian",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 15,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 35,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 40,
+          "straight_line_distance_km": 11.83,
+          "walking_minutes": 151
+        },
+        "Chicago Loop": {
+          "driving_minutes": 23,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 32,
+          "straight_line_distance_km": 7.48,
+          "walking_minutes": 96
+        },
+        "Chinatown": {
+          "driving_minutes": 30,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 40,
+          "straight_line_distance_km": 10.33,
+          "walking_minutes": 131
+        },
+        "Hyde Park": {
+          "driving_minutes": 47,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 58,
+          "straight_line_distance_km": 17.29,
+          "walking_minutes": 218
+        },
+        "Illinois Tech": {
+          "driving_minutes": 31,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 46,
+          "straight_line_distance_km": 12.27,
+          "walking_minutes": 157
+        },
+        "Lakeview": {
+          "driving_minutes": 7,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 13,
+          "straight_line_distance_km": 0.33,
+          "walking_minutes": 7
+        },
+        "River North": {
+          "driving_minutes": 17,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 24,
+          "straight_line_distance_km": 5.85,
+          "walking_minutes": 75
+        }
+      },
+      "latitude": 41.944368,
+      "longitude": -87.645348,
+      "name": "Little Tandoor Table",
+      "neighborhood": "Lakeview",
+      "opening_hours": {
+        "friday": {
+          "close": "23:00",
+          "open": "12:00"
+        },
+        "monday": {
+          "close": "23:00",
+          "open": "12:00"
+        },
+        "saturday": {
+          "close": "23:00",
+          "open": "12:00"
+        },
+        "sunday": {
+          "close": "23:00",
+          "open": "12:00"
+        },
+        "thursday": {
+          "close": "23:00",
+          "open": "12:00"
+        },
+        "tuesday": null,
+        "wednesday": {
+          "close": "23:00",
+          "open": "12:00"
+        }
+      },
+      "price_category": "$",
+      "rating": 3.6,
+      "restaurant_id": "CHI-SYN-002",
+      "review_count": 295,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "211 Sample Road, Chicago, IL 60608",
+      "city": "Chicago",
+      "cuisine": "Mediterranean",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 56,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 5,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 12,
+          "straight_line_distance_km": 0.42,
+          "walking_minutes": 7
+        },
+        "Chicago Loop": {
+          "driving_minutes": 16,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 20,
+          "straight_line_distance_km": 4.41,
+          "walking_minutes": 58
+        },
+        "Chinatown": {
+          "driving_minutes": 11,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 18,
+          "straight_line_distance_km": 1.8,
+          "walking_minutes": 26
+        },
+        "Hyde Park": {
+          "driving_minutes": 20,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 32,
+          "straight_line_distance_km": 7.0,
+          "walking_minutes": 91
+        },
+        "Illinois Tech": {
+          "driving_minutes": 14,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 13,
+          "straight_line_distance_km": 1.83,
+          "walking_minutes": 25
+        },
+        "Lakeview": {
+          "driving_minutes": 34,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 44,
+          "straight_line_distance_km": 11.47,
+          "walking_minutes": 147
+        },
+        "River North": {
+          "driving_minutes": 20,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 24,
+          "straight_line_distance_km": 5.85,
+          "walking_minutes": 76
+        }
+      },
+      "latitude": 41.840765,
+      "longitude": -87.647685,
+      "name": "Prairie Cypress Cafe",
+      "neighborhood": "Bridgeport",
+      "opening_hours": {
+        "friday": {
+          "close": "21:00",
+          "open": "12:00"
+        },
+        "monday": {
+          "close": "21:00",
+          "open": "12:00"
+        },
+        "saturday": {
+          "close": "21:00",
+          "open": "12:00"
+        },
+        "sunday": {
+          "close": "21:00",
+          "open": "12:00"
+        },
+        "thursday": {
+          "close": "21:00",
+          "open": "12:00"
+        },
+        "tuesday": {
+          "close": "21:00",
+          "open": "12:00"
+        },
+        "wednesday": null
+      },
+      "price_category": "$$$",
+      "rating": 3.7,
+      "restaurant_id": "CHI-SYN-003",
+      "review_count": 1051,
+      "state": "IL",
+      "vegan_available": true,
+      "vegetarian_available": true
+    },
+    {
+      "address": "248 Test Kitchen Way, Chicago, IL 60601",
+      "city": "Chicago",
+      "cuisine": "Indian",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 42,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 20,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 28,
+          "straight_line_distance_km": 5.22,
+          "walking_minutes": 67
+        },
+        "Chicago Loop": {
+          "driving_minutes": 7,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 13,
+          "straight_line_distance_km": 0.74,
+          "walking_minutes": 11
+        },
+        "Chinatown": {
+          "driving_minutes": 13,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 17,
+          "straight_line_distance_km": 3.51,
+          "walking_minutes": 46
+        },
+        "Hyde Park": {
+          "driving_minutes": 30,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 36,
+          "straight_line_distance_km": 10.58,
+          "walking_minutes": 134
+        },
+        "Illinois Tech": {
+          "driving_minutes": 18,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 26,
+          "straight_line_distance_km": 5.44,
+          "walking_minutes": 72
+        },
+        "Lakeview": {
+          "driving_minutes": 23,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 27,
+          "straight_line_distance_km": 6.82,
+          "walking_minutes": 86
+        },
+        "River North": {
+          "driving_minutes": 12,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 11,
+          "straight_line_distance_km": 1.0,
+          "walking_minutes": 14
+        }
+      },
+      "latitude": 41.883462,
+      "longitude": -87.635158,
+      "name": "Prairie Tandoor Table",
+      "neighborhood": "Chicago Loop",
+      "opening_hours": {
+        "friday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "monday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "saturday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "sunday": null,
+        "thursday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "tuesday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "wednesday": {
+          "close": "22:00",
+          "open": "12:00"
+        }
+      },
+      "price_category": "$$$",
+      "rating": 4.8,
+      "restaurant_id": "CHI-SYN-004",
+      "review_count": 423,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "285 Demo Avenue, Chicago, IL 60654",
+      "city": "Chicago",
+      "cuisine": "Chinese",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 22,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 23,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 26,
+          "straight_line_distance_km": 6.29,
+          "walking_minutes": 80
+        },
+        "Chicago Loop": {
+          "driving_minutes": 9,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 18,
+          "straight_line_distance_km": 1.73,
+          "walking_minutes": 24
+        },
+        "Chinatown": {
+          "driving_minutes": 16,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 20,
+          "straight_line_distance_km": 4.59,
+          "walking_minutes": 61
+        },
+        "Hyde Park": {
+          "driving_minutes": 31,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 42,
+          "straight_line_distance_km": 11.59,
+          "walking_minutes": 146
+        },
+        "Illinois Tech": {
+          "driving_minutes": 22,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 30,
+          "straight_line_distance_km": 6.52,
+          "walking_minutes": 84
+        },
+        "Lakeview": {
+          "driving_minutes": 20,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 29,
+          "straight_line_distance_km": 5.76,
+          "walking_minutes": 74
+        },
+        "River North": {
+          "driving_minutes": 9,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 14,
+          "straight_line_distance_km": 0.1,
+          "walking_minutes": 3
+        }
+      },
+      "latitude": 41.893253,
+      "longitude": -87.634537,
+      "name": "North Lantern House",
+      "neighborhood": "River North",
+      "opening_hours": {
+        "friday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "monday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "saturday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "sunday": null,
+        "thursday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "tuesday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "wednesday": {
+          "close": "23:00",
+          "open": "11:00"
+        }
+      },
+      "price_category": "$$",
+      "rating": 3.4,
+      "restaurant_id": "CHI-SYN-005",
+      "review_count": 894,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": false
+    },
+    {
+      "address": "322 Example Street, Chicago, IL 60615",
+      "city": "Chicago",
+      "cuisine": "Ethiopian",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 51,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 19,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 31,
+          "straight_line_distance_km": 7.01,
+          "walking_minutes": 89
+        },
+        "Chicago Loop": {
+          "driving_minutes": 28,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 38,
+          "straight_line_distance_km": 9.49,
+          "walking_minutes": 122
+        },
+        "Chinatown": {
+          "driving_minutes": 23,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 28,
+          "straight_line_distance_km": 7.03,
+          "walking_minutes": 91
+        },
+        "Hyde Park": {
+          "driving_minutes": 7,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 11,
+          "straight_line_distance_km": 0.84,
+          "walking_minutes": 13
+        },
+        "Illinois Tech": {
+          "driving_minutes": 21,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 24,
+          "straight_line_distance_km": 5.28,
+          "walking_minutes": 67
+        },
+        "Lakeview": {
+          "driving_minutes": 43,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 53,
+          "straight_line_distance_km": 16.9,
+          "walking_minutes": 213
+        },
+        "River North": {
+          "driving_minutes": 28,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 41,
+          "straight_line_distance_km": 11.09,
+          "walking_minutes": 142
+        }
+      },
+      "latitude": 41.799928,
+      "longitude": -87.583878,
+      "name": "Cedar Berbere Table",
+      "neighborhood": "Hyde Park",
+      "opening_hours": {
+        "friday": {
+          "close": "21:00",
+          "open": "10:00"
+        },
+        "monday": {
+          "close": "21:00",
+          "open": "10:00"
+        },
+        "saturday": {
+          "close": "21:00",
+          "open": "10:00"
+        },
+        "sunday": null,
+        "thursday": {
+          "close": "21:00",
+          "open": "10:00"
+        },
+        "tuesday": {
+          "close": "21:00",
+          "open": "10:00"
+        },
+        "wednesday": {
+          "close": "21:00",
+          "open": "10:00"
+        }
+      },
+      "price_category": "$$$",
+      "rating": 4.0,
+      "restaurant_id": "CHI-SYN-006",
+      "review_count": 833,
+      "state": "IL",
+      "vegan_available": true,
+      "vegetarian_available": true
+    },
+    {
+      "address": "359 Sample Road, Chicago, IL 60615",
+      "city": "Chicago",
+      "cuisine": "Korean",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 26,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 23,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 27,
+          "straight_line_distance_km": 7.32,
+          "walking_minutes": 95
+        },
+        "Chicago Loop": {
+          "driving_minutes": 26,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 36,
+          "straight_line_distance_km": 10.02,
+          "walking_minutes": 127
+        },
+        "Chinatown": {
+          "driving_minutes": 24,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 29,
+          "straight_line_distance_km": 7.5,
+          "walking_minutes": 96
+        },
+        "Hyde Park": {
+          "driving_minutes": 11,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 11,
+          "straight_line_distance_km": 0.47,
+          "walking_minutes": 9
+        },
+        "Illinois Tech": {
+          "driving_minutes": 20,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 27,
+          "straight_line_distance_km": 5.69,
+          "walking_minutes": 72
+        },
+        "Lakeview": {
+          "driving_minutes": 45,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 55,
+          "straight_line_distance_km": 17.45,
+          "walking_minutes": 221
+        },
+        "River North": {
+          "driving_minutes": 31,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 40,
+          "straight_line_distance_km": 11.63,
+          "walking_minutes": 148
+        }
+      },
+      "latitude": 41.794394,
+      "longitude": -87.585079,
+      "name": "Blue Sesame Cafe",
+      "neighborhood": "Hyde Park",
+      "opening_hours": {
+        "friday": {
+          "close": "20:00",
+          "open": "10:00"
+        },
+        "monday": {
+          "close": "20:00",
+          "open": "10:00"
+        },
+        "saturday": {
+          "close": "20:00",
+          "open": "10:00"
+        },
+        "sunday": {
+          "close": "20:00",
+          "open": "10:00"
+        },
+        "thursday": {
+          "close": "20:00",
+          "open": "10:00"
+        },
+        "tuesday": {
+          "close": "20:00",
+          "open": "10:00"
+        },
+        "wednesday": {
+          "close": "20:00",
+          "open": "10:00"
+        }
+      },
+      "price_category": "$$",
+      "rating": 3.9,
+      "restaurant_id": "CHI-SYN-007",
+      "review_count": 1178,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "396 Test Kitchen Way, Chicago, IL 60608",
+      "city": "Chicago",
+      "cuisine": "Mediterranean",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 18,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 6,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 15,
+          "straight_line_distance_km": 0.67,
+          "walking_minutes": 10
+        },
+        "Chicago Loop": {
+          "driving_minutes": 18,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 23,
+          "straight_line_distance_km": 5.45,
+          "walking_minutes": 70
+        },
+        "Chinatown": {
+          "driving_minutes": 11,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 20,
+          "straight_line_distance_km": 2.86,
+          "walking_minutes": 39
+        },
+        "Hyde Park": {
+          "driving_minutes": 22,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 32,
+          "straight_line_distance_km": 6.86,
+          "walking_minutes": 89
+        },
+        "Illinois Tech": {
+          "driving_minutes": 11,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 20,
+          "straight_line_distance_km": 2.35,
+          "walking_minutes": 31
+        },
+        "Lakeview": {
+          "driving_minutes": 31,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 46,
+          "straight_line_distance_km": 12.35,
+          "walking_minutes": 157
+        },
+        "River North": {
+          "driving_minutes": 25,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 27,
+          "straight_line_distance_km": 6.84,
+          "walking_minutes": 88
+        }
+      },
+      "latitude": 41.832925,
+      "longitude": -87.655291,
+      "name": "Golden Cypress Table",
+      "neighborhood": "Bridgeport",
+      "opening_hours": {
+        "friday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "monday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "saturday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "sunday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "thursday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "tuesday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "wednesday": {
+          "close": "22:00",
+          "open": "10:00"
+        }
+      },
+      "price_category": "$",
+      "rating": 4.4,
+      "restaurant_id": "CHI-SYN-008",
+      "review_count": 1095,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "433 Demo Avenue, Chicago, IL 60616",
+      "city": "Chicago",
+      "cuisine": "Thai",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 39,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 12,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 16,
+          "straight_line_distance_km": 2.09,
+          "walking_minutes": 30
+        },
+        "Chicago Loop": {
+          "driving_minutes": 17,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 28,
+          "straight_line_distance_km": 5.26,
+          "walking_minutes": 69
+        },
+        "Chinatown": {
+          "driving_minutes": 14,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 20,
+          "straight_line_distance_km": 2.38,
+          "walking_minutes": 32
+        },
+        "Hyde Park": {
+          "driving_minutes": 20,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 22,
+          "straight_line_distance_km": 5.1,
+          "walking_minutes": 66
+        },
+        "Illinois Tech": {
+          "driving_minutes": 6,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 9,
+          "straight_line_distance_km": 0.46,
+          "walking_minutes": 8
+        },
+        "Lakeview": {
+          "driving_minutes": 36,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 48,
+          "straight_line_distance_km": 12.7,
+          "walking_minutes": 160
+        },
+        "River North": {
+          "driving_minutes": 24,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 31,
+          "straight_line_distance_km": 6.86,
+          "walking_minutes": 90
+        }
+      },
+      "latitude": 41.830839,
+      "longitude": -87.627931,
+      "name": "Windy Lemongrass Cafe",
+      "neighborhood": "Illinois Tech",
+      "opening_hours": {
+        "friday": {
+          "close": "20:00",
+          "open": "12:00"
+        },
+        "monday": {
+          "close": "20:00",
+          "open": "12:00"
+        },
+        "saturday": null,
+        "sunday": {
+          "close": "20:00",
+          "open": "12:00"
+        },
+        "thursday": {
+          "close": "20:00",
+          "open": "12:00"
+        },
+        "tuesday": {
+          "close": "20:00",
+          "open": "12:00"
+        },
+        "wednesday": {
+          "close": "20:00",
+          "open": "12:00"
+        }
+      },
+      "price_category": "$$$",
+      "rating": 3.3,
+      "restaurant_id": "CHI-SYN-009",
+      "review_count": 317,
+      "state": "IL",
+      "vegan_available": true,
+      "vegetarian_available": true
+    },
+    {
+      "address": "470 Example Street, Chicago, IL 60601",
+      "city": "Chicago",
+      "cuisine": "Chinese",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 27,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 19,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 22,
+          "straight_line_distance_km": 4.35,
+          "walking_minutes": 57
+        },
+        "Chicago Loop": {
+          "driving_minutes": 7,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 10,
+          "straight_line_distance_km": 0.71,
+          "walking_minutes": 10
+        },
+        "Chinatown": {
+          "driving_minutes": 10,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 19,
+          "straight_line_distance_km": 2.32,
+          "walking_minutes": 31
+        },
+        "Hyde Park": {
+          "driving_minutes": 25,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 39,
+          "straight_line_distance_km": 9.16,
+          "walking_minutes": 118
+        },
+        "Illinois Tech": {
+          "driving_minutes": 16,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 24,
+          "straight_line_distance_km": 4.17,
+          "walking_minutes": 54
+        },
+        "Lakeview": {
+          "driving_minutes": 22,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 36,
+          "straight_line_distance_km": 8.18,
+          "walking_minutes": 105
+        },
+        "River North": {
+          "driving_minutes": 15,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 15,
+          "straight_line_distance_km": 2.32,
+          "walking_minutes": 33
+        }
+      },
+      "latitude": 41.872397,
+      "longitude": -87.626015,
+      "name": "Lake Lantern House",
+      "neighborhood": "Chicago Loop",
+      "opening_hours": {
+        "friday": {
+          "close": "20:00",
+          "open": "11:00"
+        },
+        "monday": {
+          "close": "20:00",
+          "open": "11:00"
+        },
+        "saturday": {
+          "close": "20:00",
+          "open": "11:00"
+        },
+        "sunday": {
+          "close": "20:00",
+          "open": "11:00"
+        },
+        "thursday": {
+          "close": "20:00",
+          "open": "11:00"
+        },
+        "tuesday": {
+          "close": "20:00",
+          "open": "11:00"
+        },
+        "wednesday": {
+          "close": "20:00",
+          "open": "11:00"
+        }
+      },
+      "price_category": "$$",
+      "rating": 3.5,
+      "restaurant_id": "CHI-SYN-010",
+      "review_count": 233,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": false
+    },
+    {
+      "address": "507 Sample Road, Chicago, IL 60616",
+      "city": "Chicago",
+      "cuisine": "Japanese",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 16,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 8,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 16,
+          "straight_line_distance_km": 1.63,
+          "walking_minutes": 23
+        },
+        "Chicago Loop": {
+          "driving_minutes": 12,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 21,
+          "straight_line_distance_km": 3.29,
+          "walking_minutes": 45
+        },
+        "Chinatown": {
+          "driving_minutes": 9,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 14,
+          "straight_line_distance_km": 0.61,
+          "walking_minutes": 10
+        },
+        "Hyde Park": {
+          "driving_minutes": 25,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 33,
+          "straight_line_distance_km": 7.27,
+          "walking_minutes": 93
+        },
+        "Illinois Tech": {
+          "driving_minutes": 11,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 12,
+          "straight_line_distance_km": 1.85,
+          "walking_minutes": 25
+        },
+        "Lakeview": {
+          "driving_minutes": 31,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 39,
+          "straight_line_distance_km": 10.57,
+          "walking_minutes": 136
+        },
+        "River North": {
+          "driving_minutes": 18,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 25,
+          "straight_line_distance_km": 4.82,
+          "walking_minutes": 62
+        }
+      },
+      "latitude": 41.849186,
+      "longitude": -87.638366,
+      "name": "Little Sakura Kitchen",
+      "neighborhood": "Chinatown",
+      "opening_hours": {
+        "friday": {
+          "close": "23:00",
+          "open": "10:00"
+        },
+        "monday": {
+          "close": "23:00",
+          "open": "10:00"
+        },
+        "saturday": {
+          "close": "23:00",
+          "open": "10:00"
+        },
+        "sunday": {
+          "close": "23:00",
+          "open": "10:00"
+        },
+        "thursday": {
+          "close": "23:00",
+          "open": "10:00"
+        },
+        "tuesday": {
+          "close": "23:00",
+          "open": "10:00"
+        },
+        "wednesday": {
+          "close": "23:00",
+          "open": "10:00"
+        }
+      },
+      "price_category": "$",
+      "rating": 4.2,
+      "restaurant_id": "CHI-SYN-011",
+      "review_count": 1059,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "544 Test Kitchen Way, Chicago, IL 60657",
+      "city": "Chicago",
+      "cuisine": "Italian",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 28,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 33,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 40,
+          "straight_line_distance_km": 11.36,
+          "walking_minutes": 145
+        },
+        "Chicago Loop": {
+          "driving_minutes": 24,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 33,
+          "straight_line_distance_km": 7.04,
+          "walking_minutes": 90
+        },
+        "Chinatown": {
+          "driving_minutes": 26,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 37,
+          "straight_line_distance_km": 9.88,
+          "walking_minutes": 126
+        },
+        "Hyde Park": {
+          "driving_minutes": 43,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 54,
+          "straight_line_distance_km": 16.87,
+          "walking_minutes": 212
+        },
+        "Illinois Tech": {
+          "driving_minutes": 33,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 43,
+          "straight_line_distance_km": 11.82,
+          "walking_minutes": 150
+        },
+        "Lakeview": {
+          "driving_minutes": 6,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 13,
+          "straight_line_distance_km": 0.47,
+          "walking_minutes": 9
+        },
+        "River North": {
+          "driving_minutes": 17,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 22,
+          "straight_line_distance_km": 5.42,
+          "walking_minutes": 69
+        }
+      },
+      "latitude": 41.940202,
+      "longitude": -87.646661,
+      "name": "Little Trattoria House",
+      "neighborhood": "Lakeview",
+      "opening_hours": {
+        "friday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "monday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "saturday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "sunday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "thursday": null,
+        "tuesday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "wednesday": {
+          "close": "22:00",
+          "open": "11:00"
+        }
+      },
+      "price_category": "$$",
+      "rating": 3.9,
+      "restaurant_id": "CHI-SYN-012",
+      "review_count": 12,
+      "state": "IL",
+      "vegan_available": true,
+      "vegetarian_available": true
+    },
+    {
+      "address": "581 Demo Avenue, Chicago, IL 60616",
+      "city": "Chicago",
+      "cuisine": "Chinese",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 56,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 12,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 15,
+          "straight_line_distance_km": 2.5,
+          "walking_minutes": 33
+        },
+        "Chicago Loop": {
+          "driving_minutes": 19,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 26,
+          "straight_line_distance_km": 4.89,
+          "walking_minutes": 63
+        },
+        "Chinatown": {
+          "driving_minutes": 13,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 19,
+          "straight_line_distance_km": 2.13,
+          "walking_minutes": 30
+        },
+        "Hyde Park": {
+          "driving_minutes": 21,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 25,
+          "straight_line_distance_km": 5.15,
+          "walking_minutes": 67
+        },
+        "Illinois Tech": {
+          "driving_minutes": 10,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 13,
+          "straight_line_distance_km": 0.46,
+          "walking_minutes": 7
+        },
+        "Lakeview": {
+          "driving_minutes": 32,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 45,
+          "straight_line_distance_km": 12.37,
+          "walking_minutes": 157
+        },
+        "River North": {
+          "driving_minutes": 23,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 28,
+          "straight_line_distance_km": 6.51,
+          "walking_minutes": 85
+        }
+      },
+      "latitude": 41.834602,
+      "longitude": -87.621404,
+      "name": "Blue Lantern Table",
+      "neighborhood": "Illinois Tech",
+      "opening_hours": {
+        "friday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "monday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "saturday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "sunday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "thursday": null,
+        "tuesday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "wednesday": {
+          "close": "23:00",
+          "open": "11:00"
+        }
+      },
+      "price_category": "$$$",
+      "rating": 4.2,
+      "restaurant_id": "CHI-SYN-013",
+      "review_count": 798,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "618 Example Street, Chicago, IL 60654",
+      "city": "Chicago",
+      "cuisine": "American",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 17,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 21,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 28,
+          "straight_line_distance_km": 6.69,
+          "walking_minutes": 86
+        },
+        "Chicago Loop": {
+          "driving_minutes": 10,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 13,
+          "straight_line_distance_km": 2.16,
+          "walking_minutes": 31
+        },
+        "Chinatown": {
+          "driving_minutes": 17,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 22,
+          "straight_line_distance_km": 5.02,
+          "walking_minutes": 66
+        },
+        "Hyde Park": {
+          "driving_minutes": 31,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 41,
+          "straight_line_distance_km": 12.01,
+          "walking_minutes": 152
+        },
+        "Illinois Tech": {
+          "driving_minutes": 22,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 28,
+          "straight_line_distance_km": 6.95,
+          "walking_minutes": 89
+        },
+        "Lakeview": {
+          "driving_minutes": 18,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 27,
+          "straight_line_distance_km": 5.33,
+          "walking_minutes": 68
+        },
+        "River North": {
+          "driving_minutes": 5,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 15,
+          "straight_line_distance_km": 0.53,
+          "walking_minutes": 10
+        }
+      },
+      "latitude": 41.897104,
+      "longitude": -87.635272,
+      "name": "Prairie Harvest House",
+      "neighborhood": "River North",
+      "opening_hours": {
+        "friday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "monday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "saturday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "sunday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "thursday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "tuesday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "wednesday": {
+          "close": "22:00",
+          "open": "12:00"
+        }
+      },
+      "price_category": "$",
+      "rating": 4.0,
+      "restaurant_id": "CHI-SYN-014",
+      "review_count": 518,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "655 Sample Road, Chicago, IL 60601",
+      "city": "Chicago",
+      "cuisine": "Ethiopian",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 28,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 19,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 22,
+          "straight_line_distance_km": 5.3,
+          "walking_minutes": 69
+        },
+        "Chicago Loop": {
+          "driving_minutes": 6,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 12,
+          "straight_line_distance_km": 0.52,
+          "walking_minutes": 8
+        },
+        "Chinatown": {
+          "driving_minutes": 14,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 21,
+          "straight_line_distance_km": 3.42,
+          "walking_minutes": 45
+        },
+        "Hyde Park": {
+          "driving_minutes": 28,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 35,
+          "straight_line_distance_km": 10.32,
+          "walking_minutes": 132
+        },
+        "Illinois Tech": {
+          "driving_minutes": 16,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 25,
+          "straight_line_distance_km": 5.31,
+          "walking_minutes": 68
+        },
+        "Lakeview": {
+          "driving_minutes": 19,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 29,
+          "straight_line_distance_km": 7.02,
+          "walking_minutes": 89
+        },
+        "River North": {
+          "driving_minutes": 8,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 12,
+          "straight_line_distance_km": 1.17,
+          "walking_minutes": 17
+        }
+      },
+      "latitude": 41.882668,
+      "longitude": -87.628589,
+      "name": "North Berbere Kitchen",
+      "neighborhood": "Chicago Loop",
+      "opening_hours": {
+        "friday": {
+          "close": "21:00",
+          "open": "12:00"
+        },
+        "monday": {
+          "close": "21:00",
+          "open": "12:00"
+        },
+        "saturday": {
+          "close": "21:00",
+          "open": "12:00"
+        },
+        "sunday": {
+          "close": "21:00",
+          "open": "12:00"
+        },
+        "thursday": {
+          "close": "21:00",
+          "open": "12:00"
+        },
+        "tuesday": {
+          "close": "21:00",
+          "open": "12:00"
+        },
+        "wednesday": {
+          "close": "21:00",
+          "open": "12:00"
+        }
+      },
+      "price_category": "$$",
+      "rating": 4.5,
+      "restaurant_id": "CHI-SYN-015",
+      "review_count": 870,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": false
+    },
+    {
+      "address": "692 Test Kitchen Way, Chicago, IL 60601",
+      "city": "Chicago",
+      "cuisine": "Korean",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 34,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 16,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 26,
+          "straight_line_distance_km": 5.06,
+          "walking_minutes": 66
+        },
+        "Chicago Loop": {
+          "driving_minutes": 6,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 9,
+          "straight_line_distance_km": 0.38,
+          "walking_minutes": 6
+        },
+        "Chinatown": {
+          "driving_minutes": 12,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 23,
+          "straight_line_distance_km": 3.25,
+          "walking_minutes": 44
+        },
+        "Hyde Park": {
+          "driving_minutes": 27,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 39,
+          "straight_line_distance_km": 10.25,
+          "walking_minutes": 131
+        },
+        "Illinois Tech": {
+          "driving_minutes": 19,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 27,
+          "straight_line_distance_km": 5.17,
+          "walking_minutes": 68
+        },
+        "Lakeview": {
+          "driving_minutes": 20,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 32,
+          "straight_line_distance_km": 7.12,
+          "walking_minutes": 92
+        },
+        "River North": {
+          "driving_minutes": 7,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 17,
+          "straight_line_distance_km": 1.26,
+          "walking_minutes": 19
+        }
+      },
+      "latitude": 41.881235,
+      "longitude": -87.631734,
+      "name": "Little Seoul Cafe",
+      "neighborhood": "Chicago Loop",
+      "opening_hours": {
+        "friday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "monday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "saturday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "sunday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "thursday": null,
+        "tuesday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "wednesday": {
+          "close": "22:00",
+          "open": "10:00"
+        }
+      },
+      "price_category": "$$",
+      "rating": 3.2,
+      "restaurant_id": "CHI-SYN-016",
+      "review_count": 1116,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "729 Demo Avenue, Chicago, IL 60616",
+      "city": "Chicago",
+      "cuisine": "Italian",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 25,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 12,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 16,
+          "straight_line_distance_km": 1.62,
+          "walking_minutes": 24
+        },
+        "Chicago Loop": {
+          "driving_minutes": 14,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 20,
+          "straight_line_distance_km": 3.56,
+          "walking_minutes": 47
+        },
+        "Chinatown": {
+          "driving_minutes": 8,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 11,
+          "straight_line_distance_km": 0.68,
+          "walking_minutes": 12
+        },
+        "Hyde Park": {
+          "driving_minutes": 19,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 31,
+          "straight_line_distance_km": 6.85,
+          "walking_minutes": 89
+        },
+        "Illinois Tech": {
+          "driving_minutes": 13,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 12,
+          "straight_line_distance_km": 1.44,
+          "walking_minutes": 21
+        },
+        "Lakeview": {
+          "driving_minutes": 32,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 40,
+          "straight_line_distance_km": 10.92,
+          "walking_minutes": 140
+        },
+        "River North": {
+          "driving_minutes": 20,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 23,
+          "straight_line_distance_km": 5.13,
+          "walking_minutes": 68
+        }
+      },
+      "latitude": 41.846308,
+      "longitude": -87.635109,
+      "name": "Silver Pasta Table",
+      "neighborhood": "Chinatown",
+      "opening_hours": {
+        "friday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "monday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "saturday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "sunday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "thursday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "tuesday": {
+          "close": "22:00",
+          "open": "10:00"
+        },
+        "wednesday": {
+          "close": "22:00",
+          "open": "10:00"
+        }
+      },
+      "price_category": "$$",
+      "rating": 3.3,
+      "restaurant_id": "CHI-SYN-017",
+      "review_count": 509,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "766 Example Street, Chicago, IL 60608",
+      "city": "Chicago",
+      "cuisine": "Ethiopian",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 15,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 5,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 11,
+          "straight_line_distance_km": 0.06,
+          "walking_minutes": 3
+        },
+        "Chicago Loop": {
+          "driving_minutes": 16,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 22,
+          "straight_line_distance_km": 4.75,
+          "walking_minutes": 62
+        },
+        "Chinatown": {
+          "driving_minutes": 11,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 16,
+          "straight_line_distance_km": 2.19,
+          "walking_minutes": 29
+        },
+        "Hyde Park": {
+          "driving_minutes": 24,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 30,
+          "straight_line_distance_km": 7.04,
+          "walking_minutes": 90
+        },
+        "Illinois Tech": {
+          "driving_minutes": 12,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 17,
+          "straight_line_distance_km": 2.07,
+          "walking_minutes": 29
+        },
+        "Lakeview": {
+          "driving_minutes": 32,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 42,
+          "straight_line_distance_km": 11.71,
+          "walking_minutes": 148
+        },
+        "River North": {
+          "driving_minutes": 21,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 27,
+          "straight_line_distance_km": 6.16,
+          "walking_minutes": 79
+        }
+      },
+      "latitude": 41.838558,
+      "longitude": -87.651464,
+      "name": "Little Mesob Kitchen",
+      "neighborhood": "Bridgeport",
+      "opening_hours": {
+        "friday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "monday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "saturday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "sunday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "thursday": null,
+        "tuesday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "wednesday": {
+          "close": "23:00",
+          "open": "11:00"
+        }
+      },
+      "price_category": "$",
+      "rating": 4.6,
+      "restaurant_id": "CHI-SYN-018",
+      "review_count": 189,
+      "state": "IL",
+      "vegan_available": true,
+      "vegetarian_available": true
+    },
+    {
+      "address": "803 Sample Road, Chicago, IL 60657",
+      "city": "Chicago",
+      "cuisine": "American",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 58,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 33,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 41,
+          "straight_line_distance_km": 11.71,
+          "walking_minutes": 150
+        },
+        "Chicago Loop": {
+          "driving_minutes": 25,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 30,
+          "straight_line_distance_km": 7.59,
+          "walking_minutes": 98
+        },
+        "Chinatown": {
+          "driving_minutes": 28,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 37,
+          "straight_line_distance_km": 10.36,
+          "walking_minutes": 132
+        },
+        "Hyde Park": {
+          "driving_minutes": 43,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 59,
+          "straight_line_distance_km": 17.45,
+          "walking_minutes": 222
+        },
+        "Illinois Tech": {
+          "driving_minutes": 32,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 44,
+          "straight_line_distance_km": 12.3,
+          "walking_minutes": 158
+        },
+        "Lakeview": {
+          "driving_minutes": 11,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 13,
+          "straight_line_distance_km": 0.64,
+          "walking_minutes": 11
+        },
+        "River North": {
+          "driving_minutes": 19,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 25,
+          "straight_line_distance_km": 5.97,
+          "walking_minutes": 78
+        }
+      },
+      "latitude": 41.943278,
+      "longitude": -87.657024,
+      "name": "Golden Griddle Table",
+      "neighborhood": "Lakeview",
+      "opening_hours": {
+        "friday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "monday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "saturday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "sunday": null,
+        "thursday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "tuesday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "wednesday": {
+          "close": "22:00",
+          "open": "11:00"
+        }
+      },
+      "price_category": "$$$",
+      "rating": 3.6,
+      "restaurant_id": "CHI-SYN-019",
+      "review_count": 767,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "840 Test Kitchen Way, Chicago, IL 60616",
+      "city": "Chicago",
+      "cuisine": "Indian",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 20,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 12,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 14,
+          "straight_line_distance_km": 2.36,
+          "walking_minutes": 31
+        },
+        "Chicago Loop": {
+          "driving_minutes": 20,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 24,
+          "straight_line_distance_km": 5.09,
+          "walking_minutes": 67
+        },
+        "Chinatown": {
+          "driving_minutes": 9,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 14,
+          "straight_line_distance_km": 2.28,
+          "walking_minutes": 31
+        },
+        "Hyde Park": {
+          "driving_minutes": 19,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 21,
+          "straight_line_distance_km": 5.05,
+          "walking_minutes": 65
+        },
+        "Illinois Tech": {
+          "driving_minutes": 8,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 12,
+          "straight_line_distance_km": 0.38,
+          "walking_minutes": 8
+        },
+        "Lakeview": {
+          "driving_minutes": 32,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 48,
+          "straight_line_distance_km": 12.56,
+          "walking_minutes": 159
+        },
+        "River North": {
+          "driving_minutes": 23,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 30,
+          "straight_line_distance_km": 6.71,
+          "walking_minutes": 87
+        }
+      },
+      "latitude": 41.832527,
+      "longitude": -87.623672,
+      "name": "Bright Saffron Cafe",
+      "neighborhood": "Illinois Tech",
+      "opening_hours": {
+        "friday": {
+          "close": "23:00",
+          "open": "12:00"
+        },
+        "monday": {
+          "close": "23:00",
+          "open": "12:00"
+        },
+        "saturday": {
+          "close": "23:00",
+          "open": "12:00"
+        },
+        "sunday": {
+          "close": "23:00",
+          "open": "12:00"
+        },
+        "thursday": {
+          "close": "23:00",
+          "open": "12:00"
+        },
+        "tuesday": null,
+        "wednesday": {
+          "close": "23:00",
+          "open": "12:00"
+        }
+      },
+      "price_category": "$$",
+      "rating": 4.1,
+      "restaurant_id": "CHI-SYN-020",
+      "review_count": 270,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": false
+    },
+    {
+      "address": "877 Demo Avenue, Chicago, IL 60616",
+      "city": "Chicago",
+      "cuisine": "Japanese",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 16,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 10,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 13,
+          "straight_line_distance_km": 2.0,
+          "walking_minutes": 29
+        },
+        "Chicago Loop": {
+          "driving_minutes": 14,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 21,
+          "straight_line_distance_km": 3.27,
+          "walking_minutes": 43
+        },
+        "Chinatown": {
+          "driving_minutes": 6,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 12,
+          "straight_line_distance_km": 0.37,
+          "walking_minutes": 6
+        },
+        "Hyde Park": {
+          "driving_minutes": 21,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 28,
+          "straight_line_distance_km": 6.94,
+          "walking_minutes": 88
+        },
+        "Illinois Tech": {
+          "driving_minutes": 8,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 13,
+          "straight_line_distance_km": 1.58,
+          "walking_minutes": 23
+        },
+        "Lakeview": {
+          "driving_minutes": 30,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 42,
+          "straight_line_distance_km": 10.68,
+          "walking_minutes": 135
+        },
+        "River North": {
+          "driving_minutes": 15,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 22,
+          "straight_line_distance_km": 4.86,
+          "walking_minutes": 64
+        }
+      },
+      "latitude": 41.848708,
+      "longitude": -87.631739,
+      "name": "North Sakura Kitchen",
+      "neighborhood": "Chinatown",
+      "opening_hours": {
+        "friday": {
+          "close": "20:00",
+          "open": "12:00"
+        },
+        "monday": {
+          "close": "20:00",
+          "open": "12:00"
+        },
+        "saturday": {
+          "close": "20:00",
+          "open": "12:00"
+        },
+        "sunday": {
+          "close": "20:00",
+          "open": "12:00"
+        },
+        "thursday": null,
+        "tuesday": {
+          "close": "20:00",
+          "open": "12:00"
+        },
+        "wednesday": {
+          "close": "20:00",
+          "open": "12:00"
+        }
+      },
+      "price_category": "$",
+      "rating": 3.7,
+      "restaurant_id": "CHI-SYN-021",
+      "review_count": 135,
+      "state": "IL",
+      "vegan_available": true,
+      "vegetarian_available": true
+    },
+    {
+      "address": "914 Example Street, Chicago, IL 60616",
+      "city": "Chicago",
+      "cuisine": "American",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 37,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 11,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 17,
+          "straight_line_distance_km": 1.7,
+          "walking_minutes": 25
+        },
+        "Chicago Loop": {
+          "driving_minutes": 18,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 21,
+          "straight_line_distance_km": 5.18,
+          "walking_minutes": 66
+        },
+        "Chinatown": {
+          "driving_minutes": 12,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 17,
+          "straight_line_distance_km": 2.27,
+          "walking_minutes": 32
+        },
+        "Hyde Park": {
+          "driving_minutes": 16,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 24,
+          "straight_line_distance_km": 5.41,
+          "walking_minutes": 70
+        },
+        "Illinois Tech": {
+          "driving_minutes": 9,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 13,
+          "straight_line_distance_km": 0.59,
+          "walking_minutes": 9
+        },
+        "Lakeview": {
+          "driving_minutes": 35,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 48,
+          "straight_line_distance_km": 12.56,
+          "walking_minutes": 161
+        },
+        "River North": {
+          "driving_minutes": 23,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 26,
+          "straight_line_distance_km": 6.76,
+          "walking_minutes": 86
+        }
+      },
+      "latitude": 41.831598,
+      "longitude": -87.632616,
+      "name": "Golden Griddle Cafe",
+      "neighborhood": "Illinois Tech",
+      "opening_hours": {
+        "friday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "monday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "saturday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "sunday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "thursday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "tuesday": {
+          "close": "22:00",
+          "open": "12:00"
+        },
+        "wednesday": {
+          "close": "22:00",
+          "open": "12:00"
+        }
+      },
+      "price_category": "$$$",
+      "rating": 3.5,
+      "restaurant_id": "CHI-SYN-022",
+      "review_count": 641,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "951 Sample Road, Chicago, IL 60615",
+      "city": "Chicago",
+      "cuisine": "Mexican",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 56,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 22,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 29,
+          "straight_line_distance_km": 7.16,
+          "walking_minutes": 93
+        },
+        "Chicago Loop": {
+          "driving_minutes": 29,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 40,
+          "straight_line_distance_km": 9.97,
+          "walking_minutes": 128
+        },
+        "Chinatown": {
+          "driving_minutes": 22,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 32,
+          "straight_line_distance_km": 7.41,
+          "walking_minutes": 95
+        },
+        "Hyde Park": {
+          "driving_minutes": 6,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 10,
+          "straight_line_distance_km": 0.2,
+          "walking_minutes": 5
+        },
+        "Illinois Tech": {
+          "driving_minutes": 21,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 27,
+          "straight_line_distance_km": 5.57,
+          "walking_minutes": 72
+        },
+        "Lakeview": {
+          "driving_minutes": 45,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 59,
+          "straight_line_distance_km": 17.42,
+          "walking_minutes": 222
+        },
+        "River North": {
+          "driving_minutes": 31,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 40,
+          "straight_line_distance_km": 11.59,
+          "walking_minutes": 147
+        }
+      },
+      "latitude": 41.793946,
+      "longitude": -87.588276,
+      "name": "Golden Agave Table",
+      "neighborhood": "Hyde Park",
+      "opening_hours": {
+        "friday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "monday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "saturday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "sunday": null,
+        "thursday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "tuesday": {
+          "close": "22:00",
+          "open": "11:00"
+        },
+        "wednesday": {
+          "close": "22:00",
+          "open": "11:00"
+        }
+      },
+      "price_category": "$$$",
+      "rating": 4.6,
+      "restaurant_id": "CHI-SYN-023",
+      "review_count": 198,
+      "state": "IL",
+      "vegan_available": false,
+      "vegetarian_available": true
+    },
+    {
+      "address": "988 Test Kitchen Way, Chicago, IL 60654",
+      "city": "Chicago",
+      "cuisine": "Mexican",
+      "data_provenance": "synthetic",
+      "estimated_cost_per_person": 18,
+      "estimated_transportation": {
+        "Bridgeport": {
+          "driving_minutes": 20,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 31,
+          "straight_line_distance_km": 6.57,
+          "walking_minutes": 84
+        },
+        "Chicago Loop": {
+          "driving_minutes": 13,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 14,
+          "straight_line_distance_km": 1.94,
+          "walking_minutes": 26
+        },
+        "Chinatown": {
+          "driving_minutes": 14,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 22,
+          "straight_line_distance_km": 4.83,
+          "walking_minutes": 64
+        },
+        "Hyde Park": {
+          "driving_minutes": 33,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 46,
+          "straight_line_distance_km": 11.76,
+          "walking_minutes": 148
+        },
+        "Illinois Tech": {
+          "driving_minutes": 23,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 30,
+          "straight_line_distance_km": 6.75,
+          "walking_minutes": 85
+        },
+        "Lakeview": {
+          "driving_minutes": 19,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 25,
+          "straight_line_distance_km": 5.57,
+          "walking_minutes": 73
+        },
+        "River North": {
+          "driving_minutes": 6,
+          "estimate_type": "synthetic",
+          "public_transit_minutes": 11,
+          "straight_line_distance_km": 0.38,
+          "walking_minutes": 7
+        }
+      },
+      "latitude": 41.895477,
+      "longitude": -87.632093,
+      "name": "Amber Agave Kitchen",
+      "neighborhood": "River North",
+      "opening_hours": {
+        "friday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "monday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "saturday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "sunday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "thursday": {
+          "close": "23:00",
+          "open": "11:00"
+        },
+        "tuesday": null,
+        "wednesday": {
+          "close": "23:00",
+          "open": "11:00"
+        }
+      },
+      "price_category": "$",
+      "rating": 3.4,
+      "restaurant_id": "CHI-SYN-024",
+      "review_count": 601,
+      "state": "IL",
+      "vegan_available": true,
+      "vegetarian_available": true
+    }
+  ]
+}

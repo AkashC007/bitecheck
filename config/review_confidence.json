@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "component_weights": {
+    "cross_source_agreement": 0.20,
+    "observation_volume": 0.10,
+    "review_recency": 0.15,
+    "source_diversity": 0.10,
+    "review_specificity": 0.10,
+    "branch_match_confidence": 0.10,
+    "rating_consistency": 0.25
+  },
+  "targets": {
+    "observation_count": 20,
+    "source_count": 3,
+    "freshness_days": 730,
+    "specificity_theme_count": 2
+  },
+  "maximum_penalties": {
+    "exact_duplicates": 10,
+    "repetitive_language": 5,
+    "suspicious_bursts": 10,
+    "missing_data": 10
+  },
+  "bands": {
+    "high_minimum": 75,
+    "medium_minimum": 50
+  }
+}

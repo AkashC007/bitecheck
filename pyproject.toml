@@ -1,0 +1,12 @@
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = [".", "apps/api/src"]
+testpaths = ["tests", "apps/api/tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
