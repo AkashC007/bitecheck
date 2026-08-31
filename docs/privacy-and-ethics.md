@@ -11,20 +11,31 @@
 
 No user location, transcript, account, or personal profile is stored.
 
-## Browser location privacy
+## Location privacy
 
-Current location is optional and requested only after the user presses “Use my
-location” and grants browser permission. The coordinates live only in React
-state in that browser tab: they are not placed in a URL, sent to the Next.js or
-FastAPI services, logged, or persisted. They are used to calculate straight-line
-distance to the fixed 24-record snapshot and optionally reorder visible results.
+Current location is optional and requested only after the user presses the
+visible control and grants browser permission. Preset Chicago-area searches do
+not use or share a personal location.
+
+The public explorer sends the chosen coordinates in a POST body to the
+same-origin Next.js route and FastAPI. FastAPI uses them in an HTTPS geographic
+query to the City of Chicago open-data service. BiteCheck does not store them in
+a database, cookie, file, browser storage, or application log. The external City
+service necessarily receives the coordinates as part of its query and operates
+under its own logging and privacy practices.
+
+The separate synthetic Analytics Lab keeps current coordinates only in React
+state. It calculates straight-line distance locally against the fixed 24-record
+snapshot and never sends those coordinates to FastAPI.
 
 Straight-line distance is labeled separately from the synthetic travel-time
 estimates. It is not a routing estimate and does not mean that these are all of
 the restaurants near the user. Exact establishment addresses link to
 OpenStreetMap using the public City coordinates.
 
-The current restaurant snapshot contains public establishment identity,
+The public explorer returns live public establishment identity, address,
+coordinate, license, facility, City risk-category, and inspection-result fields.
+The Analytics Lab snapshot contains public establishment identity,
 address, coordinate, license, and inspection fields from the City of Chicago
 Food Inspections dataset. BiteCheck records the source, snapshot date,
 transformations, and disclaimer. Inspection records describe conditions at the
@@ -32,8 +43,9 @@ time of inspection and are not presented as a current safety guarantee.
 
 Cuisine, price, dietary availability, ratings, reviews, opening hours, travel
 times, themes, confidence, and ranking labels are synthetic. They are kept
-separate through field-level provenance and must not be interpreted as factual
-claims about the named businesses.
+inside the explicitly labeled Analytics Lab, separated through field-level
+provenance, and must not be interpreted as factual claims about the named
+businesses.
 
 ## Browser voice privacy
 

@@ -222,3 +222,18 @@ current business status, safety, or recommendation-quality outcome is claimed.
 These measurements describe implementation behavior. The location feature
 reorders the fixed 24-record snapshot; it is not a complete nearby-business or
 routing service.
+
+## Live public inspection explorer
+
+- Live Chicago Loop source rows examined in the verified query: 720
+- Deduplicated establishments returned in the default verified view: 24
+- Latest-fail establishments returned in the verified filtered view: 9
+- New backend tests: 6
+- New frontend contract tests: 3
+- Total automated project tests: 178 (152 Python, 26 TypeScript)
+- Narrow viewport horizontal overflow: none
+- Browser console errors and warnings: 0
+- Paid data API keys required: 0
+
+These are one verified live-query and implementation measurements, not traffic,
+uptime, restaurant coverage, current operating status, or a safety assessment.

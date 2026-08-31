@@ -1,3 +1,4 @@
+from datetime import date
 from typing import Literal, Self
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
@@ -150,6 +151,87 @@ class RestaurantSearchResponse(StrictModel):
     applied_filters: RestaurantSearchFilters
     match_count: int = Field(ge=0)
     restaurants: list[RestaurantSearchItem]
+
+
+InspectionResultFilter = Literal["all", "pass", "conditions", "fail", "other"]
+InspectionAttentionLevel = Literal[
+    "latest_passed",
+    "conditions_noted",
+    "review_latest_report",
+    "informational",
+]
+
+
+class InspectionExplorerRequest(StrictModel):
+    latitude: float | None = Field(default=None, ge=-90, le=90)
+    longitude: float | None = Field(default=None, ge=-180, le=180)
+    radius_km: float = Field(default=3, ge=0.5, le=10)
+    query: str | None = Field(
+        default=None,
+        min_length=1,
+        max_length=80,
+        pattern=r"^[\w\s.&'/-]+$",
+    )
+    result_filter: InspectionResultFilter = "all"
+    limit: int = Field(default=24, ge=1, le=50)
+
+    @field_validator("query", mode="before")
+    @classmethod
+    def strip_query(cls, value: object) -> object:
+        if isinstance(value, str):
+            return value.strip()
+        return value
+
+    @model_validator(mode="after")
+    def require_complete_location_or_query(self) -> Self:
+        has_latitude = self.latitude is not None
+        has_longitude = self.longitude is not None
+        if has_latitude != has_longitude:
+            raise ValueError("latitude and longitude must be provided together")
+        if not has_latitude and self.query is None:
+            raise ValueError("provide a location or a restaurant/address search")
+        return self
+
+
+class PublicInspectionSummary(StrictModel):
+    inspection_id: str
+    inspection_date: date
+    result: str
+    inspection_type: str
+
+
+class PublicInspectionHistory(StrictModel):
+    records_in_query: int = Field(gt=0)
+    pass_count: int = Field(ge=0)
+    conditions_count: int = Field(ge=0)
+    fail_count: int = Field(ge=0)
+    other_count: int = Field(ge=0)
+
+
+class PublicInspectionRestaurant(StrictModel):
+    license_number: str
+    name: str
+    alternate_name: str | None
+    facility_type: str
+    city_risk_category: str
+    address: str
+    latitude: float
+    longitude: float
+    distance_km: float | None = Field(default=None, ge=0)
+    attention_level: InspectionAttentionLevel
+    attention_label: str
+    latest_inspection: PublicInspectionSummary
+    history: PublicInspectionHistory
+
+
+class InspectionExplorerResponse(StrictModel):
+    source_name: str
+    source_url: str
+    retrieved_at: str
+    source_record_count: int = Field(ge=0)
+    restaurant_count: int = Field(ge=0)
+    restaurants: list[PublicInspectionRestaurant]
+    data_notice: str
 
 
 TravelConvenienceCategory = Literal[

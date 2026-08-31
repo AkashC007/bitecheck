@@ -6,6 +6,12 @@ All notable project changes will be recorded here.
 
 ### Added
 
+- Live City of Chicago inspection provider with server-side geographic and text
+  queries, external-row validation, license deduplication, and safe timeouts.
+- Public inspection explorer with real addresses, current-location or preset
+  area search, official-result filters, exact map links, and factual cards.
+- Separate primary public-data and synthetic Analytics Lab experiences so demo
+  review signals cannot be mistaken for real restaurant claims.
 - Browser-only current-location distance and nearest-result ordering, with a
   deliberate permission control and no coordinate transfer to the backend.
 - Prominent real-address links to exact OpenStreetMap coordinates.

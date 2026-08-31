@@ -1,5 +1,5 @@
 import { getBackendHealth } from "@/lib/api/health";
-import { RestaurantSearch } from "@/components/restaurant-search";
+import { BiteCheckExperience } from "@/components/bitecheck-experience";
 
 export default async function Home() {
   const backendHealth = await getBackendHealth();
@@ -20,17 +20,17 @@ export default async function Home() {
           </div>
 
           <span className="rounded-full border border-stone-200 bg-white px-3 py-1.5 text-xs font-semibold text-stone-600">
-            Explainable recommendations · Portfolio MVP
+            Live inspections · Explainable analytics
           </span>
         </div>
       </header>
 
-      <RestaurantSearch backendConnected={isBackendConnected} />
+      <BiteCheckExperience backendConnected={isBackendConnected} />
 
       <footer className="border-t border-stone-200 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-2 px-5 py-6 text-xs text-stone-500 sm:flex-row sm:px-8 lg:px-10">
-          <p>Real City identities with clearly labeled synthetic enrichment.</p>
-          <p>City of Chicago Food Inspections snapshot · 2026-08-30.</p>
+          <p>Primary explorer: live City records. Analytics Lab: clearly labeled synthetic enrichment.</p>
+          <p>Inspection results are historical observations, not current safety guarantees.</p>
         </div>
       </footer>
     </main>

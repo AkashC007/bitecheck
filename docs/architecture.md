@@ -215,3 +215,27 @@ Follow-up input + explicit client state
 No server session is required. State travels in the typed request and response,
 which makes transitions replayable and prevents hidden conversational memory.
 The existing recommendation service remains the source of card data.
+
+## Live public inspection explorer
+
+```text
+Browser form or explicit geolocation permission
+  -> POST /api/restaurants/inspections (same-origin Next.js Route Handler)
+  -> POST /restaurants/inspections/explore (FastAPI)
+  -> typed InspectionProvider interface
+  -> HTTPS SODA query to City of Chicago Food Inspections
+  -> validate external rows
+  -> group by restaurant license and select newest inspection
+  -> official-result filter + Haversine distance ordering + result limit
+  -> runtime-validated factual cards
+```
+
+The external provider owns URL construction, bounded query size, timeout, HTTP
+errors, and source-row validation. The service owns entity resolution, result
+grouping, counts, distance, and presentation-ready factual labels. Tests inject a
+fake provider, so backend behavior remains deterministic without contacting the
+City service.
+
+The public explorer and Analytics Lab intentionally have different data paths.
+Only the public view calls the live City service. Synthetic recommendation and
+review fields never enter the public inspection response model.

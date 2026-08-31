@@ -1,5 +1,20 @@
 # Data pipeline
 
+## Live public serving flow
+
+```text
+Area / text / explicit current location
+  -> bounded City SODA query
+  -> external-row validation
+  -> license-level entity resolution
+  -> newest inspection + result grouping + distance
+  -> factual public cards
+```
+
+This request-time path is separate from the reproducible batch pipeline below.
+It does not add synthetic enrichment and does not write the live response to
+disk. See `docs/public-inspection-explorer.md` for its contract and limits.
+
 ## Hybrid identity and enrichment flow
 
 ```text
@@ -62,9 +77,9 @@ For seed 42 and 24 records, repeated runs produced the same SHA-256 hash:
 af1e2ff1b3aaa817f851a8ce4cd39c771055bedc72f308d39a291c929f4cc6b3
 ```
 
-## Current limitations
+## Batch-pipeline limitations
 
-- This is a fixed batch snapshot, not live business-status data.
+- The Analytics Lab is a fixed batch snapshot, not live business-status data.
 - Travel values are estimates for testing, not routing-provider results.
 - The source may contain duplicates or corrections, and inspection results only
   describe conditions observed at inspection time.

@@ -366,7 +366,7 @@
   about real establishments. Every field group is visibly labeled by origin,
   and inspection results are described as point-in-time observations.
 
-## PD-044: Keep optional current location entirely in the browser
+## PD-044: Keep Analytics Lab location entirely in the browser
 
 - **Status:** Accepted
 - **Decision:** Request geolocation only from a visible user action, retain it
@@ -382,3 +382,32 @@
   passing each returned state into the next existing conversation request.
 - **Reason:** Multi-action behavior stays deterministic, inspectable, and
   covered by the same backend rules instead of duplicating them in the client.
+
+## PD-046: Make official live inspections the primary public experience
+
+- **Status:** Accepted
+- **Decision:** Query the City of Chicago SODA endpoint through a replaceable
+  typed provider, validate external rows, deduplicate by license, and show the
+  newest inspection without synthetic recommendation fields.
+- **Reason:** The product becomes useful with source-backed current records while
+  the provider boundary, timeouts, validation, and fake-provider tests keep an
+  unreliable external dependency from spreading through the application.
+
+## PD-047: Separate factual exploration from the synthetic Analytics Lab
+
+- **Status:** Accepted
+- **Decision:** Default the interface to live public inspections and place the
+  existing ranking/review experience behind an explicitly labeled lab view.
+- **Reason:** Restaurant identities are real in both views, so visual and product
+  separation is necessary to prevent synthetic reviews, ratings, and confidence
+  scores from being mistaken for claims about real businesses.
+
+## PD-048: Transmit location only for an explicit live nearby query
+
+- **Status:** Accepted
+- **Decision:** Keep preset-area searches location-free; after explicit browser
+  permission, send current coordinates in a POST body to FastAPI for the City
+  geographic query and do not persist them.
+- **Reason:** A genuinely nearby live search requires the source query to know a
+  center point. A visible action, minimized use, no persistence, and truthful
+  disclosure are more honest than claiming the data never leaves the browser.

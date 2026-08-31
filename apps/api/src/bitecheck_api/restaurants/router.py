@@ -12,6 +12,8 @@ from bitecheck_api.restaurants.conversation import (
     RestaurantConversationService,
 )
 from bitecheck_api.restaurants.models import (
+    InspectionExplorerRequest,
+    InspectionExplorerResponse,
     NaturalLanguageParseRequest,
     RestaurantConversationRequest,
     RestaurantConversationResponse,
@@ -23,6 +25,12 @@ from bitecheck_api.restaurants.models import (
     ReviewConfidenceDataset,
     TravelCategoryRequest,
     TravelCategoryResponse,
+)
+from bitecheck_api.restaurants.inspection_explorer import (
+    InspectionExplorerService,
+    InspectionProvider,
+    InspectionProviderError,
+    get_inspection_provider,
 )
 from bitecheck_api.restaurants.insights import (
     RecommendationInsightsDataError,
@@ -55,6 +63,29 @@ from bitecheck_api.restaurants.travel import TransportationCategorizationService
 
 
 router = APIRouter(prefix="/restaurants", tags=["restaurants"])
+
+
+@router.post(
+    "/inspections/explore",
+    response_model=InspectionExplorerResponse,
+    summary="Explore live City of Chicago restaurant inspections",
+)
+async def explore_public_restaurant_inspections(
+    request: InspectionExplorerRequest,
+    provider: Annotated[
+        InspectionProvider,
+        Depends(get_inspection_provider),
+    ],
+) -> InspectionExplorerResponse:
+    """Return deduplicated, source-backed inspection cards without demo fields."""
+
+    try:
+        return await InspectionExplorerService(provider).explore(request)
+    except InspectionProviderError as error:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Live City inspection data is temporarily unavailable.",
+        ) from error
 
 
 @router.post(

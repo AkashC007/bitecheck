@@ -413,3 +413,24 @@ This preserves the deterministic backend contract while making the interface
 feel more flexible. Pure distance and sequence helpers add focused tests, and
 browser checks cover real address links, two selected actions, mobile overflow,
 and console output.
+
+## Live public inspection explorer
+
+Real public use requires a different product contract from a synthetic model
+demonstration. The primary interface now asks one factual question: what did the
+City report in the latest inspection records near this place or matching this
+text? FastAPI builds a bounded SODA query, validates untrusted external rows,
+groups multiple inspections by license, keeps the newest record as the headline,
+and calculates straight-line distance when a search center exists.
+
+The provider is replaceable and the service is tested with fake data. That
+separates network instability from cleaning and entity-resolution logic. The
+live check matters because mocks cannot catch a broken local HTTP installation
+or a changed external contract; it exposed and led to repair of an incomplete
+local `httpx` package before release.
+
+The interface defaults to the factual explorer and moves synthetic reviews,
+ratings, confidence, prices, cuisine, and travel signals into a visibly separate
+Analytics Lab. Live browser checks covered 720 source rows, 24 nearby results,
+nine latest-fail matches, source links, lab separation, responsive layout, and a
+clean console.
