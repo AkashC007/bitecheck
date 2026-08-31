@@ -26,8 +26,8 @@ shows why each result ranked where it did.
   four penalties
 - Typed FastAPI endpoints, Pydantic validation, repository/service separation,
   and safe failure states
-- A responsive Next.js and TypeScript interface with deterministic follow-up
-  searches and optional browser voice controls
+- A responsive Next.js and TypeScript interface with browser-only location
+  distance, stackable deterministic follow-ups, and optional voice controls
 - Automated CI for linting, strict type checks, tests, production builds, and
   dependency auditing
 
@@ -36,7 +36,7 @@ shows why each result ranked where it did.
 | Area | Result |
 | --- | --- |
 | Hybrid data | 24 real establishments, 288 synthetic reviews, 15 themes |
-| Automated tests | 163 total: 146 Python and 17 TypeScript |
+| Automated tests | 169 total: 146 Python and 23 TypeScript |
 | Quality gates | Ruff, strict mypy, ESLint, production build, npm audit |
 | External services | None required; no API keys or paid providers |
 | Current state | Showcase-ready MVP with local and container run paths |
@@ -55,6 +55,10 @@ Browser -> Next.js server routes -> FastAPI services -> ranked explanations
 The browser talks only to same-origin Next.js routes. Next.js reads the
 server-only `API_BASE_URL` and forwards requests to FastAPI, so backend
 configuration is never shipped to the browser.
+
+The optional “Use my location” control keeps coordinates in browser memory. It
+uses them only to show straight-line distance to the 24 records and to reorder
+the current matches; coordinates are never sent to FastAPI or stored.
 
 ## Run locally
 

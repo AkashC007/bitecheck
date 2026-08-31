@@ -13,9 +13,16 @@ import {
 } from "@/lib/api/recommendations";
 import {
   ConversationState,
-  followUpConversation,
+  ConversationResponse,
+  followUpConversationSequence,
   initialConversationState,
 } from "@/lib/api/conversation";
+import {
+  Coordinates,
+  formatDistance,
+  openStreetMapUrl,
+  straightLineDistanceKm,
+} from "@/lib/location";
 import {
   createRecognition,
   speak,
@@ -37,6 +44,19 @@ type SearchState =
   | { kind: "loading" }
   | { kind: "success"; response: RestaurantRecommendationResponse }
   | { kind: "error"; message: string };
+
+type LocationState =
+  | { kind: "idle" }
+  | { kind: "loading" }
+  | { kind: "success" }
+  | { kind: "error"; message: string };
+
+const FOLLOW_UP_SUGGESTIONS = [
+  "Only show walkable options",
+  "Show me the cheapest one",
+  "Most reliable reviews",
+  "What are the common complaints?",
+] as const;
 
 const SUGGESTED_VALUES: SearchFormValues = {
   cuisine: "",
@@ -70,26 +90,65 @@ function SearchIcon() {
   );
 }
 
+function LocationIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="size-5"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
+      <path d="M12 21s6-5.1 6-12a6 6 0 1 0-12 0c0 6.9 6 12 6 12Z" />
+      <circle cx="12" cy="9" r="2" />
+    </svg>
+  );
+}
+
 function RestaurantCard({
   restaurant,
+  currentLocation,
+  displayRank,
 }: {
   restaurant: RestaurantRecommendation;
+  currentLocation: Coordinates | null;
+  displayRank: number;
 }) {
   const travelMode = restaurant.travel?.selected_mode.replace("_", " ");
+  const coordinates = {
+    latitude: restaurant.latitude,
+    longitude: restaurant.longitude,
+  };
+  const distance =
+    currentLocation === null
+      ? null
+      : straightLineDistanceKm(currentLocation, coordinates);
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-stone-200 bg-white shadow-[0_14px_40px_rgba(66,45,32,0.07)] transition duration-200 hover:-translate-y-1 hover:border-orange-200 hover:shadow-[0_22px_50px_rgba(66,45,32,0.12)]">
       <div className="flex items-start justify-between gap-4 border-b border-stone-100 bg-gradient-to-br from-orange-50/80 to-white px-5 py-5">
         <div className="min-w-0">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-orange-700">
-            <span>#{restaurant.rank}</span>
+            <span>#{displayRank}</span>
             <span aria-hidden="true">·</span>
             <span>Demo {restaurant.cuisine}</span>
           </div>
           <h3 className="mt-1 text-xl font-bold tracking-[-0.025em] text-stone-950">
             {restaurant.name}
           </h3>
-          <p className="mt-1 text-sm text-stone-500">{restaurant.neighborhood}</p>
+          <p className="mt-1 text-sm font-medium text-stone-600">
+            {restaurant.neighborhood}
+          </p>
+          <a
+            href={openStreetMapUrl(coordinates)}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-2 inline-flex max-w-full items-start gap-1.5 text-left text-xs leading-5 text-stone-500 underline decoration-stone-300 underline-offset-4 transition hover:text-orange-800 hover:decoration-orange-400"
+          >
+            <LocationIcon />
+            <span>{restaurant.address}</span>
+          </a>
         </div>
         <div className="shrink-0 text-right">
           <p className="text-2xl font-black tracking-tight text-stone-950">
@@ -153,6 +212,22 @@ function RestaurantCard({
             </span>
           )}
         </div>
+
+        {distance !== null && (
+          <div className="mt-5 flex items-center justify-between rounded-xl border border-violet-100 bg-violet-50/80 p-4">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wider text-violet-700">
+                From your location
+              </p>
+              <p className="mt-1 text-xs text-violet-700">
+                Straight-line distance · not travel time
+              </p>
+            </div>
+            <p className="text-xl font-black text-violet-950">
+              {formatDistance(distance)}
+            </p>
+          </div>
+        )}
 
         <div className="mt-5 rounded-xl border border-emerald-100 bg-emerald-50/70 p-4 text-sm">
           <div className="flex items-center justify-between gap-3">
@@ -235,7 +310,7 @@ function RestaurantCard({
 
         <div className="mt-auto border-t border-stone-100 pt-4 text-xs text-stone-500">
           <p>{restaurant.data_freshness_label}</p>
-          <p className="mt-1">{restaurant.address}</p>
+          <p className="mt-1">Address and coordinates: City of Chicago data</p>
         </div>
       </div>
     </article>
@@ -302,6 +377,7 @@ export function RestaurantSearch({
   const [conversationState, setConversationState] =
     useState<ConversationState | null>(null);
   const [followUpMessage, setFollowUpMessage] = useState("");
+  const [selectedFollowUps, setSelectedFollowUps] = useState<string[]>([]);
   const [followUpStatus, setFollowUpStatus] = useState<
     | { kind: "idle" }
     | { kind: "loading" }
@@ -314,6 +390,13 @@ export function RestaurantSearch({
   const [isListening, setIsListening] = useState(false);
   const [voiceOutputEnabled, setVoiceOutputEnabled] = useState(false);
   const [voiceMessage, setVoiceMessage] = useState<string | null>(null);
+  const [currentLocation, setCurrentLocation] = useState<Coordinates | null>(
+    null,
+  );
+  const [locationState, setLocationState] = useState<LocationState>({
+    kind: "idle",
+  });
+  const [sortByDistance, setSortByDistance] = useState(false);
 
   useEffect(() => {
     const supportCheck = window.setTimeout(
@@ -352,6 +435,7 @@ export function RestaurantSearch({
       setState({ kind: "success", response });
       setConversationState(initialConversationState(response.filters));
       setFollowUpStatus({ kind: "idle" });
+      setSelectedFollowUps([]);
     } catch (error) {
       setState({
         kind: "error",
@@ -368,56 +452,111 @@ export function RestaurantSearch({
     setState({ kind: "idle" });
     setConversationState(null);
     setFollowUpMessage("");
+    setSelectedFollowUps([]);
     setFollowUpStatus({ kind: "idle" });
+    setCurrentLocation(null);
+    setLocationState({ kind: "idle" });
+    setSortByDistance(false);
   }
 
-  async function handleFollowUp(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    if (conversationState === null || !followUpMessage.trim()) return;
+  function requestCurrentLocation() {
+    if (!("geolocation" in navigator)) {
+      setLocationState({
+        kind: "error",
+        message: "Location is unavailable in this browser.",
+      });
+      return;
+    }
+
+    setLocationState({ kind: "loading" });
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setCurrentLocation({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        });
+        setLocationState({ kind: "success" });
+        setSortByDistance(true);
+      },
+      (error) => {
+        const message =
+          error.code === error.PERMISSION_DENIED
+            ? "Location permission was not granted. Preset areas still work."
+            : "Your location could not be read. Try again or use a preset area.";
+        setLocationState({ kind: "error", message });
+      },
+      { enableHighAccuracy: false, timeout: 10_000, maximumAge: 300_000 },
+    );
+  }
+
+  function applyConversationResponse(
+    response: ConversationResponse,
+    statusMessage: string,
+  ) {
+    setConversationState(response.state);
+    setState({ kind: "success", response: response.results });
+    setFollowUpStatus({ kind: "success", message: statusMessage });
+    const filters = response.state.filters;
+    setValues({
+      cuisine: filters.cuisine ?? "",
+      maximumBudget:
+        filters.maximum_budget === null ? "" : String(filters.maximum_budget),
+      vegetarianRequired: filters.vegetarian_required,
+      startingArea: filters.starting_area ?? "",
+      maximumTravelTime:
+        filters.maximum_travel_time === null
+          ? ""
+          : String(filters.maximum_travel_time),
+    });
+
+    if (voiceOutputEnabled) {
+      const top = response.results.recommendations[0];
+      const summary =
+        top === undefined
+          ? "No restaurants match the updated request."
+          : `${statusMessage} The top result is ${top.name} with a match score of ${top.total_score.toFixed(1)}.`;
+      if (!speak(window, summary)) {
+        setVoiceMessage("Speech output is unavailable in this browser.");
+      }
+    }
+  }
+
+  async function applyFollowUps(messages: string[]) {
+    if (conversationState === null || messages.length === 0) return;
     setFollowUpStatus({ kind: "loading" });
+
     try {
-      const response = await followUpConversation(
-        followUpMessage,
+      const sequence = await followUpConversationSequence(
+        messages,
         conversationState,
       );
-      setConversationState(response.state);
-      setState({ kind: "success", response: response.results });
-      setFollowUpStatus({
-        kind: "success",
-        message: response.transition_explanation,
-      });
-      const filters = response.state.filters;
-      setValues({
-        cuisine: filters.cuisine ?? "",
-        maximumBudget:
-          filters.maximum_budget === null ? "" : String(filters.maximum_budget),
-        vegetarianRequired: filters.vegetarian_required,
-        startingArea: filters.starting_area ?? "",
-        maximumTravelTime:
-          filters.maximum_travel_time === null
-            ? ""
-            : String(filters.maximum_travel_time),
-      });
+      applyConversationResponse(sequence.response, sequence.explanation);
       setFollowUpMessage("");
-      if (voiceOutputEnabled) {
-        const top = response.results.recommendations[0];
-        const summary =
-          top === undefined
-            ? "No restaurants match the updated request."
-            : `${response.transition_explanation} The top result is ${top.name} with a match score of ${top.total_score.toFixed(1)}.`;
-        if (!speak(window, summary)) {
-          setVoiceMessage("Speech output is unavailable in this browser.");
-        }
-      }
+      setSelectedFollowUps([]);
     } catch (error) {
       setFollowUpStatus({
         kind: "error",
         message:
           error instanceof Error
             ? error.message
-            : "BiteCheck could not apply that follow-up.",
+            : "BiteCheck could not apply those follow-ups.",
       });
     }
+  }
+
+  async function handleFollowUp(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const message = followUpMessage.trim();
+    if (!message) return;
+    await applyFollowUps([message]);
+  }
+
+  function toggleFollowUp(suggestion: string) {
+    setSelectedFollowUps((current) =>
+      current.includes(suggestion)
+        ? current.filter((item) => item !== suggestion)
+        : [...current, suggestion],
+    );
   }
 
   function startListening() {
@@ -450,10 +589,36 @@ export function RestaurantSearch({
     }
   }
 
+  const displayedRecommendations =
+    state.kind === "success" && currentLocation !== null && sortByDistance
+      ? [...state.response.recommendations].sort(
+          (left, right) =>
+            straightLineDistanceKm(currentLocation, {
+              latitude: left.latitude,
+              longitude: left.longitude,
+            }) -
+            straightLineDistanceKm(currentLocation, {
+              latitude: right.latitude,
+              longitude: right.longitude,
+            }),
+        )
+      : state.kind === "success"
+        ? state.response.recommendations
+        : [];
+
   return (
     <>
-      <section className="mx-auto grid max-w-7xl gap-8 px-5 pb-12 pt-8 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-10 lg:pb-16 lg:pt-12">
-        <div className="py-3 lg:pr-8">
+      <section className="relative isolate overflow-hidden">
+        <div
+          aria-hidden="true"
+          className="absolute -left-28 top-8 -z-10 size-80 rounded-full bg-orange-200/35 blur-3xl"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute -right-24 bottom-0 -z-10 size-96 rounded-full bg-emerald-200/25 blur-3xl"
+        />
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 pb-12 pt-8 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-10 lg:pb-16 lg:pt-12">
+          <div className="py-3 lg:pr-8">
           <div className="flex items-center gap-3">
             <span className="rounded-full bg-orange-100 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-orange-800">
               Chicago preview
@@ -486,15 +651,15 @@ export function RestaurantSearch({
 
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-stone-600">
             <span>24 real Chicago establishments</span>
-            <span>7 Chicago starting areas</span>
+            <span>Your location stays in the browser</span>
             <span>No paid APIs</span>
           </div>
-        </div>
+          </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="rounded-[2rem] border border-stone-200 bg-white p-5 shadow-[0_25px_70px_rgba(66,45,32,0.12)] sm:p-7"
-        >
+          <form
+            onSubmit={handleSubmit}
+            className="rounded-[2rem] border border-white/80 bg-white/90 p-5 shadow-[0_25px_70px_rgba(66,45,32,0.14)] backdrop-blur sm:p-7"
+          >
           <div className="flex items-start justify-between gap-4 border-b border-stone-100 pb-5">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-orange-700">
@@ -628,6 +793,43 @@ export function RestaurantSearch({
             Require the demo vegetarian flag
           </label>
 
+          <div className="mt-5 rounded-2xl border border-violet-100 bg-gradient-to-r from-violet-50 to-sky-50 p-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="flex items-center gap-2 font-bold text-violet-950">
+                  <LocationIcon />
+                  Distance from where you are
+                </p>
+                <p className="mt-1 text-xs leading-5 text-violet-700">
+                  Optional and browser-only. Shows straight-line distance to
+                  these 24 Chicago records.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={requestCurrentLocation}
+                disabled={locationState.kind === "loading"}
+                className="shrink-0 rounded-xl border border-violet-200 bg-white px-4 py-2.5 text-sm font-bold text-violet-900 shadow-sm transition hover:-translate-y-0.5 hover:border-violet-400 hover:shadow disabled:cursor-wait disabled:text-violet-400"
+              >
+                {locationState.kind === "loading"
+                  ? "Locating…"
+                  : currentLocation === null
+                    ? "Use my location"
+                    : "Refresh location"}
+              </button>
+            </div>
+            {locationState.kind === "success" && (
+              <p className="mt-3 text-xs font-semibold text-emerald-700" role="status">
+                Location ready. Results can now be ordered by nearest distance.
+              </p>
+            )}
+            {locationState.kind === "error" && (
+              <p className="mt-3 text-xs font-semibold text-red-700" role="alert">
+                {locationState.message}
+              </p>
+            )}
+          </div>
+
           <button
             type="submit"
             disabled={state.kind === "loading"}
@@ -648,7 +850,8 @@ export function RestaurantSearch({
               </>
             )}
           </button>
-        </form>
+          </form>
+        </div>
       </section>
 
       <section
@@ -702,6 +905,47 @@ export function RestaurantSearch({
                 {state.response.data_notice}
               </p>
 
+              {currentLocation !== null && state.response.match_count > 0 && (
+                <div className="mt-5 flex flex-col gap-3 rounded-2xl border border-violet-100 bg-white p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p className="font-bold text-stone-950">Current-location view</p>
+                    <p className="mt-1 text-xs text-stone-500">
+                      Your coordinates stay in this browser and are used only
+                      for straight-line distance.
+                    </p>
+                  </div>
+                  <div
+                    className="inline-flex rounded-xl bg-stone-100 p-1"
+                    aria-label="Result ordering"
+                  >
+                    <button
+                      type="button"
+                      aria-pressed={!sortByDistance}
+                      onClick={() => setSortByDistance(false)}
+                      className={`rounded-lg px-3 py-2 text-xs font-bold transition ${
+                        !sortByDistance
+                          ? "bg-white text-stone-950 shadow-sm"
+                          : "text-stone-500 hover:text-stone-900"
+                      }`}
+                    >
+                      Match score
+                    </button>
+                    <button
+                      type="button"
+                      aria-pressed={sortByDistance}
+                      onClick={() => setSortByDistance(true)}
+                      className={`rounded-lg px-3 py-2 text-xs font-bold transition ${
+                        sortByDistance
+                          ? "bg-violet-700 text-white shadow-sm"
+                          : "text-stone-500 hover:text-stone-900"
+                      }`}
+                    >
+                      Nearest to me
+                    </button>
+                  </div>
+                </div>
+              )}
+
               {conversationState !== null && state.response.match_count > 0 && (
                 <form
                   onSubmit={handleFollowUp}
@@ -713,11 +957,11 @@ export function RestaurantSearch({
                         Refine this result
                       </p>
                       <h3 className="mt-1 text-xl font-bold text-stone-950">
-                        Ask a follow-up
+                        Stack follow-up actions
                       </h3>
                     </div>
                     <p className="text-xs text-stone-600">
-                      Free deterministic rules · current search remembered
+                      Select several · applied in selection order
                     </p>
                   </div>
                   <div className="mt-4 flex flex-col gap-3 sm:flex-row">
@@ -736,25 +980,67 @@ export function RestaurantSearch({
                       disabled={followUpStatus.kind === "loading"}
                       className="h-12 rounded-xl bg-orange-700 px-5 font-bold text-white transition hover:bg-orange-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 disabled:cursor-wait disabled:bg-orange-400"
                     >
-                      {followUpStatus.kind === "loading" ? "Updating…" : "Apply follow-up"}
+                      {followUpStatus.kind === "loading"
+                        ? "Updating…"
+                        : "Apply typed request"}
                     </button>
                   </div>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {[
-                      "Only show walkable options",
-                      "Show me the cheapest one",
-                      "Most reliable reviews",
-                      "What are the common complaints?",
-                    ].map((suggestion) => (
+                  <fieldset className="mt-4">
+                    <legend className="text-xs font-bold uppercase tracking-wider text-orange-900">
+                      Quick actions
+                    </legend>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {FOLLOW_UP_SUGGESTIONS.map((suggestion) => {
+                        const selected =
+                          selectedFollowUps.includes(suggestion);
+                        const unavailable =
+                          suggestion === "Only show walkable options" &&
+                          conversationState.filters.starting_area === null;
+                        return (
+                          <button
+                            key={suggestion}
+                            type="button"
+                            aria-pressed={selected}
+                            disabled={unavailable}
+                            onClick={() => toggleFollowUp(suggestion)}
+                            className={`rounded-full border px-3 py-2 text-xs font-semibold transition disabled:cursor-not-allowed disabled:opacity-45 ${
+                              selected
+                                ? "border-orange-700 bg-orange-700 text-white shadow-sm"
+                                : "border-orange-200 bg-white text-orange-900 hover:-translate-y-0.5 hover:border-orange-400 hover:shadow-sm"
+                            }`}
+                          >
+                            {selected ? "✓ " : "+ "}
+                            {suggestion}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </fieldset>
+
+                  <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-orange-200/70 pt-4">
+                    <button
+                      type="button"
+                      disabled={
+                        selectedFollowUps.length === 0 ||
+                        followUpStatus.kind === "loading"
+                      }
+                      onClick={() => void applyFollowUps(selectedFollowUps)}
+                      className="rounded-xl bg-stone-950 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-orange-800 hover:shadow disabled:cursor-not-allowed disabled:bg-stone-300"
+                    >
+                      {selectedFollowUps.length === 0
+                        ? "Select quick actions"
+                        : `Apply ${selectedFollowUps.length} selected`}
+                    </button>
+                    {selectedFollowUps.length > 0 && (
                       <button
-                        key={suggestion}
                         type="button"
-                        onClick={() => setFollowUpMessage(suggestion)}
-                        className="rounded-full border border-orange-200 bg-white px-3 py-1.5 text-xs font-semibold text-orange-900 hover:border-orange-400"
+                        onClick={() => setSelectedFollowUps([])}
+                        className="text-xs font-bold text-stone-500 underline underline-offset-4 hover:text-stone-900"
                       >
-                        {suggestion}
+                        Clear selection
                       </button>
-                    ))}
+                    )}
+                    <span className="hidden h-6 w-px bg-orange-200 sm:block" />
                     <button
                       type="button"
                       onClick={startListening}
@@ -819,10 +1105,12 @@ export function RestaurantSearch({
                 </div>
               ) : (
                 <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                  {state.response.recommendations.map((restaurant) => (
+                  {displayedRecommendations.map((restaurant, index) => (
                     <RestaurantCard
                       key={restaurant.restaurant_id}
                       restaurant={restaurant}
+                      currentLocation={currentLocation}
+                      displayRank={index + 1}
                     />
                   ))}
                 </div>

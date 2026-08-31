@@ -24,6 +24,8 @@ const validResponse = {
       restaurant_id: "CHI-COC-1766001",
       name: "The Bog",
       address: "3241 S Federal St, Chicago, IL 60616",
+      latitude: 41.8351,
+      longitude: -87.62876,
       cuisine: "Japanese",
       neighborhood: "Bridgeport",
       price_category: "$$",

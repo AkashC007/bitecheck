@@ -68,6 +68,8 @@ export type RestaurantRecommendation = {
   restaurant_id: string;
   name: string;
   address: string;
+  latitude: number;
+  longitude: number;
   cuisine: string;
   neighborhood: string;
   price_category: "$" | "$$" | "$$$";
@@ -194,6 +196,8 @@ function isRecommendation(value: unknown): value is RestaurantRecommendation {
     typeof value.restaurant_id === "string" &&
     typeof value.name === "string" &&
     typeof value.address === "string" &&
+    typeof value.latitude === "number" &&
+    typeof value.longitude === "number" &&
     typeof value.cuisine === "string" &&
     typeof value.neighborhood === "string" &&
     (value.price_category === "$" ||

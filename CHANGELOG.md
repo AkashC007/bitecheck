@@ -6,6 +6,13 @@ All notable project changes will be recorded here.
 
 ### Added
 
+- Browser-only current-location distance and nearest-result ordering, with a
+  deliberate permission control and no coordinate transfer to the backend.
+- Prominent real-address links to exact OpenStreetMap coordinates.
+- Multi-select follow-up actions that replay deterministic state transitions in
+  the order selected.
+- A more interactive recommendation interface with clearer location, sorting,
+  selection, privacy, and responsive-state feedback.
 - Reproducible City of Chicago Food Inspections ingestion and cleaning pipeline
   with source attribution, license deduplication, history counts, and a fixed
   24-establishment snapshot.

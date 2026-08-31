@@ -365,3 +365,20 @@
   lineage without scraping commercial reviews or making unsupported claims
   about real establishments. Every field group is visibly labeled by origin,
   and inspection results are described as point-in-time observations.
+
+## PD-044: Keep optional current location entirely in the browser
+
+- **Status:** Accepted
+- **Decision:** Request geolocation only from a visible user action, retain it
+  only in in-memory frontend state, and calculate straight-line distance locally.
+- **Reason:** The interface can answer “how far from me?” without creating a
+  precise-location backend record. The UI distinguishes this calculation from
+  synthetic travel times and from a complete nearby-business search.
+
+## PD-045: Compose multiple follow-ups from single-intent transitions
+
+- **Status:** Accepted
+- **Decision:** Apply selected suggestions sequentially in selection order,
+  passing each returned state into the next existing conversation request.
+- **Reason:** Multi-action behavior stays deterministic, inspectable, and
+  covered by the same backend rules instead of duplicating them in the client.

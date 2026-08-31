@@ -14,6 +14,8 @@
   "include": [
     "src/lib/api/restaurants.ts",
     "src/lib/api/recommendations.ts",
+    "src/lib/api/conversation.ts",
+    "src/lib/location.ts",
     "src/lib/api/server-config.ts",
     "src/lib/voice.ts",
     "tests/**/*.test.ts"

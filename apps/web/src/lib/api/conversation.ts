@@ -1,8 +1,8 @@
 import {
   parseRestaurantRecommendationResponse,
   RestaurantRecommendationResponse,
-} from "@/lib/api/recommendations";
-import type { AppliedRestaurantSearchFilters } from "@/lib/api/restaurants";
+} from "./recommendations";
+import type { AppliedRestaurantSearchFilters } from "./restaurants.js";
 
 export type ConversationState = {
   filters: AppliedRestaurantSearchFilters;
@@ -106,4 +106,33 @@ export async function followUpConversation(
     throw new Error("BiteCheck received an unexpected conversation response.");
   }
   return parsed;
+}
+
+type FollowUpRequester = (
+  message: string,
+  state: ConversationState,
+) => Promise<ConversationResponse>;
+
+export async function followUpConversationSequence(
+  messages: string[],
+  state: ConversationState,
+  request: FollowUpRequester = followUpConversation,
+): Promise<{ response: ConversationResponse; explanation: string }> {
+  if (messages.length === 0) {
+    throw new Error("Select at least one follow-up action.");
+  }
+
+  let nextState = state;
+  let finalResponse: ConversationResponse | null = null;
+  const explanations: string[] = [];
+  for (const message of messages) {
+    finalResponse = await request(message, nextState);
+    nextState = finalResponse.state;
+    explanations.push(finalResponse.transition_explanation);
+  }
+
+  if (finalResponse === null) {
+    throw new Error("No follow-up response was produced.");
+  }
+  return { response: finalResponse, explanation: explanations.join(" ") };
 }

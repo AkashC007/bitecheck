@@ -11,6 +11,19 @@
 
 No user location, transcript, account, or personal profile is stored.
 
+## Browser location privacy
+
+Current location is optional and requested only after the user presses “Use my
+location” and grants browser permission. The coordinates live only in React
+state in that browser tab: they are not placed in a URL, sent to the Next.js or
+FastAPI services, logged, or persisted. They are used to calculate straight-line
+distance to the fixed 24-record snapshot and optionally reorder visible results.
+
+Straight-line distance is labeled separately from the synthetic travel-time
+estimates. It is not a routing estimate and does not mean that these are all of
+the restaurants near the user. Exact establishment addresses link to
+OpenStreetMap using the public City coordinates.
+
 The current restaurant snapshot contains public establishment identity,
 address, coordinate, license, and inspection fields from the City of Chicago
 Food Inspections dataset. BiteCheck records the source, snapshot date,

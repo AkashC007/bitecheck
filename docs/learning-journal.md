@@ -397,3 +397,19 @@ metadata and the interface. Inspection dates/results are shown separately with
 a point-in-time warning. The upgraded pipeline and application passed 146
 Python tests, 17 TypeScript tests, strict typing, both linters, and a production
 frontend build.
+
+## Location-aware and stackable interaction polish
+
+Browser geolocation does not need to become backend data. BiteCheck requests it
+only from an explicit button, keeps it in memory, and runs the Haversine formula
+locally to compare the user with public restaurant coordinates. The result is a
+straight-line distance, so the interface avoids calling it walking or driving
+time. It also explains that location reorders a fixed snapshot rather than
+discovering every business nearby.
+
+Multi-select follow-ups are state composition: each supported transition runs
+in the order selected and hands its new explicit state to the next transition.
+This preserves the deterministic backend contract while making the interface
+feel more flexible. Pure distance and sequence helpers add focused tests, and
+browser checks cover real address links, two selected actions, mobile overflow,
+and console output.

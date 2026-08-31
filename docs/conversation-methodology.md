@@ -21,6 +21,12 @@ The client sends the current state with every request and replaces it only after
 a successful response. This makes every transition inspectable, replayable, and
 easy to regression test.
 
+The interface may select several supported suggestions at once. It submits them
+one at a time in selection order, carrying each successful returned state into
+the next request. This composes the same tested single-intent transitions instead
+of creating a second hidden rules engine in the browser. If one request fails,
+the sequence stops and reports the error.
+
 ## Supported intents
 
 | Example | State transition |
@@ -46,7 +52,8 @@ complete recommendation response.
 - Keyword rules cover only the documented English phrasing and close variants.
 - Theme priority uses positive mention counts from synthetic rule-based
   analysis. Equal theme counts fall back to the weighted ranking.
-- “Open now,” multi-city requests, arbitrary cuisines, and free-form preference
-  combinations remain unsupported.
+- “Open now,” multi-city requests, arbitrary cuisines, and unsupported free-form
+  preference combinations remain unavailable. Multiple visible supported
+  actions can be stacked in the interface.
 - Conversation state belongs to the current browser interaction and is not
   stored in a database or associated with a user identity.

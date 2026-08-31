@@ -208,3 +208,17 @@ traffic are not claimed until the deployment is live and observed.
 The establishments and inspection records are real public data as of the fixed
 2026-08-30 snapshot. Recommendation/profile fields remain synthetic, and no
 current business status, safety, or recommendation-quality outcome is claimed.
+
+## Location and interaction polish
+
+- Browser coordinates sent to the backend or persisted: 0
+- Distance method: local Haversine straight-line calculation
+- Visible follow-up actions selectable in one sequence: up to 4
+- New TypeScript tests: 6
+- Total automated project tests: 169 (146 Python, 23 TypeScript)
+- Narrow viewport horizontal overflow: none
+- Browser console errors and warnings: 0
+
+These measurements describe implementation behavior. The location feature
+reorders the fixed 24-record snapshot; it is not a complete nearby-business or
+routing service.

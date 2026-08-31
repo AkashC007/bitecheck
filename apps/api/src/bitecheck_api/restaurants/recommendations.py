@@ -121,6 +121,8 @@ class RestaurantRecommendationService:
                     restaurant_id=ranked.restaurant_id,
                     name=record.name,
                     address=record.address,
+                    latitude=record.latitude,
+                    longitude=record.longitude,
                     cuisine=record.cuisine,
                     neighborhood=record.neighborhood,
                     price_category=record.price_category,

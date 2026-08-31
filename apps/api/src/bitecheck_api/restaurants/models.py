@@ -463,6 +463,8 @@ class RestaurantRecommendationCard(StrictModel):
     restaurant_id: str
     name: str
     address: str
+    latitude: float
+    longitude: float
     cuisine: str
     neighborhood: str
     price_category: Literal["$", "$$", "$$$"]
