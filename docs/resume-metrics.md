@@ -195,3 +195,16 @@ until the user-authorized live check is completed.
 
 These are repository and local verification measurements. Public uptime and
 traffic are not claimed until the deployment is live and observed.
+
+## Public-data upgrade
+
+- Official inspection rows processed: 22,003
+- Deduplicated, geographically balanced snapshot records: 24
+- Real field groups: identity, address, coordinates, license, inspection history
+- Synthetic reviews retained for controlled analytics: 288
+- Total automated project tests: 163 (146 Python, 17 TypeScript)
+- Production build and strict type checks: passing
+
+The establishments and inspection records are real public data as of the fixed
+2026-08-30 snapshot. Recommendation/profile fields remain synthetic, and no
+current business status, safety, or recommendation-quality outcome is claimed.

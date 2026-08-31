@@ -1,21 +1,24 @@
 # BiteCheck
 
 BiteCheck is an explainable restaurant recommendation app built with a typed
-FastAPI backend, a Next.js interface, and a reproducible synthetic-data
-pipeline. It ranks fictional Chicago restaurants by budget, dietary needs,
-travel time, review themes, and evidence confidence—then shows why each result
-ranked where it did.
+FastAPI backend, a Next.js interface, and a reproducible hybrid-data pipeline
+layered on an official City of Chicago data snapshot. It ranks real
+Chicago establishments using clearly labeled demo recommendation signals—then
+shows why each result ranked where it did.
 
-![BiteCheck recommendation results](docs/assets/bitecheck-showcase.jpg)
+![BiteCheck real-data recommendation results](docs/assets/bitecheck-showcase-real-data.jpg)
 
-> All restaurants, reviews, ratings, addresses, travel times, and evaluation
-> labels are synthetic. The project demonstrates engineering and analytics
-> methods; it does not make claims about real businesses.
+> Names, addresses, coordinates, and inspection records come from the City of
+> [Chicago Food Inspections dataset](https://data.cityofchicago.org/Health-Human-Services/Food-Inspections/4ijn-s7e5)
+> (snapshot: 2026-08-30). Cuisines, prices,
+> dietary flags, ratings, reviews, hours, travel times, themes, confidence, and
+> ranking labels are synthetic. Inspection records are point-in-time findings,
+> not a guarantee of current operation or safety.
 
 ## What it demonstrates
 
-- Reproducible Python pipelines that generate and transform 24 restaurant and
-  288 review records into versioned analytics artifacts
+- Reproducible Python ingestion, cleaning, deduplication, enrichment, and
+  analytics pipelines over 22,003 public inspection rows
 - Explainable ranking with configurable weights and per-factor score
   contributions
 - Review-theme extraction with a measured synthetic baseline of 0.9825 F1
@@ -32,8 +35,8 @@ ranked where it did.
 
 | Area | Result |
 | --- | --- |
-| Synthetic data | 24 restaurants, 288 reviews, 15 review themes |
-| Automated tests | 159 total: 142 Python and 17 TypeScript |
+| Hybrid data | 24 real establishments, 288 synthetic reviews, 15 themes |
+| Automated tests | 163 total: 146 Python and 17 TypeScript |
 | Quality gates | Ruff, strict mypy, ESLint, production build, npm audit |
 | External services | None required; no API keys or paid providers |
 | Current state | Showcase-ready MVP with local and container run paths |
@@ -44,8 +47,8 @@ Detailed measurements and their limitations are recorded in
 ## Architecture
 
 ```text
-Synthetic generators -> validated JSON -> analytics transformations
-                                         |
+City open data -> cleaned snapshot -> synthetic enrichment -> analytics
+                                                        |
 Browser -> Next.js server routes -> FastAPI services -> ranked explanations
 ```
 
@@ -102,6 +105,10 @@ apps/api/.venv/bin/python scripts/analyze_review_themes.py
 apps/api/.venv/bin/python scripts/calculate_review_confidence.py
 apps/api/.venv/bin/python scripts/build_recommendation_insights.py
 ```
+
+The real-source snapshot is committed for reproducible builds. To refresh it
+from the public City API first, run
+`scripts/ingest_chicago_food_inspections.py`; no API token is required.
 
 Fixed seeds and reference dates make the artifacts reproducible. The pipeline,
 schemas, assumptions, and limitations are documented in

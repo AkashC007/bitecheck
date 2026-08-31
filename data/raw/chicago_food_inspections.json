@@ -1,0 +1,690 @@
+{
+  "metadata": {
+    "api_url": "https://data.cityofchicago.org/resource/4ijn-s7e5.json",
+    "attribution": "City of Chicago",
+    "dataset_id": "4ijn-s7e5",
+    "dataset_name": "Food Inspections",
+    "disclaimer": "Inspection results describe conditions observed at inspection time. This fixed snapshot does not guarantee current operation or safety.",
+    "history_start_date": "2024-01-01",
+    "modification_note": "Filtered to restaurant-type Chicago facilities near seven demo areas; removed duplicate inspection IDs; deduplicated establishments by license; kept records whose latest inspection in the source window was Pass or Pass w/ Conditions.",
+    "retrieved_on": "2026-08-30",
+    "selected_record_count": 24,
+    "snapshot_date": "2026-08-30",
+    "source_row_count": 22003,
+    "source_url": "https://data.cityofchicago.org/Health-Human-Services/Food-Inspections/4ijn-s7e5"
+  },
+  "restaurants": [
+    {
+      "address": "3241 S Federal St, Chicago, IL 60616",
+      "city": "Chicago",
+      "dba_name": "Illinois Inst Of Technology",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 1,
+        "pass_count": 1,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2024-08-19",
+        "inspection_id": "2600364",
+        "inspection_type": "Canvass",
+        "result": "Pass",
+        "risk": "Risk 2 (Medium)"
+      },
+      "latitude": 41.835100345951005,
+      "license_number": "1766001",
+      "longitude": -87.62876125242913,
+      "name": "The Bog",
+      "neighborhood": "Illinois Tech",
+      "restaurant_id": "CHI-COC-1766001",
+      "state": "IL",
+      "zip_code": "60616"
+    },
+    {
+      "address": "3201 S State St, Chicago, IL 60616",
+      "city": "Chicago",
+      "dba_name": "Illinois Institute Of Technology",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 3,
+        "pass_count": 1,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2025-11-06",
+        "inspection_id": "2626694",
+        "inspection_type": "Canvass",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.836371827384944,
+      "license_number": "1352449",
+      "longitude": -87.62638078984217,
+      "name": "Center Court",
+      "neighborhood": "Illinois Tech",
+      "restaurant_id": "CHI-COC-1352449",
+      "state": "IL",
+      "zip_code": "60616"
+    },
+    {
+      "address": "3137 S Federal St, Chicago, IL 60616",
+      "city": "Chicago",
+      "dba_name": "John + Pat Anderson's Cafe",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 1,
+        "pass_count": 1,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2024-11-12",
+        "inspection_id": "2607271",
+        "inspection_type": "Canvass",
+        "result": "Pass",
+        "risk": "Risk 2 (Medium)"
+      },
+      "latitude": 41.836921774113534,
+      "license_number": "2647099",
+      "longitude": -87.62878938497728,
+      "name": "John + Pat Anderson's Cafe",
+      "neighborhood": "Illinois Tech",
+      "restaurant_id": "CHI-COC-2647099",
+      "state": "IL",
+      "zip_code": "60616"
+    },
+    {
+      "address": "17 W 35th St, Chicago, IL 60616",
+      "city": "Chicago",
+      "dba_name": "Jerk & Soul Food LLC",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 3,
+        "inspection_count": 5,
+        "pass_count": 2,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2025-06-11",
+        "inspection_id": "2618988",
+        "inspection_type": "Canvass Re-Inspection",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.83089083505026,
+      "license_number": "2766605",
+      "longitude": -87.62723820487749,
+      "name": "Jerk & Soul Food LLC",
+      "neighborhood": "Illinois Tech",
+      "restaurant_id": "CHI-COC-2766605",
+      "state": "IL",
+      "zip_code": "60616"
+    },
+    {
+      "address": "2230 S Wentworth Ave, Chicago, IL 60616",
+      "city": "Chicago",
+      "dba_name": "Wus Ramen Wentworth Inc",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 1,
+        "inspection_count": 2,
+        "pass_count": 0,
+        "pass_with_conditions_count": 1,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2026-06-26",
+        "inspection_id": "2639060",
+        "inspection_type": "License Re-Inspection",
+        "result": "Pass w/ Conditions",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.852010428019845,
+      "license_number": "3090298",
+      "longitude": -87.63214186708234,
+      "name": "Wus Ramen Wentworth Inc",
+      "neighborhood": "Chinatown",
+      "restaurant_id": "CHI-COC-3090298",
+      "state": "IL",
+      "zip_code": "60616"
+    },
+    {
+      "address": "2228 S Wentworth Ave, Chicago, IL 60616",
+      "city": "Chicago",
+      "dba_name": "Mui's Feida Bakery",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 2,
+        "inspection_count": 5,
+        "pass_count": 3,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2026-03-05",
+        "inspection_id": "2632206",
+        "inspection_type": "Canvass Re-Inspection",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.852068812871245,
+      "license_number": "82530",
+      "longitude": -87.63214293138071,
+      "name": "Mui's Feida Bakery",
+      "neighborhood": "Chinatown",
+      "restaurant_id": "CHI-COC-82530",
+      "state": "IL",
+      "zip_code": "60616"
+    },
+    {
+      "address": "2234 S Wentworth Ave, Chicago, IL 60616",
+      "city": "Chicago",
+      "dba_name": "Heytea",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 1,
+        "pass_count": 0,
+        "pass_with_conditions_count": 1,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2026-08-24",
+        "inspection_id": "2641637",
+        "inspection_type": "License",
+        "result": "Pass w/ Conditions",
+        "risk": "Risk 2 (Medium)"
+      },
+      "latitude": 41.85189277010586,
+      "license_number": "3099639",
+      "longitude": -87.63213877988592,
+      "name": "Heytea",
+      "neighborhood": "Chinatown",
+      "restaurant_id": "CHI-COC-3099639",
+      "state": "IL",
+      "zip_code": "60616"
+    },
+    {
+      "address": "2226 S Wentworth Ave, Chicago, IL 60616",
+      "city": "Chicago",
+      "dba_name": "Oriental Tea",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 1,
+        "inspection_count": 2,
+        "pass_count": 1,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2026-02-05",
+        "inspection_id": "2630902",
+        "inspection_type": "License Re-Inspection",
+        "result": "Pass",
+        "risk": "Risk 2 (Medium)"
+      },
+      "latitude": 41.85212719772204,
+      "license_number": "3069203",
+      "longitude": -87.6321439956803,
+      "name": "Oriental Tea",
+      "neighborhood": "Chinatown",
+      "restaurant_id": "CHI-COC-3069203",
+      "state": "IL",
+      "zip_code": "60616"
+    },
+    {
+      "address": "53 W Jackson Blvd, Chicago, IL 60604",
+      "city": "Chicago",
+      "dba_name": "Bistro Manadnock",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 1,
+        "inspection_count": 7,
+        "pass_count": 3,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2026-05-13",
+        "inspection_id": "2636764",
+        "inspection_type": "Canvass",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.878050680824906,
+      "license_number": "2882503",
+      "longitude": -87.62978100842273,
+      "name": "Bistro Manadnock",
+      "neighborhood": "Chicago Loop",
+      "restaurant_id": "CHI-COC-2882503",
+      "state": "IL",
+      "zip_code": "60604"
+    },
+    {
+      "address": "65 W Jackson Blvd, Chicago, IL 60604",
+      "city": "Chicago",
+      "dba_name": "Union League Club",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 2,
+        "inspection_count": 5,
+        "pass_count": 3,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2026-02-10",
+        "inspection_id": "2631123",
+        "inspection_type": "Canvass",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.878045653481664,
+      "license_number": "2570240",
+      "longitude": -87.6301367989615,
+      "name": "Union League Club",
+      "neighborhood": "Chicago Loop",
+      "restaurant_id": "CHI-COC-2570240",
+      "state": "IL",
+      "zip_code": "60604"
+    },
+    {
+      "address": "39 W Jackson Blvd, Chicago, IL 60604",
+      "city": "Chicago",
+      "dba_name": "Dunkin Donuts",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 2,
+        "pass_count": 1,
+        "pass_with_conditions_count": 1,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2024-12-05",
+        "inspection_id": "2608558",
+        "inspection_type": "Canvass Re-Inspection",
+        "result": "Pass",
+        "risk": "Risk 2 (Medium)"
+      },
+      "latitude": 41.87805765240321,
+      "license_number": "15491",
+      "longitude": -87.62926894464043,
+      "name": "Dunkin Donuts",
+      "neighborhood": "Chicago Loop",
+      "restaurant_id": "CHI-COC-15491",
+      "state": "IL",
+      "zip_code": "60604"
+    },
+    {
+      "address": "27 W Jackson Blvd, Chicago, IL 60604",
+      "city": "Chicago",
+      "dba_name": "Dba Garrett Popcorn Shops",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 1,
+        "pass_count": 1,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2024-12-19",
+        "inspection_id": "2609496",
+        "inspection_type": "Canvass",
+        "result": "Pass",
+        "risk": "Risk 2 (Medium)"
+      },
+      "latitude": 41.878064434112346,
+      "license_number": "2125326",
+      "longitude": -87.62869594583626,
+      "name": "Garrett Popcorn Shops",
+      "neighborhood": "Chicago Loop",
+      "restaurant_id": "CHI-COC-2125326",
+      "state": "IL",
+      "zip_code": "60604"
+    },
+    {
+      "address": "1500 E 55th St, Chicago, IL 60615",
+      "city": "Chicago",
+      "dba_name": "Bistro Ascione",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 1,
+        "inspection_count": 5,
+        "pass_count": 2,
+        "pass_with_conditions_count": 2,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2026-08-13",
+        "inspection_id": "2641152",
+        "inspection_type": "Canvass Re-Inspection",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.79531041368725,
+      "license_number": "2646656",
+      "longitude": -87.58917027740623,
+      "name": "Bistro Ascione",
+      "neighborhood": "Hyde Park",
+      "restaurant_id": "CHI-COC-2646656",
+      "state": "IL",
+      "zip_code": "60615"
+    },
+    {
+      "address": "1504 E 55th St, Chicago, IL 60615",
+      "city": "Chicago",
+      "dba_name": "Mahari Restaurant",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 2,
+        "pass_count": 2,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2026-02-11",
+        "inspection_id": "2631158",
+        "inspection_type": "Canvass",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.79530818499822,
+      "license_number": "2997780",
+      "longitude": -87.58894079318983,
+      "name": "Mahari Restaurant",
+      "neighborhood": "Hyde Park",
+      "restaurant_id": "CHI-COC-2997780",
+      "state": "IL",
+      "zip_code": "60615"
+    },
+    {
+      "address": "1348 E 55th ST, Chicago, IL 60615",
+      "city": "Chicago",
+      "dba_name": "Jet's Pizza",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 1,
+        "inspection_count": 3,
+        "pass_count": 2,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2025-01-13",
+        "inspection_id": "2610427",
+        "inspection_type": "Complaint",
+        "result": "Pass",
+        "risk": "Risk 2 (Medium)"
+      },
+      "latitude": 41.79522972341963,
+      "license_number": "2835493",
+      "longitude": -87.59254962506914,
+      "name": "Jet's Pizza",
+      "neighborhood": "Hyde Park",
+      "restaurant_id": "CHI-COC-2835493",
+      "state": "IL",
+      "zip_code": "60615"
+    },
+    {
+      "address": "964 W 31st St, Chicago, IL 60608",
+      "city": "Chicago",
+      "dba_name": "3Lp",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 2,
+        "inspection_count": 7,
+        "pass_count": 2,
+        "pass_with_conditions_count": 1,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2025-08-28",
+        "inspection_id": "2623059",
+        "inspection_type": "Complaint Re-Inspection",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.83808910384431,
+      "license_number": "2956223",
+      "longitude": -87.65129460738949,
+      "name": "3Lp",
+      "neighborhood": "Bridgeport",
+      "restaurant_id": "CHI-COC-2956223",
+      "state": "IL",
+      "zip_code": "60608"
+    },
+    {
+      "address": "3129 S Morgan ST, Chicago, IL 60608",
+      "city": "Chicago",
+      "dba_name": "Zaytune Mediterranean Grill",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 3,
+        "pass_count": 2,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2025-07-08",
+        "inspection_id": "2620259",
+        "inspection_type": "Canvass",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.83713294787266,
+      "license_number": "2009543",
+      "longitude": -87.65097503508115,
+      "name": "Zaytune",
+      "neighborhood": "Bridgeport",
+      "restaurant_id": "CHI-COC-2009543",
+      "state": "IL",
+      "zip_code": "60608"
+    },
+    {
+      "address": "3132 S Morgan St, Chicago, IL 60608",
+      "city": "Chicago",
+      "dba_name": "With U Fusion Cuisine, Inc.",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 2,
+        "inspection_count": 4,
+        "pass_count": 2,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2025-10-03",
+        "inspection_id": "2624851",
+        "inspection_type": "Canvass Re-Inspection",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.83703578571522,
+      "license_number": "2962096",
+      "longitude": -87.65126549188066,
+      "name": "With U Fusion Cuisine",
+      "neighborhood": "Bridgeport",
+      "restaurant_id": "CHI-COC-2962096",
+      "state": "IL",
+      "zip_code": "60608"
+    },
+    {
+      "address": "3411 N Halsted St, Chicago, IL 60657",
+      "city": "Chicago",
+      "dba_name": "The Chicago Diner Inc",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 3,
+        "pass_count": 2,
+        "pass_with_conditions_count": 1,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2025-05-07",
+        "inspection_id": "2617075",
+        "inspection_type": "Canvass",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.94398025441224,
+      "license_number": "6507",
+      "longitude": -87.64923859947368,
+      "name": "The Chicago Diner",
+      "neighborhood": "Lakeview",
+      "restaurant_id": "CHI-COC-6507",
+      "state": "IL",
+      "zip_code": "60657"
+    },
+    {
+      "address": "3354-3356 N Halsted St, Chicago, IL 60657",
+      "city": "Chicago",
+      "dba_name": "Roscoe's Tavern Ltd",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 4,
+        "pass_count": 1,
+        "pass_with_conditions_count": 1,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2025-06-04",
+        "inspection_id": "2618621",
+        "inspection_type": "Complaint",
+        "result": "Pass w/ Conditions",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.94344291172199,
+      "license_number": "31223",
+      "longitude": -87.64951705356305,
+      "name": "Roscoe's Tavern",
+      "neighborhood": "Lakeview",
+      "restaurant_id": "CHI-COC-31223",
+      "state": "IL",
+      "zip_code": "60657"
+    },
+    {
+      "address": "3344 N Halsted St, Chicago, IL 60657",
+      "city": "Chicago",
+      "dba_name": "Elevate Coffee",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 3,
+        "pass_count": 3,
+        "pass_with_conditions_count": 0,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2026-05-11",
+        "inspection_id": "2636520",
+        "inspection_type": "Suspected Food Poisoning",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.94312984017461,
+      "license_number": "2617529",
+      "longitude": -87.64951168839137,
+      "name": "Elevate Coffee",
+      "neighborhood": "Lakeview",
+      "restaurant_id": "CHI-COC-2617529",
+      "state": "IL",
+      "zip_code": "60657"
+    },
+    {
+      "address": "548 N Wells St, Chicago, IL 60654",
+      "city": "Chicago",
+      "dba_name": "Al's Beef Restaurant",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 2,
+        "pass_count": 0,
+        "pass_with_conditions_count": 2,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2025-10-08",
+        "inspection_id": "2625000",
+        "inspection_type": "Canvass",
+        "result": "Pass w/ Conditions",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.89227263383808,
+      "license_number": "2754055",
+      "longitude": -87.63423010025919,
+      "name": "Al's Beef Restaurant",
+      "neighborhood": "River North",
+      "restaurant_id": "CHI-COC-2754055",
+      "state": "IL",
+      "zip_code": "60654"
+    },
+    {
+      "address": "605-607 N Wells St, Chicago, IL 60654",
+      "city": "Chicago",
+      "dba_name": "City Nikki's",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 4,
+        "pass_count": 0,
+        "pass_with_conditions_count": 1,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2026-02-19",
+        "inspection_id": "2631482",
+        "inspection_type": "Canvass",
+        "result": "Pass w/ Conditions",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.8925743372172,
+      "license_number": "2535322",
+      "longitude": -87.63394880128168,
+      "name": "City Nikki's",
+      "neighborhood": "River North",
+      "restaurant_id": "CHI-COC-2535322",
+      "state": "IL",
+      "zip_code": "60654"
+    },
+    {
+      "address": "546 N Wells St, Chicago, IL 60654",
+      "city": "Chicago",
+      "dba_name": "Akiro",
+      "inspection_history": {
+        "end_date": "2026-08-30",
+        "fail_count": 0,
+        "inspection_count": 3,
+        "pass_count": 1,
+        "pass_with_conditions_count": 1,
+        "start_date": "2024-01-01"
+      },
+      "latest_inspection": {
+        "inspection_date": "2026-07-21",
+        "inspection_id": "2639956",
+        "inspection_type": "Canvass Re-Inspection",
+        "result": "Pass",
+        "risk": "Risk 1 (High)"
+      },
+      "latitude": 41.892202981359844,
+      "license_number": "3041276",
+      "longitude": -87.63422789890868,
+      "name": "Akiro Chicago LLC",
+      "neighborhood": "River North",
+      "restaurant_id": "CHI-COC-3041276",
+      "state": "IL",
+      "zip_code": "60654"
+    }
+  ]
+}

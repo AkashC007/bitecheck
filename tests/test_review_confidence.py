@@ -115,22 +115,15 @@ def test_component_contributions_use_configured_weights() -> None:
 
 def test_controlled_bursts_receive_the_suspicious_burst_penalty() -> None:
     records = confidence_records()
-    first_six = records[:6]
-    remaining = records[6:]
+    penalties = [
+        cast(dict[str, dict[str, object]], record["penalties"])[
+            "suspicious_bursts"
+        ]["penalty"]
+        for record in records
+    ]
 
-    assert {
-        cast(dict[str, dict[str, object]], record["penalties"])[
-            "suspicious_bursts"
-        ]["penalty"]
-        for record in first_six
-    } == {3.33}
-    assert all(
-        cast(dict[str, dict[str, object]], record["penalties"])[
-            "suspicious_bursts"
-        ]["penalty"]
-        == 0
-        for record in remaining
-    )
+    assert penalties.count(3.33) == 6
+    assert penalties.count(0.0) == len(records) - 6
 
 
 def test_complete_branch_and_source_data_receive_full_component_scores() -> None:

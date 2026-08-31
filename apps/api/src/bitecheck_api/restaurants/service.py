@@ -139,6 +139,7 @@ class RestaurantSearchService:
                     vegan_available=restaurant.vegan_available,
                     rating=restaurant.rating,
                     review_count=restaurant.review_count,
+                    latest_inspection=restaurant.latest_inspection,
                     travel=travel,
                 )
             )

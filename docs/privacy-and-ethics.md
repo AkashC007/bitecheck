@@ -9,12 +9,18 @@
 - Preserve source attribution when external data is introduced.
 - Do not describe review confidence as proof of truthfulness.
 
-No user data, location, transcript, restaurant data, or review data is stored in
-Milestone 0.
+No user location, transcript, account, or personal profile is stored.
 
-Milestone 1 stores only generated records. Restaurant names use generated word
-combinations, addresses use obvious demo street names, and every record includes
-`data_provenance: synthetic`. Coordinates and travel times are for testing only.
+The current restaurant snapshot contains public establishment identity,
+address, coordinate, license, and inspection fields from the City of Chicago
+Food Inspections dataset. BiteCheck records the source, snapshot date,
+transformations, and disclaimer. Inspection records describe conditions at the
+time of inspection and are not presented as a current safety guarantee.
+
+Cuisine, price, dietary availability, ratings, reviews, opening hours, travel
+times, themes, confidence, and ranking labels are synthetic. They are kept
+separate through field-level provenance and must not be interpreted as factual
+claims about the named businesses.
 
 ## Browser voice privacy
 

@@ -37,103 +37,6 @@
   },
   "restaurants": [
     {
-      "base_score": 75.0,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 17.96,
-          "explanation": "Source mean-rating dispersion is 0.20.",
-          "score": 89.79,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 11.03,
-          "explanation": "Rating standard deviation is 1.12.",
-          "score": 44.1,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 10.84,
-          "explanation": "Average review age is 244 days.",
-          "score": 72.24,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "33.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 3.33,
-          "rate": 0.3333
-        }
-      },
-      "restaurant_id": "CHI-SYN-001",
-      "restaurant_name": "Silver Orchid Cafe",
-      "review_confidence_score": 70.42,
-      "source_metrics": [
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 4.58
-    },
-    {
       "base_score": 73.8,
       "components": {
         "branch_match_confidence": {
@@ -208,8 +111,8 @@
           "rate": 0.3333
         }
       },
-      "restaurant_id": "CHI-SYN-002",
-      "restaurant_name": "Little Tandoor Table",
+      "restaurant_id": "CHI-COC-1352449",
+      "restaurant_name": "Center Court",
       "review_confidence_score": 69.22,
       "source_metrics": [
         {
@@ -229,782 +132,6 @@
         }
       ],
       "total_penalty": 4.58
-    },
-    {
-      "base_score": 74.99,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 18.82,
-          "explanation": "Source mean-rating dispersion is 0.12.",
-          "score": 94.11,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 12.16,
-          "explanation": "Rating standard deviation is 1.03.",
-          "score": 48.63,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 8.84,
-          "explanation": "Average review age is 332 days.",
-          "score": 58.95,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "33.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 3.33,
-          "rate": 0.3333
-        }
-      },
-      "restaurant_id": "CHI-SYN-003",
-      "restaurant_name": "Prairie Cypress Cafe",
-      "review_confidence_score": 70.41,
-      "source_metrics": [
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 4.58
-    },
-    {
-      "base_score": 74.69,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 17.96,
-          "explanation": "Source mean-rating dispersion is 0.20.",
-          "score": 89.79,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 11.03,
-          "explanation": "Rating standard deviation is 1.12.",
-          "score": 44.1,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 10.53,
-          "explanation": "Average review age is 244 days.",
-          "score": 70.18,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "33.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 3.33,
-          "rate": 0.3333
-        }
-      },
-      "restaurant_id": "CHI-SYN-004",
-      "restaurant_name": "Prairie Tandoor Table",
-      "review_confidence_score": 70.11,
-      "source_metrics": [
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 4.58
-    },
-    {
-      "base_score": 75.28,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 18.82,
-          "explanation": "Source mean-rating dispersion is 0.12.",
-          "score": 94.11,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 10.27,
-          "explanation": "Rating standard deviation is 1.18.",
-          "score": 41.07,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 11.02,
-          "explanation": "Average review age is 228 days.",
-          "score": 73.49,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "33.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 3.33,
-          "rate": 0.3333
-        }
-      },
-      "restaurant_id": "CHI-SYN-005",
-      "restaurant_name": "North Lantern House",
-      "review_confidence_score": 70.7,
-      "source_metrics": [
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 4.58
-    },
-    {
-      "base_score": 76.65,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 18.82,
-          "explanation": "Source mean-rating dispersion is 0.12.",
-          "score": 94.11,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 12.16,
-          "explanation": "Rating standard deviation is 1.03.",
-          "score": 48.63,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 10.5,
-          "explanation": "Average review age is 256 days.",
-          "score": 70.0,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "33.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 3.33,
-          "rate": 0.3333
-        }
-      },
-      "restaurant_id": "CHI-SYN-006",
-      "restaurant_name": "Cedar Berbere Table",
-      "review_confidence_score": 72.07,
-      "source_metrics": [
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 4.58
-    },
-    {
-      "base_score": 74.77,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 17.96,
-          "explanation": "Source mean-rating dispersion is 0.20.",
-          "score": 89.79,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 11.03,
-          "explanation": "Rating standard deviation is 1.12.",
-          "score": 44.1,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 10.61,
-          "explanation": "Average review age is 275 days.",
-          "score": 70.7,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-007",
-      "restaurant_name": "Blue Sesame Cafe",
-      "review_confidence_score": 73.52,
-      "source_metrics": [
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
-    },
-    {
-      "base_score": 73.05,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 17.96,
-          "explanation": "Source mean-rating dispersion is 0.20.",
-          "score": 89.79,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 11.03,
-          "explanation": "Rating standard deviation is 1.12.",
-          "score": 44.1,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 8.89,
-          "explanation": "Average review age is 348 days.",
-          "score": 59.27,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-008",
-      "restaurant_name": "Golden Cypress Table",
-      "review_confidence_score": 71.8,
-      "source_metrics": [
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
-    },
-    {
-      "base_score": 77.01,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 18.82,
-          "explanation": "Source mean-rating dispersion is 0.12.",
-          "score": 94.11,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 12.16,
-          "explanation": "Rating standard deviation is 1.03.",
-          "score": 48.63,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 10.86,
-          "explanation": "Average review age is 253 days.",
-          "score": 72.43,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "high",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-009",
-      "restaurant_name": "Windy Lemongrass Cafe",
-      "review_confidence_score": 75.76,
-      "source_metrics": [
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
-    },
-    {
-      "base_score": 71.77,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 18.82,
-          "explanation": "Source mean-rating dispersion is 0.12.",
-          "score": 94.11,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 10.27,
-          "explanation": "Rating standard deviation is 1.18.",
-          "score": 41.07,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 7.51,
-          "explanation": "Average review age is 403 days.",
-          "score": 50.05,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-010",
-      "restaurant_name": "Lake Lantern House",
-      "review_confidence_score": 70.52,
-      "source_metrics": [
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
     },
     {
       "base_score": 72.03,
@@ -1081,9 +208,203 @@
           "rate": 0.0
         }
       },
-      "restaurant_id": "CHI-SYN-011",
-      "restaurant_name": "Little Sakura Kitchen",
+      "restaurant_id": "CHI-COC-15491",
+      "restaurant_name": "Dunkin Donuts",
       "review_confidence_score": 70.78,
+      "source_metrics": [
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 75.0,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 17.96,
+          "explanation": "Source mean-rating dispersion is 0.20.",
+          "score": 89.79,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 11.03,
+          "explanation": "Rating standard deviation is 1.12.",
+          "score": 44.1,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 10.84,
+          "explanation": "Average review age is 244 days.",
+          "score": 72.24,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "33.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 3.33,
+          "rate": 0.3333
+        }
+      },
+      "restaurant_id": "CHI-COC-1766001",
+      "restaurant_name": "The Bog",
+      "review_confidence_score": 70.42,
+      "source_metrics": [
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 4.58
+    },
+    {
+      "base_score": 72.81,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 17.96,
+          "explanation": "Source mean-rating dispersion is 0.20.",
+          "score": 89.79,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 11.03,
+          "explanation": "Rating standard deviation is 1.12.",
+          "score": 44.1,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 8.65,
+          "explanation": "Average review age is 364 days.",
+          "score": 57.64,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-2009543",
+      "restaurant_name": "Zaytune",
+      "review_confidence_score": 71.56,
       "source_metrics": [
         {
           "mean_rating": 3.75,
@@ -1178,9 +499,300 @@
           "rate": 0.0
         }
       },
-      "restaurant_id": "CHI-SYN-012",
-      "restaurant_name": "Little Trattoria House",
+      "restaurant_id": "CHI-COC-2125326",
+      "restaurant_name": "Garrett Popcorn Shops",
       "review_confidence_score": 74.37,
+      "source_metrics": [
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 74.75,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 17.96,
+          "explanation": "Source mean-rating dispersion is 0.20.",
+          "score": 89.79,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 11.03,
+          "explanation": "Rating standard deviation is 1.12.",
+          "score": 44.1,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 10.59,
+          "explanation": "Average review age is 257 days.",
+          "score": 70.58,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-2535322",
+      "restaurant_name": "City Nikki's",
+      "review_confidence_score": 73.5,
+      "source_metrics": [
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 71.77,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 18.82,
+          "explanation": "Source mean-rating dispersion is 0.12.",
+          "score": 94.11,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 10.27,
+          "explanation": "Rating standard deviation is 1.18.",
+          "score": 41.07,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 7.51,
+          "explanation": "Average review age is 403 days.",
+          "score": 50.05,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-2570240",
+      "restaurant_name": "Union League Club",
+      "review_confidence_score": 70.52,
+      "source_metrics": [
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 75.02,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 18.82,
+          "explanation": "Source mean-rating dispersion is 0.12.",
+          "score": 94.11,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 12.16,
+          "explanation": "Rating standard deviation is 1.03.",
+          "score": 48.63,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 8.87,
+          "explanation": "Average review age is 344 days.",
+          "score": 59.11,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-2617529",
+      "restaurant_name": "Elevate Coffee",
+      "review_confidence_score": 73.77,
       "source_metrics": [
         {
           "mean_rating": 3.5,
@@ -1275,8 +887,8 @@
           "rate": 0.0
         }
       },
-      "restaurant_id": "CHI-SYN-013",
-      "restaurant_name": "Blue Lantern Table",
+      "restaurant_id": "CHI-COC-2646656",
+      "restaurant_name": "Bistro Ascione",
       "review_confidence_score": 71.9,
       "source_metrics": [
         {
@@ -1286,6 +898,685 @@
         },
         {
           "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 74.99,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 18.82,
+          "explanation": "Source mean-rating dispersion is 0.12.",
+          "score": 94.11,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 12.16,
+          "explanation": "Rating standard deviation is 1.03.",
+          "score": 48.63,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 8.84,
+          "explanation": "Average review age is 332 days.",
+          "score": 58.95,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "33.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 3.33,
+          "rate": 0.3333
+        }
+      },
+      "restaurant_id": "CHI-COC-2647099",
+      "restaurant_name": "John + Pat Anderson's Cafe",
+      "review_confidence_score": 70.41,
+      "source_metrics": [
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 4.58
+    },
+    {
+      "base_score": 71.84,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 17.96,
+          "explanation": "Source mean-rating dispersion is 0.20.",
+          "score": 89.79,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 11.03,
+          "explanation": "Rating standard deviation is 1.12.",
+          "score": 44.1,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 7.68,
+          "explanation": "Average review age is 380 days.",
+          "score": 51.21,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-2754055",
+      "restaurant_name": "Al's Beef Restaurant",
+      "review_confidence_score": 70.59,
+      "source_metrics": [
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 74.69,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 17.96,
+          "explanation": "Source mean-rating dispersion is 0.20.",
+          "score": 89.79,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 11.03,
+          "explanation": "Rating standard deviation is 1.12.",
+          "score": 44.1,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 10.53,
+          "explanation": "Average review age is 244 days.",
+          "score": 70.18,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "33.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 3.33,
+          "rate": 0.3333
+        }
+      },
+      "restaurant_id": "CHI-COC-2766605",
+      "restaurant_name": "Jerk & Soul Food LLC",
+      "review_confidence_score": 70.11,
+      "source_metrics": [
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 4.58
+    },
+    {
+      "base_score": 73.08,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 18.82,
+          "explanation": "Source mean-rating dispersion is 0.12.",
+          "score": 94.11,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 10.27,
+          "explanation": "Rating standard deviation is 1.18.",
+          "score": 41.07,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 8.82,
+          "explanation": "Average review age is 325 days.",
+          "score": 58.82,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-2835493",
+      "restaurant_name": "Jet's Pizza",
+      "review_confidence_score": 71.83,
+      "source_metrics": [
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 77.01,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 18.82,
+          "explanation": "Source mean-rating dispersion is 0.12.",
+          "score": 94.11,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 12.16,
+          "explanation": "Rating standard deviation is 1.03.",
+          "score": 48.63,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 10.86,
+          "explanation": "Average review age is 253 days.",
+          "score": 72.43,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "high",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-2882503",
+      "restaurant_name": "Bistro Manadnock",
+      "review_confidence_score": 75.76,
+      "source_metrics": [
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 73.48,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 17.96,
+          "explanation": "Source mean-rating dispersion is 0.20.",
+          "score": 89.79,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 11.03,
+          "explanation": "Rating standard deviation is 1.12.",
+          "score": 44.1,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 9.32,
+          "explanation": "Average review age is 329 days.",
+          "score": 62.12,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-2956223",
+      "restaurant_name": "3Lp",
+      "review_confidence_score": 72.23,
+      "source_metrics": [
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 73.65,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 18.82,
+          "explanation": "Source mean-rating dispersion is 0.12.",
+          "score": 94.11,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 12.16,
+          "explanation": "Rating standard deviation is 1.03.",
+          "score": 48.63,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 7.5,
+          "explanation": "Average review age is 420 days.",
+          "score": 50.03,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-2962096",
+      "restaurant_name": "With U Fusion Cuisine",
+      "review_confidence_score": 72.4,
+      "source_metrics": [
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.75,
           "review_count": 4,
           "source": "CityEats Demo"
         },
@@ -1372,882 +1663,9 @@
           "rate": 0.0
         }
       },
-      "restaurant_id": "CHI-SYN-014",
-      "restaurant_name": "Prairie Harvest House",
+      "restaurant_id": "CHI-COC-2997780",
+      "restaurant_name": "Mahari Restaurant",
       "review_confidence_score": 71.89,
-      "source_metrics": [
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
-    },
-    {
-      "base_score": 73.08,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 18.82,
-          "explanation": "Source mean-rating dispersion is 0.12.",
-          "score": 94.11,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 10.27,
-          "explanation": "Rating standard deviation is 1.18.",
-          "score": 41.07,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 8.82,
-          "explanation": "Average review age is 325 days.",
-          "score": 58.82,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-015",
-      "restaurant_name": "North Berbere Kitchen",
-      "review_confidence_score": 71.83,
-      "source_metrics": [
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
-    },
-    {
-      "base_score": 73.48,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 17.96,
-          "explanation": "Source mean-rating dispersion is 0.20.",
-          "score": 89.79,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 11.03,
-          "explanation": "Rating standard deviation is 1.12.",
-          "score": 44.1,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 9.32,
-          "explanation": "Average review age is 329 days.",
-          "score": 62.12,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-016",
-      "restaurant_name": "Little Seoul Cafe",
-      "review_confidence_score": 72.23,
-      "source_metrics": [
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
-    },
-    {
-      "base_score": 72.81,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 17.96,
-          "explanation": "Source mean-rating dispersion is 0.20.",
-          "score": 89.79,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 11.03,
-          "explanation": "Rating standard deviation is 1.12.",
-          "score": 44.1,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 8.65,
-          "explanation": "Average review age is 364 days.",
-          "score": 57.64,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-017",
-      "restaurant_name": "Silver Pasta Table",
-      "review_confidence_score": 71.56,
-      "source_metrics": [
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
-    },
-    {
-      "base_score": 73.65,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 18.82,
-          "explanation": "Source mean-rating dispersion is 0.12.",
-          "score": 94.11,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 12.16,
-          "explanation": "Rating standard deviation is 1.03.",
-          "score": 48.63,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 7.5,
-          "explanation": "Average review age is 420 days.",
-          "score": 50.03,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-018",
-      "restaurant_name": "Little Mesob Kitchen",
-      "review_confidence_score": 72.4,
-      "source_metrics": [
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
-    },
-    {
-      "base_score": 73.87,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 17.96,
-          "explanation": "Source mean-rating dispersion is 0.20.",
-          "score": 89.79,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 11.03,
-          "explanation": "Rating standard deviation is 1.12.",
-          "score": 44.1,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 9.71,
-          "explanation": "Average review age is 315 days.",
-          "score": 64.7,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-019",
-      "restaurant_name": "Golden Griddle Table",
-      "review_confidence_score": 72.62,
-      "source_metrics": [
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
-    },
-    {
-      "base_score": 72.16,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 18.82,
-          "explanation": "Source mean-rating dispersion is 0.12.",
-          "score": 94.11,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 10.27,
-          "explanation": "Rating standard deviation is 1.18.",
-          "score": 41.07,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 7.9,
-          "explanation": "Average review age is 405 days.",
-          "score": 52.69,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-020",
-      "restaurant_name": "Bright Saffron Cafe",
-      "review_confidence_score": 70.91,
-      "source_metrics": [
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
-    },
-    {
-      "base_score": 75.02,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 18.82,
-          "explanation": "Source mean-rating dispersion is 0.12.",
-          "score": 94.11,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 12.16,
-          "explanation": "Rating standard deviation is 1.03.",
-          "score": 48.63,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 8.87,
-          "explanation": "Average review age is 344 days.",
-          "score": 59.11,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-021",
-      "restaurant_name": "North Sakura Kitchen",
-      "review_confidence_score": 73.77,
-      "source_metrics": [
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
-    },
-    {
-      "base_score": 71.84,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 17.96,
-          "explanation": "Source mean-rating dispersion is 0.20.",
-          "score": 89.79,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 11.03,
-          "explanation": "Rating standard deviation is 1.12.",
-          "score": 44.1,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 7.68,
-          "explanation": "Average review age is 380 days.",
-          "score": 51.21,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-022",
-      "restaurant_name": "Golden Griddle Cafe",
-      "review_confidence_score": 70.59,
-      "source_metrics": [
-        {
-          "mean_rating": 3.25,
-          "review_count": 4,
-          "source": "BiteCheck Community Synthetic"
-        },
-        {
-          "mean_rating": 3.5,
-          "review_count": 4,
-          "source": "CityEats Demo"
-        },
-        {
-          "mean_rating": 3.75,
-          "review_count": 4,
-          "source": "DineLog Synthetic"
-        }
-      ],
-      "total_penalty": 1.25
-    },
-    {
-      "base_score": 74.75,
-      "components": {
-        "branch_match_confidence": {
-          "contribution": 10.0,
-          "explanation": "12 of 12 reviews match branch name and address.",
-          "score": 100.0,
-          "weight": 0.1
-        },
-        "cross_source_agreement": {
-          "contribution": 17.96,
-          "explanation": "Source mean-rating dispersion is 0.20.",
-          "score": 89.79,
-          "weight": 0.2
-        },
-        "observation_volume": {
-          "contribution": 6.0,
-          "explanation": "12 observations against a target of 20.",
-          "score": 60.0,
-          "weight": 0.1
-        },
-        "rating_consistency": {
-          "contribution": 11.03,
-          "explanation": "Rating standard deviation is 1.12.",
-          "score": 44.1,
-          "weight": 0.25
-        },
-        "review_recency": {
-          "contribution": 10.59,
-          "explanation": "Average review age is 257 days.",
-          "score": 70.58,
-          "weight": 0.15
-        },
-        "review_specificity": {
-          "contribution": 9.17,
-          "explanation": "Specificity uses extracted theme counts per review.",
-          "score": 91.67,
-          "weight": 0.1
-        },
-        "source_diversity": {
-          "contribution": 10.0,
-          "explanation": "3 of 3 expected sources present.",
-          "score": 100.0,
-          "weight": 0.1
-        }
-      },
-      "confidence_band": "medium",
-      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
-      "observation_count": 12,
-      "penalties": {
-        "exact_duplicates": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.83,
-          "rate": 0.0833
-        },
-        "missing_data": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        },
-        "repetitive_language": {
-          "explanation": "8.3% of applicable observations.",
-          "maximum_penalty": 5,
-          "penalty": 0.42,
-          "rate": 0.0833
-        },
-        "suspicious_bursts": {
-          "explanation": "0.0% of applicable observations.",
-          "maximum_penalty": 10,
-          "penalty": 0.0,
-          "rate": 0.0
-        }
-      },
-      "restaurant_id": "CHI-SYN-023",
-      "restaurant_name": "Golden Agave Table",
-      "review_confidence_score": 73.5,
       "source_metrics": [
         {
           "mean_rating": 3.75,
@@ -2342,8 +1760,8 @@
           "rate": 0.0
         }
       },
-      "restaurant_id": "CHI-SYN-024",
-      "restaurant_name": "Amber Agave Kitchen",
+      "restaurant_id": "CHI-COC-3041276",
+      "restaurant_name": "Akiro Chicago LLC",
       "review_confidence_score": 73.42,
       "source_metrics": [
         {
@@ -2363,6 +1781,588 @@
         }
       ],
       "total_penalty": 1.25
+    },
+    {
+      "base_score": 73.05,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 17.96,
+          "explanation": "Source mean-rating dispersion is 0.20.",
+          "score": 89.79,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 11.03,
+          "explanation": "Rating standard deviation is 1.12.",
+          "score": 44.1,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 8.89,
+          "explanation": "Average review age is 348 days.",
+          "score": 59.27,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-3069203",
+      "restaurant_name": "Oriental Tea",
+      "review_confidence_score": 71.8,
+      "source_metrics": [
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 75.28,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 18.82,
+          "explanation": "Source mean-rating dispersion is 0.12.",
+          "score": 94.11,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 10.27,
+          "explanation": "Rating standard deviation is 1.18.",
+          "score": 41.07,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 11.02,
+          "explanation": "Average review age is 228 days.",
+          "score": 73.49,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "33.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 3.33,
+          "rate": 0.3333
+        }
+      },
+      "restaurant_id": "CHI-COC-3090298",
+      "restaurant_name": "Wus Ramen Wentworth Inc",
+      "review_confidence_score": 70.7,
+      "source_metrics": [
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 4.58
+    },
+    {
+      "base_score": 74.77,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 17.96,
+          "explanation": "Source mean-rating dispersion is 0.20.",
+          "score": 89.79,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 11.03,
+          "explanation": "Rating standard deviation is 1.12.",
+          "score": 44.1,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 10.61,
+          "explanation": "Average review age is 275 days.",
+          "score": 70.7,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-3099639",
+      "restaurant_name": "Heytea",
+      "review_confidence_score": 73.52,
+      "source_metrics": [
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 72.16,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 18.82,
+          "explanation": "Source mean-rating dispersion is 0.12.",
+          "score": 94.11,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 10.27,
+          "explanation": "Rating standard deviation is 1.18.",
+          "score": 41.07,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 7.9,
+          "explanation": "Average review age is 405 days.",
+          "score": 52.69,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-31223",
+      "restaurant_name": "Roscoe's Tavern",
+      "review_confidence_score": 70.91,
+      "source_metrics": [
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 73.87,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 17.96,
+          "explanation": "Source mean-rating dispersion is 0.20.",
+          "score": 89.79,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 11.03,
+          "explanation": "Rating standard deviation is 1.12.",
+          "score": 44.1,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 9.71,
+          "explanation": "Average review age is 315 days.",
+          "score": 64.7,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        }
+      },
+      "restaurant_id": "CHI-COC-6507",
+      "restaurant_name": "The Chicago Diner",
+      "review_confidence_score": 72.62,
+      "source_metrics": [
+        {
+          "mean_rating": 3.25,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 1.25
+    },
+    {
+      "base_score": 76.65,
+      "components": {
+        "branch_match_confidence": {
+          "contribution": 10.0,
+          "explanation": "12 of 12 reviews match branch name and address.",
+          "score": 100.0,
+          "weight": 0.1
+        },
+        "cross_source_agreement": {
+          "contribution": 18.82,
+          "explanation": "Source mean-rating dispersion is 0.12.",
+          "score": 94.11,
+          "weight": 0.2
+        },
+        "observation_volume": {
+          "contribution": 6.0,
+          "explanation": "12 observations against a target of 20.",
+          "score": 60.0,
+          "weight": 0.1
+        },
+        "rating_consistency": {
+          "contribution": 12.16,
+          "explanation": "Rating standard deviation is 1.03.",
+          "score": 48.63,
+          "weight": 0.25
+        },
+        "review_recency": {
+          "contribution": 10.5,
+          "explanation": "Average review age is 256 days.",
+          "score": 70.0,
+          "weight": 0.15
+        },
+        "review_specificity": {
+          "contribution": 9.17,
+          "explanation": "Specificity uses extracted theme counts per review.",
+          "score": 91.67,
+          "weight": 0.1
+        },
+        "source_diversity": {
+          "contribution": 10.0,
+          "explanation": "3 of 3 expected sources present.",
+          "score": 100.0,
+          "weight": 0.1
+        }
+      },
+      "confidence_band": "medium",
+      "interpretation": "Evidence reliability estimate; not a truth or authenticity score.",
+      "observation_count": 12,
+      "penalties": {
+        "exact_duplicates": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.83,
+          "rate": 0.0833
+        },
+        "missing_data": {
+          "explanation": "0.0% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 0.0,
+          "rate": 0.0
+        },
+        "repetitive_language": {
+          "explanation": "8.3% of applicable observations.",
+          "maximum_penalty": 5,
+          "penalty": 0.42,
+          "rate": 0.0833
+        },
+        "suspicious_bursts": {
+          "explanation": "33.3% of applicable observations.",
+          "maximum_penalty": 10,
+          "penalty": 3.33,
+          "rate": 0.3333
+        }
+      },
+      "restaurant_id": "CHI-COC-82530",
+      "restaurant_name": "Mui's Feida Bakery",
+      "review_confidence_score": 72.07,
+      "source_metrics": [
+        {
+          "mean_rating": 3.5,
+          "review_count": 4,
+          "source": "BiteCheck Community Synthetic"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "CityEats Demo"
+        },
+        {
+          "mean_rating": 3.75,
+          "review_count": 4,
+          "source": "DineLog Synthetic"
+        }
+      ],
+      "total_penalty": 4.58
     }
   ]
 }

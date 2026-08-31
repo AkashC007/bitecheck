@@ -10,71 +10,6 @@
   },
   "restaurants": [
     {
-      "latest_review_date": "2026-01-13",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "vegan_options": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 11,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-001",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
       "latest_review_date": "2026-01-10",
       "negative_theme_counts": {
         "food_quality": 1,
@@ -103,527 +38,7 @@
         "vegetarian_options": 1
       },
       "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-002",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2026-01-07",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 10,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegan_options": 1,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 16,
-      "restaurant_id": "CHI-SYN-003",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2026-01-04",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "vegan_options": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 11,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-004",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2026-01-03",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "vegan_options": 1,
-        "vegetarian_options": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 12,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2
-      },
-      "positive_theme_mentions": 14,
-      "restaurant_id": "CHI-SYN-005",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2025-12-29",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 10,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegan_options": 1,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 16,
-      "restaurant_id": "CHI-SYN-006",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2025-12-21",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "vegan_options": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 11,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-007",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2025-08-14",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "vegan_options": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 11,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-008",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2026-01-02",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 10,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegan_options": 1,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 16,
-      "restaurant_id": "CHI-SYN-009",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2026-01-10",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "vegan_options": 1,
-        "vegetarian_options": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 12,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2
-      },
-      "positive_theme_mentions": 14,
-      "restaurant_id": "CHI-SYN-010",
+      "restaurant_id": "CHI-COC-1352449",
       "top_negative_themes": [
         {
           "label": "Waiting time",
@@ -688,202 +103,7 @@
         "vegetarian_options": 1
       },
       "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-011",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2026-01-14",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 10,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegan_options": 1,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 16,
-      "restaurant_id": "CHI-SYN-012",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2025-10-29",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "vegan_options": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 11,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-013",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2025-12-15",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "vegan_options": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 11,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-014",
+      "restaurant_id": "CHI-COC-15491",
       "top_negative_themes": [
         {
           "label": "Waiting time",
@@ -931,71 +151,6 @@
         "spice_level": 1,
         "value": 1,
         "vegan_options": 1,
-        "vegetarian_options": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 12,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2
-      },
-      "positive_theme_mentions": 14,
-      "restaurant_id": "CHI-SYN-015",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2026-01-15",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "vegan_options": 1,
         "waiting_time": 2
       },
       "negative_theme_mentions": 11,
@@ -1013,7 +168,7 @@
         "vegetarian_options": 1
       },
       "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-016",
+      "restaurant_id": "CHI-COC-1766001",
       "top_negative_themes": [
         {
           "label": "Waiting time",
@@ -1078,7 +233,7 @@
         "vegetarian_options": 1
       },
       "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-017",
+      "restaurant_id": "CHI-COC-2009543",
       "top_negative_themes": [
         {
           "label": "Waiting time",
@@ -1115,7 +270,7 @@
       ]
     },
     {
-      "latest_review_date": "2025-09-16",
+      "latest_review_date": "2026-01-14",
       "negative_theme_counts": {
         "food_quality": 1,
         "parking": 1,
@@ -1143,267 +298,7 @@
         "vegetarian_options": 1
       },
       "positive_theme_mentions": 16,
-      "restaurant_id": "CHI-SYN-018",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2026-01-15",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "vegan_options": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 11,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-019",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2025-12-12",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "vegan_options": 1,
-        "vegetarian_options": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 12,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2
-      },
-      "positive_theme_mentions": 14,
-      "restaurant_id": "CHI-SYN-020",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2026-01-09",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 10,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegan_options": 1,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 16,
-      "restaurant_id": "CHI-SYN-021",
-      "top_negative_themes": [
-        {
-          "label": "Waiting time",
-          "mention_count": 2,
-          "theme": "waiting_time"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 1,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Parking",
-          "mention_count": 1,
-          "theme": "parking"
-        }
-      ],
-      "top_positive_themes": [
-        {
-          "label": "Specific dishes",
-          "mention_count": 3,
-          "theme": "specific_dishes"
-        },
-        {
-          "label": "Food quality",
-          "mention_count": 2,
-          "theme": "food_quality"
-        },
-        {
-          "label": "Portion size",
-          "mention_count": 2,
-          "theme": "portion_size"
-        }
-      ]
-    },
-    {
-      "latest_review_date": "2026-01-04",
-      "negative_theme_counts": {
-        "food_quality": 1,
-        "parking": 1,
-        "portion_size": 1,
-        "price": 1,
-        "service": 1,
-        "specific_dishes": 1,
-        "spice_level": 1,
-        "value": 1,
-        "vegan_options": 1,
-        "waiting_time": 2
-      },
-      "negative_theme_mentions": 11,
-      "observation_count": 12,
-      "positive_theme_counts": {
-        "atmosphere": 1,
-        "authenticity": 1,
-        "cleanliness": 1,
-        "food_quality": 2,
-        "portion_size": 2,
-        "public_transit_convenience": 1,
-        "service": 1,
-        "specific_dishes": 3,
-        "value": 2,
-        "vegetarian_options": 1
-      },
-      "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-022",
+      "restaurant_id": "CHI-COC-2125326",
       "top_negative_themes": [
         {
           "label": "Waiting time",
@@ -1468,7 +363,722 @@
         "vegetarian_options": 1
       },
       "positive_theme_mentions": 15,
-      "restaurant_id": "CHI-SYN-023",
+      "restaurant_id": "CHI-COC-2535322",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2026-01-10",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "vegan_options": 1,
+        "vegetarian_options": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 12,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2
+      },
+      "positive_theme_mentions": 14,
+      "restaurant_id": "CHI-COC-2570240",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2026-01-09",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 10,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegan_options": 1,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 16,
+      "restaurant_id": "CHI-COC-2617529",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2025-10-29",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "vegan_options": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 11,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 15,
+      "restaurant_id": "CHI-COC-2646656",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2026-01-07",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 10,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegan_options": 1,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 16,
+      "restaurant_id": "CHI-COC-2647099",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2026-01-04",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "vegan_options": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 11,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 15,
+      "restaurant_id": "CHI-COC-2754055",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2026-01-04",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "vegan_options": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 11,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 15,
+      "restaurant_id": "CHI-COC-2766605",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2026-01-13",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "vegan_options": 1,
+        "vegetarian_options": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 12,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2
+      },
+      "positive_theme_mentions": 14,
+      "restaurant_id": "CHI-COC-2835493",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2026-01-02",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 10,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegan_options": 1,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 16,
+      "restaurant_id": "CHI-COC-2882503",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2026-01-15",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "vegan_options": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 11,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 15,
+      "restaurant_id": "CHI-COC-2956223",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2025-09-16",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 10,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegan_options": 1,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 16,
+      "restaurant_id": "CHI-COC-2962096",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2025-12-15",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "vegan_options": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 11,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 15,
+      "restaurant_id": "CHI-COC-2997780",
       "top_negative_themes": [
         {
           "label": "Waiting time",
@@ -1533,7 +1143,397 @@
         "vegetarian_options": 1
       },
       "positive_theme_mentions": 16,
-      "restaurant_id": "CHI-SYN-024",
+      "restaurant_id": "CHI-COC-3041276",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2025-08-14",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "vegan_options": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 11,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 15,
+      "restaurant_id": "CHI-COC-3069203",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2026-01-03",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "vegan_options": 1,
+        "vegetarian_options": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 12,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2
+      },
+      "positive_theme_mentions": 14,
+      "restaurant_id": "CHI-COC-3090298",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2025-12-21",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "vegan_options": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 11,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 15,
+      "restaurant_id": "CHI-COC-3099639",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2025-12-12",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "vegan_options": 1,
+        "vegetarian_options": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 12,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2
+      },
+      "positive_theme_mentions": 14,
+      "restaurant_id": "CHI-COC-31223",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2026-01-15",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "vegan_options": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 11,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 15,
+      "restaurant_id": "CHI-COC-6507",
+      "top_negative_themes": [
+        {
+          "label": "Waiting time",
+          "mention_count": 2,
+          "theme": "waiting_time"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 1,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Parking",
+          "mention_count": 1,
+          "theme": "parking"
+        }
+      ],
+      "top_positive_themes": [
+        {
+          "label": "Specific dishes",
+          "mention_count": 3,
+          "theme": "specific_dishes"
+        },
+        {
+          "label": "Food quality",
+          "mention_count": 2,
+          "theme": "food_quality"
+        },
+        {
+          "label": "Portion size",
+          "mention_count": 2,
+          "theme": "portion_size"
+        }
+      ]
+    },
+    {
+      "latest_review_date": "2025-12-29",
+      "negative_theme_counts": {
+        "food_quality": 1,
+        "parking": 1,
+        "portion_size": 1,
+        "price": 1,
+        "service": 1,
+        "specific_dishes": 1,
+        "spice_level": 1,
+        "value": 1,
+        "waiting_time": 2
+      },
+      "negative_theme_mentions": 10,
+      "observation_count": 12,
+      "positive_theme_counts": {
+        "atmosphere": 1,
+        "authenticity": 1,
+        "cleanliness": 1,
+        "food_quality": 2,
+        "portion_size": 2,
+        "public_transit_convenience": 1,
+        "service": 1,
+        "specific_dishes": 3,
+        "value": 2,
+        "vegan_options": 1,
+        "vegetarian_options": 1
+      },
+      "positive_theme_mentions": 16,
+      "restaurant_id": "CHI-COC-82530",
       "top_negative_themes": [
         {
           "label": "Waiting time",

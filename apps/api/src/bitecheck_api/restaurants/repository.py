@@ -25,7 +25,7 @@ class RestaurantRepository(Protocol):
 
 
 class JsonRestaurantRepository:
-    """Load and validate restaurant records from the synthetic JSON adapter."""
+    """Load and validate restaurant records from the hybrid JSON adapter."""
 
     def __init__(self, dataset_path: Path) -> None:
         self._dataset_path = dataset_path

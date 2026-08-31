@@ -84,7 +84,7 @@ function RestaurantCard({
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-orange-700">
             <span>#{restaurant.rank}</span>
             <span aria-hidden="true">·</span>
-            <span>{restaurant.cuisine}</span>
+            <span>Demo {restaurant.cuisine}</span>
           </div>
           <h3 className="mt-1 text-xl font-bold tracking-[-0.025em] text-stone-950">
             {restaurant.name}
@@ -121,20 +121,20 @@ function RestaurantCard({
 
         <dl className="mt-5 grid grid-cols-3 gap-2">
           <div className="rounded-xl bg-stone-50 p-3">
-            <dt className="text-xs font-semibold text-orange-800">Est. cost</dt>
+            <dt className="text-xs font-semibold text-orange-800">Demo cost</dt>
             <dd className="mt-1 font-bold text-stone-950">
               ${restaurant.estimated_cost_per_person} {restaurant.price_category}
             </dd>
           </div>
           <div className="rounded-xl bg-amber-50 p-3">
-            <dt className="text-xs font-semibold text-amber-800">Rating</dt>
+            <dt className="text-xs font-semibold text-amber-800">Demo rating</dt>
             <dd className="mt-1 font-bold text-stone-950">
               <span className="text-amber-500" aria-hidden="true">★</span>{" "}
               {restaurant.rating.toFixed(1)}
             </dd>
           </div>
           <div className="rounded-xl bg-emerald-50 p-3">
-            <dt className="text-xs font-semibold text-emerald-800">Confidence</dt>
+            <dt className="text-xs font-semibold text-emerald-800">Demo confidence</dt>
             <dd className="mt-1 font-bold text-stone-950">
               {restaurant.review_confidence_score.toFixed(0)}%
             </dd>
@@ -144,14 +144,29 @@ function RestaurantCard({
         <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
           {restaurant.vegetarian_available && (
             <span className="rounded-full bg-emerald-50 px-3 py-1.5 text-emerald-800">
-              Vegetarian options
+              Demo vegetarian options
             </span>
           )}
           {restaurant.vegan_available && (
             <span className="rounded-full bg-teal-50 px-3 py-1.5 text-teal-800">
-              Vegan options
+              Demo vegan options
             </span>
           )}
+        </div>
+
+        <div className="mt-5 rounded-xl border border-emerald-100 bg-emerald-50/70 p-4 text-sm">
+          <div className="flex items-center justify-between gap-3">
+            <span className="font-semibold text-emerald-950">
+              Latest City inspection
+            </span>
+            <span className="rounded-full bg-white px-2.5 py-1 text-xs font-bold text-emerald-800">
+              {restaurant.latest_inspection.result}
+            </span>
+          </div>
+          <p className="mt-2 text-xs text-emerald-800">
+            {restaurant.latest_inspection.inspection_date} · Fixed public-data
+            snapshot, not a current safety guarantee
+          </p>
         </div>
 
         {restaurant.travel && (
@@ -238,7 +253,7 @@ function ResultSummary({
     filters.maximum_budget === null
       ? null
       : `Up to $${filters.maximum_budget}`,
-    filters.vegetarian_required ? "Vegetarian options" : null,
+    filters.vegetarian_required ? "Demo vegetarian flag" : null,
     filters.starting_area,
     filters.maximum_travel_time === null
       ? null
@@ -470,7 +485,7 @@ export function RestaurantSearch({
           </p>
 
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-stone-600">
-            <span>24 fictional restaurants</span>
+            <span>24 real Chicago establishments</span>
             <span>7 Chicago starting areas</span>
             <span>No paid APIs</span>
           </div>
@@ -500,7 +515,7 @@ export function RestaurantSearch({
 
           <div className="mt-6 grid gap-5 sm:grid-cols-2">
             <label className="grid gap-2 text-sm font-bold text-stone-800">
-              Cuisine
+              Demo cuisine category
               <select
                 name="cuisine"
                 value={values.cuisine}
@@ -512,7 +527,7 @@ export function RestaurantSearch({
                 }
                 className="h-12 rounded-xl border border-stone-200 bg-stone-50 px-3 font-medium text-stone-900 outline-none transition focus:border-orange-500 focus:ring-3 focus:ring-orange-100"
               >
-                <option value="">Any cuisine</option>
+                <option value="">Any demo cuisine</option>
                 {CUISINE_OPTIONS.map((cuisine) => (
                   <option key={cuisine} value={cuisine}>
                     {cuisine}
@@ -610,7 +625,7 @@ export function RestaurantSearch({
               }
               className="size-5 accent-emerald-700"
             />
-            Vegetarian options are required
+            Require the demo vegetarian flag
           </label>
 
           <button
@@ -652,7 +667,7 @@ export function RestaurantSearch({
               </p>
               <p className="mx-auto mt-2 max-w-xl text-sm leading-6 text-stone-500">
                 The suggested preferences are ready to search, or clear them to
-                browse all 24 fictional restaurants.
+                browse all 24 establishments in the City-data snapshot.
               </p>
             </div>
           )}

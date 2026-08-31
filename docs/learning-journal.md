@@ -381,3 +381,19 @@ The final local release check passed 142 Python tests and 17 TypeScript tests,
 strict Python type checking, both linters, dependency checks, and the Next.js
 production build. Hosting remains an account-level action rather than a hidden
 part of the codebase.
+
+## Real public-data upgrade
+
+A real-data portfolio project needs field-level provenance, not a vague claim
+that the dataset is “real.” BiteCheck now ingests the official City of Chicago
+Food Inspections dataset, cleans required values, groups inspection history by
+license, checks the newest result, assigns establishments to seven demo areas,
+and commits a fixed 24-record snapshot. This makes the source layer
+reproducible and reviewable while avoiding a live API dependency in production.
+
+The source does not provide the recommendation attributes the existing app
+needs. Those fields remain deterministic synthetic enrichment and are named in
+metadata and the interface. Inspection dates/results are shown separately with
+a point-in-time warning. The upgraded pipeline and application passed 146
+Python tests, 17 TypeScript tests, strict typing, both linters, and a production
+frontend build.

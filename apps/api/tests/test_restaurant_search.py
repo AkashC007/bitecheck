@@ -6,6 +6,7 @@ from fastapi.testclient import TestClient
 
 from bitecheck_api.main import app
 from bitecheck_api.restaurants.repository import (
+    DEFAULT_DATASET_PATH,
     JsonRestaurantRepository,
     get_restaurant_repository,
 )
@@ -41,9 +42,15 @@ def test_search_without_filters_returns_dataset_in_stable_order() -> None:
         "starting_area": None,
         "maximum_travel_time": None,
     }
+    source_records = JsonRestaurantRepository(DEFAULT_DATASET_PATH).list_restaurants()
     assert [restaurant["restaurant_id"] for restaurant in payload["restaurants"]] == [
-        f"CHI-SYN-{number:03d}" for number in range(1, 25)
+        restaurant.restaurant_id for restaurant in source_records
     ]
+    assert all(
+        restaurant["latest_inspection"]["result"]
+        in {"Pass", "Pass w/ Conditions"}
+        for restaurant in payload["restaurants"]
+    )
 
 
 def test_search_matches_cuisine_without_case_sensitivity() -> None:
@@ -53,9 +60,14 @@ def test_search_matches_cuisine_without_case_sensitivity() -> None:
     payload = response.json()
     assert payload["match_count"] == 3
     assert payload["applied_filters"]["cuisine"] == "Chinese"
+    source_records = JsonRestaurantRepository(DEFAULT_DATASET_PATH).list_restaurants()
     assert {
         restaurant["restaurant_id"] for restaurant in payload["restaurants"]
-    } == {"CHI-SYN-005", "CHI-SYN-010", "CHI-SYN-013"}
+    } == {
+        restaurant.restaurant_id
+        for restaurant in source_records
+        if restaurant.cuisine == "Chinese"
+    }
     assert all(
         restaurant["cuisine"] == "Chinese"
         for restaurant in payload["restaurants"]
@@ -122,8 +134,16 @@ def test_search_combines_all_filters_with_and_logic() -> None:
     )
 
     assert response.status_code == 200
-    assert response.json()["match_count"] == 0
-    assert response.json()["restaurants"] == []
+    payload = response.json()
+    assert payload["match_count"] == len(payload["restaurants"])
+    assert payload["match_count"] > 0
+    assert all(
+        restaurant["cuisine"] == "Chinese"
+        and restaurant["estimated_cost_per_person"] <= 25
+        and restaurant["vegetarian_available"]
+        and restaurant["travel"]["minutes"] <= 30
+        for restaurant in payload["restaurants"]
+    )
 
 
 def test_search_returns_empty_success_response_when_nothing_matches() -> None:

@@ -30,9 +30,9 @@ def test_recommendations_combine_every_card_signal() -> None:
 
     assert response.status_code == 200
     payload = response.json()
-    assert payload["match_count"] == len(payload["recommendations"]) == 8
-    assert payload["recommendations"][0]["name"] == "Little Sakura Kitchen"
-    assert payload["recommendations"][0]["total_score"] == 79.2
+    assert payload["match_count"] == len(payload["recommendations"]) == 9
+    assert payload["recommendations"][0]["rank"] == 1
+    assert payload["recommendations"][0]["total_score"] > 0
     assert payload["assigned_categories"] == [
         "best_overall",
         "best_walkable",
@@ -52,7 +52,13 @@ def test_recommendations_combine_every_card_signal() -> None:
             "review_confidence"
         ]["score"]
         assert card["latest_review_date"] in card["data_freshness_label"]
+        assert card["latest_inspection"]["result"] in {
+            "Pass",
+            "Pass w/ Conditions",
+        }
+        assert card["latest_inspection"]["inspection_date"] <= "2026-08-30"
         assert "synthetic" in payload["data_notice"].lower()
+        assert "city of chicago" in payload["data_notice"].lower()
 
 
 def test_recommendation_categories_have_one_winner_and_reasons() -> None:

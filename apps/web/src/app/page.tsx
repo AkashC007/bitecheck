@@ -29,8 +29,8 @@ export default async function Home() {
 
       <footer className="border-t border-stone-200 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-2 px-5 py-6 text-xs text-stone-500 sm:flex-row sm:px-8 lg:px-10">
-          <p>Built for learning with clearly labeled synthetic data.</p>
-          <p>No paid APIs, external providers, or secrets required.</p>
+          <p>Real City identities with clearly labeled synthetic enrichment.</p>
+          <p>City of Chicago Food Inspections snapshot · 2026-08-30.</p>
         </div>
       </footer>
     </main>

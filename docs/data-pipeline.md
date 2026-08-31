@@ -1,24 +1,21 @@
 # Data pipeline
 
-## Milestone 1 generation flow
+## Hybrid identity and enrichment flow
 
 ```text
-Versioned constants + seed + record count
+City of Chicago Food Inspections API (4ijn-s7e5)
+                  │ bounded date/location query
+                  ▼
+scripts/ingest_chicago_food_inspections.py
+                  │ clean + license dedupe + newest-result check
+                  ▼
+data/raw/chicago_food_inspections.json
                   │
                   ▼
-scripts/generate_demo_data.py
-                  │
-     balanced category assignments
-     bounded coordinate variation
-     synthetic cost and dietary rules
-     Haversine distance calculation
-     synthetic travel-time calculation
-                  │
+scripts/generate_demo_data.py + fixed seed
+                  │ synthetic recommendation enrichment
                   ▼
-data/synthetic/restaurants.json
-                  │
-                  ▼
-tests/test_demo_data.py
+data/synthetic/restaurants.json -> analytics transformations
 ```
 
 ## Run
@@ -27,44 +24,53 @@ From the BiteCheck root:
 
 ```bash
 apps/api/.venv/bin/python scripts/generate_demo_data.py
-apps/api/.venv/bin/pytest
+apps/api/.venv/bin/pytest tests/test_chicago_food_inspections.py tests/test_demo_data.py
 ```
+
+To refresh the committed source snapshot, run
+`scripts/ingest_chicago_food_inspections.py` first. The Socrata endpoint works
+without a token; `CHICAGO_DATA_APP_TOKEN` is an optional backend-only rate-limit
+token.
 
 ## Inputs
 
-- Seed: 42 by default
-- Restaurant count: 24 by default
-- Versioned neighborhood centers, cuisine values, price ranges, name fragments,
-  and fictional street names stored in the generator
+- Official dataset: City of Chicago Food Inspections (`4ijn-s7e5`)
+- Fixed source window: 2024-01-01 through 2026-08-30
+- Seven configured Chicago demo-area centers and 3 km maximum distance
+- Seed: 42 and restaurant count: 24 by default
 
 ## Transformations
 
-1. Balance neighborhoods, cuisines, and price categories before shuffling.
-2. Add bounded coordinate offsets around configured Chicago-area centers.
-3. Apply price, dietary, rating, review-count, and opening-hour rules.
-4. Calculate straight-line Haversine distance from each supported origin.
-5. Convert distance into clearly synthetic walk, transit, and drive estimates.
-6. Serialize JSON with sorted keys and stable indentation.
+1. Validate and normalize public inspection rows.
+2. Group rows by City license and identify the newest inspection in the window.
+3. Retain nearby restaurant facilities whose newest result is `Pass` or
+   `Pass w/ Conditions`, then select a balanced 24-record snapshot.
+4. Preserve real name, address, coordinates, license, and inspection history.
+5. Add deterministic synthetic cuisine, price, dietary, rating, review-count,
+   opening-hour, and travel fields.
+6. Serialize lineage metadata and records with stable ordering.
 
 ## Output and lineage
 
-The committed JSON records its seed, schema version, generator version, record
-count, city, and synthetic status. It intentionally omits a generation timestamp
-because timestamps would make identical runs produce different bytes.
+The raw snapshot records source URL, attribution, retrieval date, filters,
+modifications, and disclaimers. The enriched file records the source snapshot
+date alongside its seed, versions, and exact list of synthetic fields.
 
 For seed 42 and 24 records, repeated runs produced the same SHA-256 hash:
 
 ```text
-e9f17701e6bd3e1d42a9d9a6885a164d317cd5c546c328ac852be6419afa4b8f
+af1e2ff1b3aaa817f851a8ce4cd39c771055bedc72f308d39a291c929f4cc6b3
 ```
 
 ## Current limitations
 
-- This is batch generation, not external API ingestion.
+- This is a fixed batch snapshot, not live business-status data.
 - Travel values are estimates for testing, not routing-provider results.
-- Coordinates and addresses are fictional.
-- No incremental processing, raw/clean/analytics layers, quarantine, or database
-  exists yet.
+- The source may contain duplicates or corrections, and inspection results only
+  describe conditions observed at inspection time.
+- Cuisine and all recommendation/profile signals remain synthetic; they must
+  not be interpreted as claims about a real establishment.
+- No incremental processing, quarantine table, or database exists yet.
 
 ## Milestone 2 serving flow
 
@@ -102,7 +108,7 @@ The committed output contains 24 unique restaurant rows and 288 contributing
 reviews. Repeated generation produced SHA-256:
 
 ```text
-577444691784b4a4eac70151145a067da424efa28dd922b8f10c09bfd1035993
+3abf20581ec192fa6f5b4b6a3ce7c3b3b584dc4b6a4ca99fd57ff4aa404c5e37
 ```
 
 ## Milestone 10 presentation insight build
@@ -116,5 +122,5 @@ restaurant's latest review date. The deterministic artifact is stored at
 Its current SHA-256 is:
 
 ```text
-e5b2b4334f35db4cc14be117eb4493c89c4782cb85762da7743dfbee639c353d
+3037c2f6067dbdfafa155e4ce8b85a8cdd9363480d7dc20f8df0cbb02bc98e20
 ```

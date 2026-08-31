@@ -5,19 +5,18 @@ import json
 import math
 import random
 from pathlib import Path
-from typing import Final, Literal, TypedDict
+from typing import Final, Literal, TypedDict, cast
 
 
+ROOT: Final = Path(__file__).resolve().parents[1]
 DEFAULT_SEED: Final = 42
 DEFAULT_RESTAURANT_COUNT: Final = 24
-GENERATOR_VERSION: Final = "1.0.0"
-SCHEMA_VERSION: Final = "1.0.0"
-DEFAULT_OUTPUT_PATH: Final = (
-    Path(__file__).resolve().parents[1]
-    / "data"
-    / "synthetic"
-    / "restaurants.json"
+GENERATOR_VERSION: Final = "2.0.0"
+SCHEMA_VERSION: Final = "2.0.0"
+DEFAULT_SOURCE_PATH: Final = (
+    ROOT / "data" / "raw" / "chicago_food_inspections.json"
 )
+DEFAULT_OUTPUT_PATH: Final = ROOT / "data" / "synthetic" / "restaurants.json"
 
 DAYS: Final = (
     "monday",
@@ -37,54 +36,18 @@ class NeighborhoodConfig(TypedDict):
 
 
 NEIGHBORHOODS: Final[dict[str, NeighborhoodConfig]] = {
-    "Illinois Tech": {
-        "latitude": 41.8349,
-        "longitude": -87.6270,
-        "zip_code": "60616",
-    },
-    "Chinatown": {
-        "latitude": 41.8520,
-        "longitude": -87.6321,
-        "zip_code": "60616",
-    },
-    "Chicago Loop": {
-        "latitude": 41.8781,
-        "longitude": -87.6298,
-        "zip_code": "60601",
-    },
-    "Hyde Park": {
-        "latitude": 41.7943,
-        "longitude": -87.5907,
-        "zip_code": "60615",
-    },
-    "Bridgeport": {
-        "latitude": 41.8381,
-        "longitude": -87.6512,
-        "zip_code": "60608",
-    },
-    "Lakeview": {
-        "latitude": 41.9439,
-        "longitude": -87.6493,
-        "zip_code": "60657",
-    },
-    "River North": {
-        "latitude": 41.8924,
-        "longitude": -87.6341,
-        "zip_code": "60654",
-    },
+    "Illinois Tech": {"latitude": 41.8349, "longitude": -87.6270, "zip_code": "60616"},
+    "Chinatown": {"latitude": 41.8520, "longitude": -87.6321, "zip_code": "60616"},
+    "Chicago Loop": {"latitude": 41.8781, "longitude": -87.6298, "zip_code": "60601"},
+    "Hyde Park": {"latitude": 41.7943, "longitude": -87.5907, "zip_code": "60615"},
+    "Bridgeport": {"latitude": 41.8381, "longitude": -87.6512, "zip_code": "60608"},
+    "Lakeview": {"latitude": 41.9439, "longitude": -87.6493, "zip_code": "60657"},
+    "River North": {"latitude": 41.8924, "longitude": -87.6341, "zip_code": "60654"},
 }
 
 CUISINES: Final = (
-    "American",
-    "Chinese",
-    "Ethiopian",
-    "Indian",
-    "Italian",
-    "Japanese",
-    "Korean",
-    "Mediterranean",
-    "Mexican",
-    "Thai",
+    "American", "Chinese", "Ethiopian", "Indian", "Italian", "Japanese",
+    "Korean", "Mediterranean", "Mexican", "Thai",
 )
 
 PRICE_RANGES: Final[dict[str, tuple[int, int]]] = {
@@ -92,43 +55,6 @@ PRICE_RANGES: Final[dict[str, tuple[int, int]]] = {
     "$$": (19, 35),
     "$$$": (36, 60),
 }
-
-NAME_PREFIXES: Final = (
-    "Amber",
-    "Blue",
-    "Bright",
-    "Cedar",
-    "Golden",
-    "Lake",
-    "Little",
-    "North",
-    "Prairie",
-    "Red",
-    "Silver",
-    "Windy",
-)
-
-NAME_SUFFIXES: Final = ("Cafe", "House", "Kitchen", "Table")
-
-CUISINE_NOUNS: Final[dict[str, tuple[str, ...]]] = {
-    "American": ("Griddle", "Harvest", "Supper"),
-    "Chinese": ("Dumpling", "Lantern", "Noodle"),
-    "Ethiopian": ("Berbere", "Injera", "Mesob"),
-    "Indian": ("Masala", "Saffron", "Tandoor"),
-    "Italian": ("Olive", "Pasta", "Trattoria"),
-    "Japanese": ("Miso", "Sakura", "Umami"),
-    "Korean": ("Banchan", "Seoul", "Sesame"),
-    "Mediterranean": ("Cypress", "Olive", "Sumac"),
-    "Mexican": ("Agave", "Maiz", "Salsa"),
-    "Thai": ("Basil", "Lemongrass", "Orchid"),
-}
-
-FICTIONAL_STREETS: Final = (
-    "Demo Avenue",
-    "Example Street",
-    "Sample Road",
-    "Test Kitchen Way",
-)
 
 
 class OpeningPeriod(TypedDict):
@@ -144,12 +70,67 @@ class TravelEstimate(TypedDict):
     estimate_type: Literal["synthetic"]
 
 
+class LatestInspection(TypedDict):
+    inspection_id: str
+    inspection_date: str
+    result: str
+    inspection_type: str
+    risk: str
+
+
+class InspectionHistory(TypedDict):
+    start_date: str
+    end_date: str
+    inspection_count: int
+    pass_count: int
+    pass_with_conditions_count: int
+    fail_count: int
+
+
+class SourceRestaurant(TypedDict):
+    restaurant_id: str
+    license_number: str
+    name: str
+    dba_name: str
+    address: str
+    city: str
+    state: str
+    zip_code: str
+    neighborhood: str
+    latitude: float
+    longitude: float
+    latest_inspection: LatestInspection
+    inspection_history: InspectionHistory
+
+
+class SourceMetadata(TypedDict):
+    dataset_id: str
+    dataset_name: str
+    source_url: str
+    api_url: str
+    attribution: str
+    retrieved_on: str
+    snapshot_date: str
+    history_start_date: str
+    source_row_count: int
+    selected_record_count: int
+    modification_note: str
+    disclaimer: str
+
+
+class SourceDataset(TypedDict):
+    metadata: SourceMetadata
+    restaurants: list[SourceRestaurant]
+
+
 class Restaurant(TypedDict):
     restaurant_id: str
+    license_number: str
     name: str
     address: str
     city: str
     state: str
+    zip_code: str
     neighborhood: str
     latitude: float
     longitude: float
@@ -162,18 +143,28 @@ class Restaurant(TypedDict):
     review_count: int
     opening_hours: dict[str, OpeningPeriod | None]
     estimated_transportation: dict[str, TravelEstimate]
-    data_provenance: Literal["synthetic"]
+    latest_inspection: LatestInspection
+    inspection_history: InspectionHistory
+    identity_provenance: Literal["city_of_chicago_food_inspections"]
+    profile_provenance: Literal["synthetic_enrichment"]
+    data_provenance: Literal["hybrid"]
 
 
 class DatasetMetadata(TypedDict):
     dataset_name: str
     description: str
     city: str
-    synthetic: Literal[True]
+    hybrid: Literal[True]
+    synthetic: Literal[False]
     seed: int
     record_count: int
     generator_version: str
     schema_version: str
+    identity_source: str
+    identity_source_url: str
+    identity_snapshot_date: str
+    synthetic_fields: list[str]
+    source_disclaimer: str
 
 
 class Dataset(TypedDict):
@@ -181,51 +172,21 @@ class Dataset(TypedDict):
     restaurants: list[Restaurant]
 
 
-def _balanced_values(
-    values: tuple[str, ...], count: int, rng: random.Random
-) -> list[str]:
+def _balanced_values(values: tuple[str, ...], count: int, rng: random.Random) -> list[str]:
     assignments = [values[index % len(values)] for index in range(count)]
     rng.shuffle(assignments)
     return assignments
-
-
-def _unique_name(
-    cuisine: str,
-    record_number: int,
-    used_names: set[str],
-    rng: random.Random,
-) -> str:
-    for _ in range(100):
-        candidate = " ".join(
-            (
-                rng.choice(NAME_PREFIXES),
-                rng.choice(CUISINE_NOUNS[cuisine]),
-                rng.choice(NAME_SUFFIXES),
-            )
-        )
-        if candidate not in used_names:
-            used_names.add(candidate)
-            return candidate
-
-    fallback = f"Synthetic {cuisine} Restaurant {record_number:03d}"
-    used_names.add(fallback)
-    return fallback
 
 
 def _opening_hours(rng: random.Random) -> dict[str, OpeningPeriod | None]:
     opening_hour = rng.choice((10, 11, 12))
     closing_hour = rng.choice((20, 21, 22, 23))
     closed_day = rng.choice((*DAYS, None, None, None, None))
-
     return {
-        day: (
-            None
-            if day == closed_day
-            else {
-                "open": f"{opening_hour:02d}:00",
-                "close": f"{closing_hour:02d}:00",
-            }
-        )
+        day: None if day == closed_day else {
+            "open": f"{opening_hour:02d}:00",
+            "close": f"{closing_hour:02d}:00",
+        }
         for day in DAYS
     }
 
@@ -241,14 +202,12 @@ def _haversine_distance_km(
     longitude_delta = math.radians(longitude_b - longitude_a)
     latitude_a_radians = math.radians(latitude_a)
     latitude_b_radians = math.radians(latitude_b)
-
     haversine_value = (
         math.sin(latitude_delta / 2) ** 2
         + math.cos(latitude_a_radians)
         * math.cos(latitude_b_radians)
         * math.sin(longitude_delta / 2) ** 2
     )
-
     return earth_radius_km * 2 * math.atan2(
         math.sqrt(haversine_value), math.sqrt(1 - haversine_value)
     )
@@ -260,19 +219,13 @@ def _transportation_estimates(
     rng: random.Random,
 ) -> dict[str, TravelEstimate]:
     estimates: dict[str, TravelEstimate] = {}
-
     for origin, location in NEIGHBORHOODS.items():
         distance_km = _haversine_distance_km(
-            location["latitude"],
-            location["longitude"],
-            latitude,
-            longitude,
+            location["latitude"], location["longitude"], latitude, longitude
         )
         estimates[origin] = {
             "straight_line_distance_km": round(distance_km, 2),
-            "walking_minutes": max(
-                3, round((distance_km / 4.8) * 60 + rng.uniform(1, 4))
-            ),
+            "walking_minutes": max(3, round((distance_km / 4.8) * 60 + rng.uniform(1, 4))),
             "public_transit_minutes": max(
                 8, round(7 + (distance_km / 22) * 60 + rng.uniform(0, 7))
             ),
@@ -281,63 +234,61 @@ def _transportation_estimates(
             ),
             "estimate_type": "synthetic",
         }
-
     return estimates
+
+
+def _load_source(source_path: Path) -> SourceDataset:
+    if not source_path.exists():
+        raise FileNotFoundError(
+            f"Real-data snapshot not found at {source_path}. Run "
+            "scripts/ingest_chicago_food_inspections.py first."
+        )
+    return cast(SourceDataset, json.loads(source_path.read_text(encoding="utf-8")))
 
 
 def generate_dataset(
     count: int = DEFAULT_RESTAURANT_COUNT,
     seed: int = DEFAULT_SEED,
+    source_path: Path = DEFAULT_SOURCE_PATH,
 ) -> Dataset:
-    """Build a deterministic synthetic Chicago restaurant dataset."""
+    """Combine real City identities with reproducible synthetic enrichment."""
 
     if count <= 0:
         raise ValueError("Restaurant count must be greater than zero.")
+    source = _load_source(source_path)
+    source_restaurants = source["restaurants"]
+    if count > len(source_restaurants):
+        raise ValueError(
+            f"Requested {count} records, but the source contains {len(source_restaurants)}."
+        )
 
     rng = random.Random(seed)
-    neighborhood_assignments = _balanced_values(
-        tuple(NEIGHBORHOODS), count, rng
-    )
     cuisine_assignments = _balanced_values(CUISINES, count, rng)
     price_assignments = _balanced_values(tuple(PRICE_RANGES), count, rng)
-    used_names: set[str] = set()
     restaurants: list[Restaurant] = []
-
-    for index in range(1, count + 1):
-        neighborhood = neighborhood_assignments[index - 1]
-        neighborhood_config = NEIGHBORHOODS[neighborhood]
+    for index, source_restaurant in enumerate(source_restaurants[:count], start=1):
         cuisine = cuisine_assignments[index - 1]
         price_category = price_assignments[index - 1]
         minimum_cost, maximum_cost = PRICE_RANGES[price_category]
-        latitude = round(
-            neighborhood_config["latitude"] + rng.uniform(-0.006, 0.006), 6
-        )
-        longitude = round(
-            neighborhood_config["longitude"] + rng.uniform(-0.008, 0.008), 6
-        )
         vegetarian_available = index % 5 != 0
         vegan_available = vegetarian_available and index % 3 == 0
-        street_number = 100 + index * 37
-        street_name = FICTIONAL_STREETS[(index - 1) % len(FICTIONAL_STREETS)]
-
+        latitude = source_restaurant["latitude"]
+        longitude = source_restaurant["longitude"]
         restaurants.append(
             {
-                "restaurant_id": f"CHI-SYN-{index:03d}",
-                "name": _unique_name(cuisine, index, used_names, rng),
-                "address": (
-                    f"{street_number} {street_name}, Chicago, IL "
-                    f"{neighborhood_config['zip_code']}"
-                ),
-                "city": "Chicago",
-                "state": "IL",
-                "neighborhood": neighborhood,
+                "restaurant_id": source_restaurant["restaurant_id"],
+                "license_number": source_restaurant["license_number"],
+                "name": source_restaurant["name"],
+                "address": source_restaurant["address"],
+                "city": source_restaurant["city"],
+                "state": source_restaurant["state"],
+                "zip_code": source_restaurant["zip_code"],
+                "neighborhood": source_restaurant["neighborhood"],
                 "latitude": latitude,
                 "longitude": longitude,
                 "cuisine": cuisine,
                 "price_category": price_category,
-                "estimated_cost_per_person": rng.randint(
-                    minimum_cost, maximum_cost
-                ),
+                "estimated_cost_per_person": rng.randint(minimum_cost, maximum_cost),
                 "vegetarian_available": vegetarian_available,
                 "vegan_available": vegan_available,
                 "rating": round(rng.uniform(3.2, 4.9), 1),
@@ -346,23 +297,38 @@ def generate_dataset(
                 "estimated_transportation": _transportation_estimates(
                     latitude, longitude, rng
                 ),
-                "data_provenance": "synthetic",
+                "latest_inspection": source_restaurant["latest_inspection"],
+                "inspection_history": source_restaurant["inspection_history"],
+                "identity_provenance": "city_of_chicago_food_inspections",
+                "profile_provenance": "synthetic_enrichment",
+                "data_provenance": "hybrid",
             }
         )
 
+    metadata = source["metadata"]
     return {
         "metadata": {
-            "dataset_name": "BiteCheck Synthetic Chicago Restaurants",
+            "dataset_name": "BiteCheck Hybrid Chicago Restaurants",
             "description": (
-                "Reproducible fictional restaurant records for portfolio "
-                "development and testing."
+                "Real City of Chicago establishment and inspection records combined "
+                "with reproducible synthetic recommendation fields."
             ),
             "city": "Chicago",
-            "synthetic": True,
+            "hybrid": True,
+            "synthetic": False,
             "seed": seed,
             "record_count": count,
             "generator_version": GENERATOR_VERSION,
             "schema_version": SCHEMA_VERSION,
+            "identity_source": f"{metadata['attribution']} {metadata['dataset_name']}",
+            "identity_source_url": metadata["source_url"],
+            "identity_snapshot_date": metadata["snapshot_date"],
+            "synthetic_fields": [
+                "cuisine", "price_category", "estimated_cost_per_person",
+                "vegetarian_available", "vegan_available", "rating", "review_count",
+                "opening_hours", "estimated_transportation",
+            ],
+            "source_disclaimer": metadata["disclaimer"],
         },
         "restaurants": restaurants,
     }
@@ -372,40 +338,24 @@ def write_dataset(
     output_path: Path = DEFAULT_OUTPUT_PATH,
     count: int = DEFAULT_RESTAURANT_COUNT,
     seed: int = DEFAULT_SEED,
+    source_path: Path = DEFAULT_SOURCE_PATH,
 ) -> Path:
-    """Write deterministic JSON and return the resolved output path."""
-
-    dataset = generate_dataset(count=count, seed=seed)
+    dataset = generate_dataset(count=count, seed=seed, source_path=source_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(
-        json.dumps(dataset, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
+        json.dumps(dataset, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
     return output_path.resolve()
 
 
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Generate BiteCheck's synthetic Chicago restaurant data."
+        description="Build BiteCheck's hybrid Chicago restaurant data."
     )
-    parser.add_argument(
-        "--output",
-        type=Path,
-        default=DEFAULT_OUTPUT_PATH,
-        help="Destination JSON path.",
-    )
-    parser.add_argument(
-        "--count",
-        type=int,
-        default=DEFAULT_RESTAURANT_COUNT,
-        help="Number of restaurant records to create.",
-    )
-    parser.add_argument(
-        "--seed",
-        type=int,
-        default=DEFAULT_SEED,
-        help="Random seed used for reproducible output.",
-    )
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT_PATH)
+    parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE_PATH)
+    parser.add_argument("--count", type=int, default=DEFAULT_RESTAURANT_COUNT)
+    parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
     return parser.parse_args()
 
 
@@ -415,8 +365,9 @@ def main() -> None:
         output_path=args.output,
         count=args.count,
         seed=args.seed,
+        source_path=args.source,
     )
-    print(f"Generated {args.count} synthetic restaurants at {output_path}")
+    print(f"Generated {args.count} hybrid restaurant records at {output_path}")
 
 
 if __name__ == "__main__":

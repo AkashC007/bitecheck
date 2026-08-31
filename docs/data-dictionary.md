@@ -3,11 +3,12 @@
 ## Dataset
 
 - **Path:** `data/synthetic/restaurants.json`
-- **Schema version:** 1.0.0
-- **Generator version:** 1.0.0
+- **Schema version:** 2.0.0
+- **Generator version:** 2.0.0
 - **Default seed:** 42
 - **Default records:** 24
-- **Provenance:** Entirely synthetic and fictional
+- **Provenance:** Hybrid. Identity/location/inspection fields are City of
+  Chicago public data; recommendation/profile fields are synthetic.
 
 The JSON document contains `metadata` and `restaurants` at its top level.
 
@@ -16,26 +17,34 @@ The JSON document contains `metadata` and `restaurants` at its top level.
 | Field | Type | Description |
 | --- | --- | --- |
 | `dataset_name` | string | Human-readable dataset name. |
-| `description` | string | Purpose and synthetic-data notice. |
+| `description` | string | Purpose and hybrid-data notice. |
 | `city` | string | Current dataset city; always `Chicago`. |
-| `synthetic` | boolean | Always `true`. |
+| `hybrid` | boolean | Always `true`. |
+| `synthetic` | boolean | Always `false`; the entire record is not synthetic. |
 | `seed` | integer | Random seed used by the generator. |
 | `record_count` | integer | Number of restaurant objects. |
 | `generator_version` | string | Version of the generation rules. |
 | `schema_version` | string | Version of the output field contract. |
+| `identity_source` | string | `City of Chicago Food Inspections`. |
+| `identity_source_url` | string | Official dataset page. |
+| `identity_snapshot_date` | date | Fixed public-data snapshot date. |
+| `synthetic_fields` | array | Exact profile fields added by BiteCheck. |
+| `source_disclaimer` | string | Point-in-time inspection limitation. |
 
 ## Restaurant fields
 
 | Field | Type | Description and allowed values |
 | --- | --- | --- |
-| `restaurant_id` | string | Unique ID formatted `CHI-SYN-###`. |
-| `name` | string | Unique fictional restaurant name. |
-| `address` | string | Unique fictional Chicago address using an obvious demo street. |
+| `restaurant_id` | string | `CHI-COC-` plus the City license number. |
+| `license_number` | string | City facility license used for deduplication. |
+| `name` | string | Public establishment/AKA name from the City dataset. |
+| `address` | string | Public establishment address from the City dataset. |
 | `city` | string | `Chicago`. Kept as a field so future cities do not require a schema rewrite. |
 | `state` | string | `IL`. |
+| `zip_code` | string | Public postal code from the City dataset. |
 | `neighborhood` | string | Illinois Tech, Chinatown, Chicago Loop, Hyde Park, Bridgeport, Lakeview, or River North. |
-| `latitude` | number | Synthetic coordinate within Chicago bounds. |
-| `longitude` | number | Synthetic coordinate within Chicago bounds. |
+| `latitude` | number | Public coordinate from the City dataset. |
+| `longitude` | number | Public coordinate from the City dataset. |
 | `cuisine` | string | American, Chinese, Ethiopian, Indian, Italian, Japanese, Korean, Mediterranean, Mexican, or Thai. |
 | `price_category` | string | `$`, `$$`, or `$$$`. |
 | `estimated_cost_per_person` | integer | Synthetic dollar estimate used by the future budget filter. |
@@ -45,7 +54,24 @@ The JSON document contains `metadata` and `restaurants` at its top level.
 | `review_count` | integer | Nonnegative synthetic review count. |
 | `opening_hours` | object | Seven day keys. Each value is an opening period or `null` for closed. |
 | `estimated_transportation` | object | Synthetic estimates from every supported starting area. |
-| `data_provenance` | string | Always `synthetic`. |
+| `latest_inspection` | object | Newest inspection in the fixed source window. |
+| `inspection_history` | object | Counts by result within the source window. |
+| `identity_provenance` | string | Always `city_of_chicago_food_inspections`. |
+| `profile_provenance` | string | Always `synthetic_enrichment`. |
+| `data_provenance` | string | Always `hybrid`. |
+
+## Latest-inspection fields
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `inspection_id` | string | City inspection identifier. |
+| `inspection_date` | date | Date of the newest inspection in the snapshot window. |
+| `result` | string | `Pass` or `Pass w/ Conditions` for included records. |
+| `inspection_type` | string | City inspection category. |
+| `risk` | string | City-provided facility risk classification. |
+
+These results are point-in-time observations and do not guarantee current
+operation, current conditions, or safety.
 
 ## Price mapping
 
@@ -82,13 +108,14 @@ directions or travel advice.
 ## Enforced quality rules
 
 - Required fields must be present with no unexpected fields.
-- IDs, names, and addresses must be unique.
+- IDs, selected names, and selected addresses must be unique.
 - Coordinates must remain within broad Chicago bounds.
 - Every configured cuisine and starting area must be represented.
 - Costs must agree with their price category.
 - Vegan availability cannot exist without vegetarian availability.
 - Opening hours must include all seven days and valid times.
 - Transportation times must be positive and labeled synthetic.
+- The latest included City result must be `Pass` or `Pass w/ Conditions`.
 - The committed file must exactly match the default generator output.
 
 ## Synthetic review dataset

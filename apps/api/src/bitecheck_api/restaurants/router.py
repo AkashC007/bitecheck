@@ -317,7 +317,7 @@ def parse_restaurant_request(
 @router.get(
     "/search",
     response_model=RestaurantSearchResponse,
-    summary="Search synthetic Chicago restaurants",
+    summary="Search hybrid Chicago restaurant records",
 )
 def search_restaurants(
     filters: Annotated[RestaurantSearchFilters, Query()],

@@ -58,8 +58,8 @@ def test_walkable_follow_up_filters_by_selected_travel_mode() -> None:
     )
     payload = response.json()
 
-    assert payload["candidate_count_before_limit"] == 4
-    assert payload["results"]["match_count"] == 4
+    assert payload["candidate_count_before_limit"] == 2
+    assert payload["results"]["match_count"] == 2
     assert all(
         card["travel"]["selected_mode"] == "walking"
         for card in payload["results"]["recommendations"]
@@ -84,10 +84,13 @@ def test_state_can_flow_through_a_multi_turn_sequence() -> None:
 
     assert cheapest["state"]["travel_preference"] == "walkable"
     assert cheapest["state"]["sort_mode"] == "cheapest"
-    assert cheapest["candidate_count_before_limit"] == 4
+    assert cheapest["candidate_count_before_limit"] == 2
     assert cheapest["results"]["match_count"] == 1
-    assert cheapest["results"]["recommendations"][0]["name"] == (
-        "Silver Orchid Cafe"
+    assert cheapest["results"]["recommendations"][0][
+        "estimated_cost_per_person"
+    ] == min(
+        card["estimated_cost_per_person"]
+        for card in walkable["results"]["recommendations"]
     )
 
 
@@ -107,9 +110,11 @@ def test_theme_and_reliability_follow_ups_change_sort_state() -> None:
     assert vegetarian["state"]["theme_preference"] == "vegetarian_options"
     assert vegetarian["state"]["filters"]["vegetarian_required"] is True
     assert vegetarian["results"]["match_count"] == 1
-    assert reliable["results"]["recommendations"][0]["name"] == (
-        "North Sakura Kitchen"
-    )
+    assert reliable["state"]["sort_mode"] == "review_confidence"
+    assert reliable["results"]["match_count"] == 1
+    assert reliable["results"]["recommendations"][0][
+        "review_confidence_score"
+    ] > 0
 
 
 def test_walkable_requires_a_starting_area() -> None:

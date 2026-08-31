@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "BiteCheck | Explainable Chicago recommendations",
   description:
-    "Compare fictional Chicago restaurants with travel, review themes, confidence, and explainable ranking.",
+    "Compare real Chicago establishments using public inspection records and clearly labeled demo recommendation signals.",
 };
 
 export default function RootLayout({

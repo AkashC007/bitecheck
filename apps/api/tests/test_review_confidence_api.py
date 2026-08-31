@@ -24,7 +24,10 @@ def test_review_confidence_endpoint_displays_every_component() -> None:
     first = payload["restaurants"][0]
     assert len(first["components"]) == 7
     assert len(first["penalties"]) == 4
-    assert first["review_confidence_score"] == 70.42
+    assert 0 <= first["review_confidence_score"] <= 100
+    assert first["review_confidence_score"] == (
+        first["base_score"] - first["total_penalty"]
+    )
 
 
 def test_repository_rejects_missing_invalid_and_inconsistent_data(

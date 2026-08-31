@@ -11,7 +11,6 @@ from scripts.generate_demo_data import (
     DEFAULT_OUTPUT_PATH,
     DEFAULT_RESTAURANT_COUNT,
     DEFAULT_SEED,
-    FICTIONAL_STREETS,
     NEIGHBORHOODS,
     PRICE_RANGES,
     Dataset,
@@ -22,10 +21,12 @@ from scripts.generate_demo_data import (
 
 EXPECTED_RESTAURANT_FIELDS = {
     "restaurant_id",
+    "license_number",
     "name",
     "address",
     "city",
     "state",
+    "zip_code",
     "neighborhood",
     "latitude",
     "longitude",
@@ -38,6 +39,10 @@ EXPECTED_RESTAURANT_FIELDS = {
     "review_count",
     "opening_hours",
     "estimated_transportation",
+    "latest_inspection",
+    "inspection_history",
+    "identity_provenance",
+    "profile_provenance",
     "data_provenance",
 }
 
@@ -93,8 +98,10 @@ def test_committed_dataset_has_valid_restaurant_records() -> None:
     metadata = dataset["metadata"]
     restaurants = dataset["restaurants"]
 
-    assert metadata["synthetic"] is True
+    assert metadata["hybrid"] is True
+    assert metadata["synthetic"] is False
     assert metadata["city"] == "Chicago"
+    assert metadata["identity_source"] == "City of Chicago Food Inspections"
     assert metadata["record_count"] == DEFAULT_RESTAURANT_COUNT
     assert len(restaurants) == DEFAULT_RESTAURANT_COUNT
 
@@ -114,19 +121,29 @@ def test_committed_dataset_has_valid_restaurant_records() -> None:
 
     for restaurant in restaurants:
         assert set(restaurant) == EXPECTED_RESTAURANT_FIELDS
-        assert restaurant["restaurant_id"].startswith("CHI-SYN-")
+        assert restaurant["restaurant_id"].startswith("CHI-COC-")
         assert restaurant["city"] == "Chicago"
         assert restaurant["state"] == "IL"
-        assert restaurant["data_provenance"] == "synthetic"
-        assert any(
-            street_name in restaurant["address"]
-            for street_name in FICTIONAL_STREETS
+        assert restaurant["license_number"] in restaurant["restaurant_id"]
+        assert restaurant["data_provenance"] == "hybrid"
+        assert (
+            restaurant["identity_provenance"]
+            == "city_of_chicago_food_inspections"
         )
+        assert restaurant["profile_provenance"] == "synthetic_enrichment"
         assert 41.64 <= restaurant["latitude"] <= 42.03
         assert -87.95 <= restaurant["longitude"] <= -87.50
         assert restaurant["cuisine"] in CUISINES
         assert restaurant["neighborhood"] in NEIGHBORHOODS
         assert restaurant["price_category"] in PRICE_RANGES
+
+        inspection = restaurant["latest_inspection"]
+        assert inspection["result"] in {"Pass", "Pass w/ Conditions"}
+        assert inspection["inspection_date"] <= metadata["identity_snapshot_date"]
+        assert inspection["inspection_id"]
+        history = restaurant["inspection_history"]
+        assert history["inspection_count"] >= 1
+        assert history["end_date"] == metadata["identity_snapshot_date"]
 
         minimum_cost, maximum_cost = PRICE_RANGES[restaurant["price_category"]]
         assert type(restaurant["estimated_cost_per_person"]) is int

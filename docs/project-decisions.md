@@ -353,3 +353,15 @@
 - **Reason:** A portfolio reviewer can run or host the project without a paid
   provider, provider-specific manifest, browser-visible backend configuration,
   or secret API key.
+
+## PD-043: Use public identities with synthetic recommendation enrichment
+
+- **Status:** Accepted
+- **Decision:** Replace fictional restaurant identities with a fixed,
+  reproducible City of Chicago Food Inspections snapshot while retaining the
+  existing synthetic cuisine, price, dietary, rating, review, hours, and travel
+  signals.
+- **Reason:** This demonstrates real ingestion, cleaning, deduplication, and
+  lineage without scraping commercial reviews or making unsupported claims
+  about real establishments. Every field group is visibly labeled by origin,
+  and inspection results are described as point-in-time observations.

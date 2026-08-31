@@ -144,6 +144,7 @@ class RestaurantRecommendationService:
                     data_freshness_label=(
                         f"Latest synthetic review: {insight.latest_review_date}"
                     ),
+                    latest_inspection=record.latest_inspection,
                 )
             )
 
@@ -159,8 +160,10 @@ class RestaurantRecommendationService:
             assigned_categories=assigned,
             recommendations=cards,
             data_notice=(
-                "All restaurants, reviews, ratings, travel times, themes, and "
-                "confidence values are synthetic portfolio data."
+                "Restaurant identities, addresses, coordinates, and inspection "
+                "records come from a fixed City of Chicago snapshot dated "
+                "2026-08-30. Cuisines, prices, dietary flags, ratings, reviews, "
+                "themes, confidence, hours, and travel times are synthetic demo data."
             ),
         )
 
@@ -234,7 +237,7 @@ class RestaurantRecommendationService:
             winner = vegetarian[0]
             assignments["best_vegetarian_match"] = (
                 winner.restaurant_id,
-                "Highest-ranked result with documented synthetic vegetarian availability.",
+                "Highest-ranked result with synthetic vegetarian availability.",
             )
 
         review_count_median = median(card.dataset_review_count for card in cards)

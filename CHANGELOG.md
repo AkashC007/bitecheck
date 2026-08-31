@@ -6,6 +6,11 @@ All notable project changes will be recorded here.
 
 ### Added
 
+- Reproducible City of Chicago Food Inspections ingestion and cleaning pipeline
+  with source attribution, license deduplication, history counts, and a fixed
+  24-establishment snapshot.
+- Hybrid restaurant schema and UI inspection summaries that distinguish real
+  public identity fields from synthetic recommendation enrichment.
 - Milestone 0 documentation and repository safety foundation.
 - Next.js 16 frontend scaffold with strict TypeScript, the App Router, Tailwind
   CSS, ESLint, and a pinned npm dependency tree.

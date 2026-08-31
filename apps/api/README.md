@@ -32,7 +32,8 @@ endpoint is `GET /health`, and interactive documentation is available at
 
 ## Restaurant search
 
-`GET /restaurants/search` reads the validated synthetic JSON dataset. All
+`GET /restaurants/search` reads the validated hybrid JSON dataset. Real
+establishment identity and inspection fields come from the City snapshot; all
 filters are optional and combine with AND logic:
 
 - `cuisine`: case-insensitive cuisine name

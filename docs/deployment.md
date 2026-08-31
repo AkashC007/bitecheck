@@ -58,7 +58,7 @@ After both services are live, verify:
 
 1. `https://your-api-host/health` returns HTTP 200 and `status: ok`.
 2. The frontend header reports that the search service is online.
-3. **Build my recommendations** returns eight cards with the default filters.
+3. **Build my recommendations** returns nine cards with the default filters.
 4. **Only show walkable options** updates the result set.
 5. Refreshing the public page produces no browser console errors.
 
@@ -66,7 +66,8 @@ After both services are live, verify:
 
 - `.env`, local virtual environments, build output, caches, and dependencies are
   excluded from Git and Docker build contexts.
-- The app uses fictional committed data and requires no production secrets.
+- The app uses a committed City open-data snapshot plus synthetic enrichment
+  and requires no production secrets.
 - GitHub Actions checks Python and TypeScript tests, linting, type safety, the
   production frontend build, and production npm dependencies.
 - The JSON repository is intentionally appropriate for this small portfolio

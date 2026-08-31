@@ -46,6 +46,14 @@ export type RecommendationTravel = {
   explanation: string;
 };
 
+export type LatestInspection = {
+  inspection_id: string;
+  inspection_date: string;
+  result: "Pass" | "Pass w/ Conditions";
+  inspection_type: string;
+  risk: string;
+};
+
 export type RankingFactor = {
   status: "active" | "not_applicable" | "unavailable";
   score: number | null;
@@ -79,6 +87,7 @@ export type RestaurantRecommendation = {
   ranking_explanation: string;
   latest_review_date: string;
   data_freshness_label: string;
+  latest_inspection: LatestInspection;
 };
 
 export type RestaurantRecommendationResponse = {
@@ -151,6 +160,17 @@ function isTravel(value: unknown): value is RecommendationTravel {
   );
 }
 
+function isLatestInspection(value: unknown): value is LatestInspection {
+  return (
+    isRecord(value) &&
+    typeof value.inspection_id === "string" &&
+    typeof value.inspection_date === "string" &&
+    (value.result === "Pass" || value.result === "Pass w/ Conditions") &&
+    typeof value.inspection_type === "string" &&
+    typeof value.risk === "string"
+  );
+}
+
 function isFactor(value: unknown): value is RankingFactor {
   return (
     isRecord(value) &&
@@ -199,7 +219,8 @@ function isRecommendation(value: unknown): value is RestaurantRecommendation {
     Object.values(value.ranking_factors).every(isFactor) &&
     typeof value.ranking_explanation === "string" &&
     typeof value.latest_review_date === "string" &&
-    typeof value.data_freshness_label === "string"
+    typeof value.data_freshness_label === "string" &&
+    isLatestInspection(value.latest_inspection)
   );
 }
 

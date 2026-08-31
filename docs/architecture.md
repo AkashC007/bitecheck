@@ -37,7 +37,7 @@ HTTP query parameters
   -> FastAPI route
   -> RestaurantSearchService
   -> RestaurantRepository interface
-  -> validated synthetic JSON adapter
+  -> validated hybrid JSON adapter
   -> stable filtering in dataset order
   -> Pydantic response validation
   -> JSON response

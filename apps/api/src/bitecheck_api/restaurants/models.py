@@ -22,12 +22,31 @@ class TransportationEstimate(StrictModel):
     estimate_type: Literal["synthetic"]
 
 
+class LatestInspection(StrictModel):
+    inspection_id: str
+    inspection_date: str
+    result: Literal["Pass", "Pass w/ Conditions"]
+    inspection_type: str
+    risk: str
+
+
+class InspectionHistory(StrictModel):
+    start_date: str
+    end_date: str
+    inspection_count: int = Field(gt=0)
+    pass_count: int = Field(ge=0)
+    pass_with_conditions_count: int = Field(ge=0)
+    fail_count: int = Field(ge=0)
+
+
 class RestaurantRecord(StrictModel):
     restaurant_id: str
+    license_number: str
     name: str
     address: str
     city: str
     state: str
+    zip_code: str
     neighborhood: str
     latitude: float
     longitude: float
@@ -40,18 +59,28 @@ class RestaurantRecord(StrictModel):
     review_count: int = Field(ge=0)
     opening_hours: dict[str, OpeningPeriod | None]
     estimated_transportation: dict[str, TransportationEstimate]
-    data_provenance: Literal["synthetic"]
+    latest_inspection: LatestInspection
+    inspection_history: InspectionHistory
+    identity_provenance: Literal["city_of_chicago_food_inspections"]
+    profile_provenance: Literal["synthetic_enrichment"]
+    data_provenance: Literal["hybrid"]
 
 
 class DatasetMetadata(StrictModel):
     dataset_name: str
     description: str
     city: str
-    synthetic: Literal[True]
+    hybrid: Literal[True]
+    synthetic: Literal[False]
     seed: int
     record_count: int = Field(gt=0)
     generator_version: str
     schema_version: str
+    identity_source: str
+    identity_source_url: str
+    identity_snapshot_date: str
+    synthetic_fields: list[str]
+    source_disclaimer: str
 
 
 class RestaurantDataset(StrictModel):
@@ -113,6 +142,7 @@ class RestaurantSearchItem(StrictModel):
     vegan_available: bool
     rating: float
     review_count: int
+    latest_inspection: LatestInspection
     travel: TravelMatch | None = None
 
 
@@ -452,6 +482,7 @@ class RestaurantRecommendationCard(StrictModel):
     ranking_explanation: str
     latest_review_date: str
     data_freshness_label: str
+    latest_inspection: LatestInspection
 
 
 class RestaurantRecommendationResponse(StrictModel):

@@ -21,9 +21,9 @@ const validResponse = {
   recommendations: [
     {
       rank: 1,
-      restaurant_id: "CHI-SYN-011",
-      name: "Little Sakura Kitchen",
-      address: "273 Demo Boulevard, Chicago, IL 60616",
+      restaurant_id: "CHI-COC-1766001",
+      name: "The Bog",
+      address: "3241 S Federal St, Chicago, IL 60616",
       cuisine: "Japanese",
       neighborhood: "Bridgeport",
       price_category: "$$",
@@ -71,9 +71,16 @@ const validResponse = {
       ranking_explanation: "Strongest score contribution: rating.",
       latest_review_date: "2026-01-13",
       data_freshness_label: "Latest synthetic review: 2026-01-13",
+      latest_inspection: {
+        inspection_id: "2602706",
+        inspection_date: "2024-08-19",
+        result: "Pass",
+        inspection_type: "Canvass",
+        risk: "Risk 1 (High)",
+      },
     },
   ],
-  data_notice: "All values are synthetic portfolio data.",
+  data_notice: "Real City identities with synthetic recommendation fields.",
 };
 
 
