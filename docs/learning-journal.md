@@ -434,3 +434,17 @@ ratings, confidence, prices, cuisine, and travel signals into a visibly separate
 Analytics Lab. Live browser checks covered 720 source rows, 24 nearby results,
 nine latest-fail matches, source links, lab separation, responsive layout, and a
 clean console.
+
+## Inspection explorer decision clarity
+
+Useful data presentation answers “what should I look at next?” without turning
+source fields into stronger claims. The explorer now gives a three-step usage
+guide, counts the latest result groups among displayed cards, defines the City
+risk value as a facility classification, and offers nearest, newest-inspection,
+and restaurant-name ordering. These transformations change presentation order
+and aggregation only; they do not manufacture a safety or recommendation score.
+
+Three pure TypeScript tests cover result grouping and stable sorting. Live
+browser checks confirmed a 22/1/0/1 result summary in the displayed Loop set,
+nearest-to-name reordering, the field glossary, mobile layout without horizontal
+overflow, and a clean console.

@@ -15,7 +15,7 @@ export default async function Home() {
             </span>
             <div>
               <p className="font-bold tracking-tight">BiteCheck</p>
-              <p className="text-xs text-stone-500">Restaurant intelligence</p>
+              <p className="text-xs text-stone-500">Independent Chicago inspection explorer</p>
             </div>
           </div>
 

@@ -39,7 +39,7 @@ and recommendation work without presenting it as public fact.
 | --- | --- |
 | Live public data | City inspection queries with up to 50 deduplicated establishments |
 | Analytics Lab | 24 real identities, 288 synthetic reviews, 15 themes |
-| Automated tests | 178 total: 152 Python and 26 TypeScript |
+| Automated tests | 181 total: 152 Python and 29 TypeScript |
 | Quality gates | Ruff, strict mypy, ESLint, production build, npm audit |
 | External services | City of Chicago public API; no key or paid provider |
 | Current state | Public-use-ready Chicago explorer; hosting account still required |

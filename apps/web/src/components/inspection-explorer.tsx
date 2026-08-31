@@ -10,6 +10,11 @@ import {
   PublicInspectionRestaurant,
 } from "@/lib/api/inspections";
 import { openStreetMapUrl } from "@/lib/location";
+import {
+  InspectionSortMode,
+  sortInspectionRestaurants,
+  summarizeInspectionResults,
+} from "@/lib/inspection-view";
 
 
 const SEARCH_CENTERS = [
@@ -51,6 +56,13 @@ function formatRetrievedAt(value: string) {
       }).format(date);
 }
 
+function formatInspectionDate(value: string) {
+  const date = new Date(`${value}T00:00:00`);
+  return Number.isNaN(date.getTime())
+    ? value
+    : new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(date);
+}
+
 function InspectionCard({ restaurant }: { restaurant: PublicInspectionRestaurant }) {
   const mapUrl = openStreetMapUrl({
     latitude: restaurant.latitude,
@@ -62,7 +74,7 @@ function InspectionCard({ restaurant }: { restaurant: PublicInspectionRestaurant
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
           <p className="text-xs font-black uppercase tracking-[0.15em] text-sky-700">
-            License {restaurant.license_number}
+            Official City record · License {restaurant.license_number}
           </p>
           <h3 className="mt-1 text-xl font-black leading-tight tracking-[-0.025em] text-slate-950">
             {restaurant.name}
@@ -102,11 +114,11 @@ function InspectionCard({ restaurant }: { restaurant: PublicInspectionRestaurant
         <div className="rounded-xl bg-slate-50 p-3">
           <dt className="text-xs font-bold uppercase tracking-wide text-slate-500">Date</dt>
           <dd className="mt-1 font-bold text-slate-900">
-            {restaurant.latest_inspection.inspection_date}
+            {formatInspectionDate(restaurant.latest_inspection.inspection_date)}
           </dd>
         </div>
         <div className="rounded-xl bg-slate-50 p-3">
-          <dt className="text-xs font-bold uppercase tracking-wide text-slate-500">City risk</dt>
+          <dt className="text-xs font-bold uppercase tracking-wide text-slate-500">Facility risk class</dt>
           <dd className="mt-1 font-bold text-slate-900">{restaurant.city_risk_category}</dd>
         </div>
       </dl>
@@ -134,6 +146,7 @@ export function InspectionExplorer({ backendConnected }: { backendConnected: boo
   const [state, setState] = useState<ExplorerState>({ kind: "idle" });
   const [centerLabel, setCenterLabel] = useState("Chicago Loop");
   const [locationStatus, setLocationStatus] = useState<string | null>(null);
+  const [sortMode, setSortMode] = useState<InspectionSortMode>("nearest");
 
   async function runSearch(
     coordinates?: { latitude: number; longitude: number },
@@ -160,6 +173,9 @@ export function InspectionExplorer({ backendConnected }: { backendConnected: boo
       const response = await exploreInspections(request);
       setState({ kind: "success", response });
       setCenterLabel(label ?? "Citywide search");
+      if (response.restaurants.every((restaurant) => restaurant.distance_km === null)) {
+        setSortMode("newest");
+      }
     } catch (error) {
       setState({
         kind: "error",
@@ -170,6 +186,15 @@ export function InspectionExplorer({ backendConnected }: { backendConnected: boo
       });
     }
   }
+
+  const displayedRestaurants =
+    state.kind === "success"
+      ? sortInspectionRestaurants(state.response.restaurants, sortMode)
+      : [];
+  const resultSummary =
+    state.kind === "success"
+      ? summarizeInspectionResults(state.response.restaurants)
+      : null;
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -294,6 +319,23 @@ export function InspectionExplorer({ backendConnected }: { backendConnected: boo
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-10 sm:px-8 lg:px-10 lg:py-14" aria-live="polite">
+        <div className="mb-8 grid gap-3 md:grid-cols-3">
+          {[
+            ["1", "Search", "Choose an area, current location, restaurant, address, or ZIP."],
+            ["2", "Compare", "Read the newest recorded result and inspection date—not an invented score."],
+            ["3", "Verify", "Open the map and official City dataset before making a decision."],
+          ].map(([number, title, description]) => (
+            <div key={number} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+              <div className="flex items-start gap-3">
+                <span className="grid size-8 shrink-0 place-items-center rounded-full bg-sky-100 text-sm font-black text-sky-800">{number}</span>
+                <div>
+                  <p className="font-black text-slate-950">{title}</p>
+                  <p className="mt-1 text-xs leading-5 text-slate-500">{description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
         {state.kind === "idle" && (
           <div className="rounded-[1.75rem] border border-dashed border-slate-300 bg-white px-6 py-12 text-center">
             <p className="text-sm font-black uppercase tracking-[0.16em] text-sky-700">Ready for a live query</p>
@@ -314,15 +356,47 @@ export function InspectionExplorer({ backendConnected }: { backendConnected: boo
         )}
         {state.kind === "success" && (
           <>
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <p className="text-xs font-black uppercase tracking-[0.16em] text-sky-700">{centerLabel}</p>
                 <h2 className="mt-1 text-3xl font-black tracking-tight text-slate-950">{state.response.restaurant_count} real establishment{state.response.restaurant_count === 1 ? "" : "s"}</h2>
                 <p className="mt-2 text-sm text-slate-500">Retrieved {formatRetrievedAt(state.response.retrieved_at)} · {state.response.source_record_count} source records examined</p>
               </div>
-              <a href={state.response.source_url} target="_blank" rel="noreferrer" className="text-sm font-bold text-sky-700 underline underline-offset-4 hover:text-sky-900">View the official City dataset ↗</a>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <label className="text-sm font-bold text-slate-700" htmlFor="inspection-sort">Sort cards</label>
+                <select id="inspection-sort" value={sortMode} onChange={(event) => setSortMode(event.target.value as InspectionSortMode)} className="h-11 rounded-xl border border-slate-200 bg-white px-3 text-sm font-bold text-slate-800">
+                  <option value="nearest">Nearest first</option>
+                  <option value="newest">Newest inspection</option>
+                  <option value="name">Restaurant name</option>
+                </select>
+                <a href={state.response.source_url} target="_blank" rel="noreferrer" className="text-sm font-bold text-sky-700 underline underline-offset-4 hover:text-sky-900">Official City dataset ↗</a>
+              </div>
             </div>
+            {resultSummary && resultSummary.total > 0 && (
+              <div className="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-4" aria-label="Summary of displayed latest inspection results">
+                {[
+                  ["Latest pass", resultSummary.passed, "border-emerald-200 bg-emerald-50 text-emerald-900"],
+                  ["With conditions", resultSummary.conditions, "border-amber-200 bg-amber-50 text-amber-900"],
+                  ["Latest fail", resultSummary.failed, "border-red-200 bg-red-50 text-red-900"],
+                  ["Other result", resultSummary.other, "border-slate-200 bg-slate-50 text-slate-800"],
+                ].map(([label, value, styles]) => (
+                  <div key={String(label)} className={`rounded-2xl border p-4 ${styles}`}>
+                    <p className="text-2xl font-black">{value}</p>
+                    <p className="mt-1 text-xs font-bold uppercase tracking-wide">{label}</p>
+                  </div>
+                ))}
+              </div>
+            )}
             <div className="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-xs leading-5 text-amber-900">{state.response.data_notice}</div>
+            <details className="mt-3 rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-600">
+              <summary className="cursor-pointer font-black text-slate-900">What do these inspection fields mean?</summary>
+              <div className="mt-3 grid gap-2 text-xs leading-5 sm:grid-cols-2">
+                <p><strong>Latest result:</strong> the newest record returned for that City license—not a permanent grade.</p>
+                <p><strong>Facility risk class:</strong> the City’s classification of the facility type, not BiteCheck’s rating.</p>
+                <p><strong>History counts:</strong> only rows included in this bounded live query, not guaranteed lifetime totals.</p>
+                <p><strong>Distance:</strong> straight-line distance from the selected center, not travel time.</p>
+              </div>
+            </details>
             {state.response.restaurant_count === 0 ? (
               <div className="mt-7 rounded-[1.75rem] border border-dashed border-slate-300 bg-white px-6 py-12 text-center">
                 <h3 className="text-xl font-black">No matching inspection records found.</h3>
@@ -330,7 +404,7 @@ export function InspectionExplorer({ backendConnected }: { backendConnected: boo
               </div>
             ) : (
               <div className="mt-7 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                {state.response.restaurants.map((restaurant) => <InspectionCard key={restaurant.license_number} restaurant={restaurant} />)}
+                {displayedRestaurants.map((restaurant) => <InspectionCard key={restaurant.license_number} restaurant={restaurant} />)}
               </div>
             )}
           </>

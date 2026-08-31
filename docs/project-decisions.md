@@ -411,3 +411,13 @@
 - **Reason:** A genuinely nearby live search requires the source query to know a
   center point. A visible action, minimized use, no persistence, and truthful
   disclosure are more honest than claiming the data never leaves the browser.
+
+## PD-049: Summarize records without inventing a safety score
+
+- **Status:** Accepted
+- **Decision:** Count displayed latest-result groups and offer factual sorting,
+  while defining the City risk category as a facility classification rather
+  than converting inspection fields into a BiteCheck grade.
+- **Reason:** A compact summary makes the explorer more useful, but a proprietary
+  “safety score” would imply a validated predictive meaning the source data and
+  current project do not support.

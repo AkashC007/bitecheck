@@ -229,8 +229,8 @@ routing service.
 - Deduplicated establishments returned in the default verified view: 24
 - Latest-fail establishments returned in the verified filtered view: 9
 - New backend tests: 6
-- New frontend contract tests: 3
-- Total automated project tests: 178 (152 Python, 26 TypeScript)
+- New frontend contract and presentation-logic tests: 6
+- Total automated project tests: 181 (152 Python, 29 TypeScript)
 - Narrow viewport horizontal overflow: none
 - Browser console errors and warnings: 0
 - Paid data API keys required: 0

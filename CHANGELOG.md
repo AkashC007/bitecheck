@@ -12,6 +12,8 @@ All notable project changes will be recorded here.
   area search, official-result filters, exact map links, and factual cards.
 - Separate primary public-data and synthetic Analytics Lab experiences so demo
   review signals cannot be mistaken for real restaurant claims.
+- Three-step usage guidance, visible latest-result summaries, field definitions,
+  readable dates, and nearest/newest/name ordering for inspection cards.
 - Browser-only current-location distance and nearest-result ordering, with a
   deliberate permission control and no coordinate transfer to the backend.
 - Prominent real-address links to exact OpenStreetMap coordinates.
