@@ -110,5 +110,5 @@ All notable project changes will be recorded here.
   layouts, expandable reasons, and clean browser console verified.
 - Multi-turn state preservation, walkable filtering, theme and confidence
   sorting, reset behavior, and conservative unsupported-language errors verified.
-- Clean production dependency audit, 156 automated tests, strict mypy, both
+- Clean production dependency audit, 159 automated tests, strict mypy, both
   linters, and the Next.js production build after showcase hardening.

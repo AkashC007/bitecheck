@@ -1,10 +1,11 @@
 import "server-only";
 
-const DEFAULT_API_BASE_URL = "http://127.0.0.1:8000";
+import { getApiBaseUrl } from "@/lib/api/server-config";
+
 const BACKEND_TIMEOUT_MS = 5_000;
 
 export async function POST(request: Request): Promise<Response> {
-  const baseUrl = process.env.API_BASE_URL ?? DEFAULT_API_BASE_URL;
+  const baseUrl = getApiBaseUrl();
   const backendUrl = new URL(
     "/restaurants/recommendations",
     `${baseUrl.replace(/\/$/, "")}/`,

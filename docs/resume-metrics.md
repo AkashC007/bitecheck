@@ -185,3 +185,13 @@ satisfaction.
 
 No microphone recording, recognition accuracy, or permission outcome is claimed
 until the user-authorized live check is completed.
+
+## Public deployment hardening
+
+- Server-only hosting configuration tests: 3
+- Total automated project tests: 159 (142 Python, 17 TypeScript)
+- Render services defined: 2 (FastAPI and Next.js)
+- Production npm audit vulnerabilities: 0
+
+These are repository and local verification measurements. Public uptime and
+traffic are not claimed until the deployment is live and observed.

@@ -33,7 +33,7 @@ ranked where it did.
 | Area | Result |
 | --- | --- |
 | Synthetic data | 24 restaurants, 288 reviews, 15 review themes |
-| Automated tests | 156 total: 142 Python and 14 TypeScript |
+| Automated tests | 159 total: 142 Python and 17 TypeScript |
 | Quality gates | Ruff, strict mypy, ESLint, production build, npm audit |
 | External services | None required; no API keys or paid providers |
 | Current state | Showcase-ready MVP with local and container run paths |
@@ -111,10 +111,14 @@ schemas, assumptions, and limitations are documented in
 
 ## Deployment
 
-The repository includes a production backend `Dockerfile`; the frontend builds
-with the standard Next.js production commands. See
-[docs/deployment.md](docs/deployment.md) for environment variables, deployment
-order, and public smoke checks.
+The repository includes a two-service Render Blueprint, a production backend
+`Dockerfile`, and standard Next.js production commands. Both services can be
+created together on Render's free plan:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https%3A%2F%2Fgithub.com%2FAkashC007%2Fbitecheck)
+
+See [docs/deployment.md](docs/deployment.md) for the service connection,
+environment variables, free-tier behavior, and public smoke checks.
 
 ## More documentation
 

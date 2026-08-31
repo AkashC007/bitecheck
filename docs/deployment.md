@@ -1,10 +1,25 @@
 # Deployment
 
-BiteCheck is prepared for public deployment but is not tied to a hosting
-account. Deploy the backend first, then give its public URL to the frontend.
-No API key or external data provider is required.
+BiteCheck includes `render.yaml`, which creates the backend and frontend
+together on Render. No API key, database, or external data provider is required.
 
-## 1. Deploy the FastAPI backend
+## One-click Render deployment
+
+Open the repository's **Deploy to Render** button, connect the public GitHub
+repository, review the two free web services, and apply the Blueprint.
+
+The Blueprint creates:
+
+- `bitecheck-api`: the Dockerized FastAPI backend with `/health` monitoring
+- `bitecheck-web`: the Next.js server connected to the API over Render's private
+  network
+
+Both services use the Ohio region and wait for GitHub CI checks before later
+automatic deployments. Free web services sleep after inactivity, so the first
+visit after a quiet period can take up to a minute; the frontend's production
+health timeout allows that initial backend start to finish.
+
+## Manual alternative: deploy the FastAPI backend
 
 Use the repository-root `Dockerfile` on any container host. It installs only
 the API package and copies the committed configuration and synthetic analytics
@@ -19,7 +34,7 @@ The container:
 If the host accepts a Docker build context, use the BiteCheck project root.
 No backend environment variable is required for the committed dataset.
 
-## 2. Deploy the Next.js frontend
+## Then deploy the Next.js frontend
 
 Create a Node/Next.js service with `apps/web` as its root directory. Use:
 
@@ -37,7 +52,7 @@ API_BASE_URL=https://your-public-api-host.example
 Do not prefix it with `NEXT_PUBLIC_`; browsers do not need the backend address.
 Redeploy the frontend after changing the value.
 
-## 3. Public smoke check
+## Public smoke check
 
 After both services are live, verify:
 

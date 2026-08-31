@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://json.schemastore.org/render.json
+services:
+  - type: web
+    name: bitecheck-api
+    runtime: docker
+    plan: free
+    region: ohio
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: checksPass
+
+  - type: web
+    name: bitecheck-web
+    runtime: node
+    plan: free
+    region: ohio
+    rootDir: apps/web
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: NODE_VERSION
+        value: 24.18.0
+      - key: API_HEALTH_TIMEOUT_MS
+        value: 60000
+      - key: API_BASE_HOSTPORT
+        fromService:
+          type: web
+          name: bitecheck-api
+          property: hostport

@@ -1,3 +1,5 @@
+import { getApiBaseUrl, getApiHealthTimeoutMs } from "@/lib/api/server-config";
+
 type BackendHealthPayload = {
   status: "ok";
   service: string;
@@ -12,9 +14,6 @@ export type BackendHealthResult =
       state: "unavailable";
     };
 
-const DEFAULT_API_BASE_URL = "http://127.0.0.1:8000";
-const HEALTH_TIMEOUT_MS = 2_000;
-
 function isBackendHealthPayload(value: unknown): value is BackendHealthPayload {
   if (typeof value !== "object" || value === null) {
     return false;
@@ -26,7 +25,7 @@ function isBackendHealthPayload(value: unknown): value is BackendHealthPayload {
 }
 
 export async function getBackendHealth(): Promise<BackendHealthResult> {
-  const baseUrl = process.env.API_BASE_URL ?? DEFAULT_API_BASE_URL;
+  const baseUrl = getApiBaseUrl();
   const healthUrl = `${baseUrl.replace(/\/$/, "")}/health`;
 
   try {
@@ -35,7 +34,7 @@ export async function getBackendHealth(): Promise<BackendHealthResult> {
       headers: {
         Accept: "application/json",
       },
-      signal: AbortSignal.timeout(HEALTH_TIMEOUT_MS),
+      signal: AbortSignal.timeout(getApiHealthTimeoutMs()),
     });
 
     if (!response.ok) {

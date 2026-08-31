@@ -377,7 +377,7 @@ Next.js packages were upgraded to patched releases, the production audit is
 clean, and the backend test client is now declared directly instead of relying
 on an unrelated environment package.
 
-The final local release check passed 142 Python tests and 14 TypeScript tests,
+The final local release check passed 142 Python tests and 17 TypeScript tests,
 strict Python type checking, both linters, dependency checks, and the Next.js
 production build. Hosting remains an account-level action rather than a hidden
 part of the codebase.
