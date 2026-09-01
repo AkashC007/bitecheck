@@ -24,8 +24,7 @@ services:
         value: 24.18.0
       - key: API_HEALTH_TIMEOUT_MS
         value: 60000
-      - key: API_BASE_HOSTPORT
-        fromService:
-          type: web
-          name: bitecheck-api
-          property: hostport
+      # Render free web services cannot receive private-network traffic, so the
+      # frontend reaches the API through its stable public service URL.
+      - key: API_BASE_URL
+        value: https://bitecheck-api.onrender.com
