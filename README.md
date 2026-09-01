@@ -6,6 +6,8 @@ primary experience queries official City records for real nearby establishments.
 A separate Analytics Lab preserves the reproducible synthetic review, ranking,
 and recommendation work without presenting it as public fact.
 
+**Live demo:** [bitecheck-web.onrender.com](https://bitecheck-web.onrender.com)
+
 ![BiteCheck synthetic Analytics Lab results](docs/assets/bitecheck-showcase-real-data.jpg)
 
 > The public explorer queries the City of
@@ -42,7 +44,7 @@ and recommendation work without presenting it as public fact.
 | Automated tests | 181 total: 152 Python and 29 TypeScript |
 | Quality gates | Ruff, strict mypy, ESLint, production build, npm audit |
 | External services | City of Chicago public API; no key or paid provider |
-| Current state | Public-use-ready Chicago explorer; hosting account still required |
+| Current state | Publicly deployed Chicago inspection explorer |
 
 Detailed measurements and their limitations are recorded in
 [docs/resume-metrics.md](docs/resume-metrics.md).
